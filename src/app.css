@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: url('/fonts/HelveticaNowDisplay-Bold.woff2') format('woff2'),
+       url('/fonts/HelveticaNowDisplay-Bold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f7f5f2;
+  color: black;
+  font-size: 16px;
+  overflow: hidden;
+
+  font-family: 'HelveticaNowDisplay';
+  font-weight: 600;
+  font-style: normal;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  pointer-events: all;
+}
+
+.active {
+  color: rgb(130, 130, 130);
+}
+
+.inactive {
+  pointer-events: none;
+  cursor: default;
+}
+
+p {
+  font-size: 0.9vw;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 1.5vw;
+  line-height: 1.18;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 1vw;
+  line-height: 1.2;
+  font-style: normal;
+}
+
+h3 {
+  font-size: 3vw;
+  line-height: 1.2;
+  font-style: normal;
+}
+
+span {
+  display: block;
+  white-space: normal;
+}
+
+.line {
+  display: inline-block;
+  position: relative;
+}
+
+.line::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 100%;
+  left: 0;
+  transform: translate(0, -80%);
+  width: 0;
+  height: 1px;
+  background: black;
+  transition: all .4s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.line:hover::after {
+  width: 100%;
+}
+
+.text-wrapper {
+  overflow: hidden;
+}
+
+.text-reveal {
+  transform: translateY(0);
+  will-change: transform;
+}
+
+.text-reveal2 {
+  transform: translateY(0);
+  will-change: transform;
+}
+
+.text-reveal3 {
+  transform: translateY(0);
+  will-change: transform;
+}
