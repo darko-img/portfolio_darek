@@ -199,6 +199,10 @@
     aspect-ratio: 16 / 9;
     width: 100%;
     height: 100%;
+
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   .work-section {
@@ -245,9 +249,6 @@
     line-height: 1.2;
   }
 
-  .work {
-    pointer-events: none;
-  }
 
 @media (max-width: 1024px) {
 
