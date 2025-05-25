@@ -36,7 +36,6 @@ footer {
 
     font-size: 1vw;
 
-
     z-index: 10;
 
     display: flex;
@@ -45,6 +44,8 @@ footer {
 
     pointer-events: none;
     margin-top: 5rem;
+
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   .social-block {
