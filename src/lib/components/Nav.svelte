@@ -108,6 +108,7 @@ nav {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
     pointer-events: auto;
+    line-height: 1.2;
   }
 
   .me.scrolled {
