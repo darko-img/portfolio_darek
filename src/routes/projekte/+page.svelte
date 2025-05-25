@@ -26,18 +26,6 @@
 
 <main>
 
-  <div class="me">
-    <span class="text-wrapper">
-      <div class="text-reveal3"><a href="/">Dariusz Tomaszewski</a></div>
-    </span>
-    <span class="text-wrapper">
-      <div class="text-reveal3"><a href="/">Designer / Developer</a></div>
-    </span>
-    <span class="text-wrapper">
-      <div class="text-reveal3"><a href="/">Berlin, Germany</a></div>
-    </span>
-  </div>
-
   <div class="work-flex">
 
     <div class="work-wrapper">
@@ -244,14 +232,6 @@
     justify-content: flex-end;
   }
 
-  .me {
-    position: static;
-    left: 0;
-    top: 0;
-    font-size: 1.2vw;
-    line-height: 1.2;
-  }
-
 
 @media (max-width: 1024px) {
 
@@ -266,11 +246,6 @@
   .work-wrapper {
     width: 100%;
     }
-
-  .me {
-    font-size: 1.5vw;
-    }
-
   }
 
 
@@ -288,11 +263,6 @@
   .work-wrapper {
     width: 100%;
     }
-
-  .me {
-    font-size: 3vw;
-    }
-
   }
 
 </style>

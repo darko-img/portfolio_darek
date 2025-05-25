@@ -2,18 +2,49 @@
   import { page } from '$app/state';
   import { onMount } from 'svelte';
   import { textReveal2 } from '$lib/animations/gsap';
+  import { writable } from 'svelte/store';
 
   let animationFinished = false;
 
+  // Scrollzustand
+  const isScrolled = writable(false);
+
   onMount(() => {
+    // Trigger die Text-Animation
     textReveal2(() => {
       animationFinished = true;
     });
-  });
 
+    // Scrollverhalten beobachten
+    const handleScroll = () => {
+      isScrolled.set(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial aufrufen
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  });
 </script>
 
 <nav class:disabled={!animationFinished}>
+
+  <div
+  class="me"
+  class:hidden={!page.url.pathname.startsWith('/projekte')}
+  class:scrolled={$isScrolled}>
+  <span class="text-wrapper">
+    <div class="text-reveal3"><a href="/">Dariusz Tomaszewski</a></div>
+  </span>
+  <span class="text-wrapper">
+    <div class="text-reveal3"><a href="/">Designer / Developer</a></div>
+  </span>
+  <span class="text-wrapper">
+    <div class="text-reveal3"><a href="/">Berlin, Germany</a></div>
+  </span>
+</div>
 
 <div></div>
 
@@ -71,6 +102,21 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
+  }
+
+  .me {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: auto;
+  }
+
+  .me.scrolled {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .me.hidden {
+    display: none;
   }
 
 
