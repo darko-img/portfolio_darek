@@ -88,6 +88,7 @@
   });
 </script>
 
+
 <canvas bind:this={canvas} class="canvas"></canvas>
 
 <div class="info-block">
@@ -148,6 +149,7 @@
   </div>
 </div>
 
+
 <style>
 
 canvas {
@@ -169,7 +171,6 @@ canvas {
 
     pointer-events: none;
   }
-
 
 
 @media (max-width: 1024px) {

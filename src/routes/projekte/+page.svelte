@@ -44,7 +44,7 @@
 
       <div class="work-section">
 
-    <div class="work 1">
+    <div class="work">
       <a
       href="https://vimeo.com/1078624279?share=copy"
       target="_blank"
@@ -65,7 +65,7 @@
 
   <div class="work-section">
 
-    <div class="work 2">
+    <div class="work">
       <a
       href="https://vimeo.com/1078458176?share=copy"
       target="_blank"
@@ -85,7 +85,7 @@
 
   <div class="work-section">
 
-    <div class="work 3">
+    <div class="work">
       <a
       href="https://vimeo.com/1078455810?share=copy"
       target="_blank"
@@ -105,7 +105,7 @@
 
   <div class="work-section">
 
-      <div class="work 4">
+      <div class="work">
         <a
         href="https://vimeo.com/1078457155?share=copy"
         target="_blank"
@@ -125,7 +125,7 @@
 
       <div class="work-section">
 
-        <div class="work 5">
+        <div class="work">
           <!-- svelte-ignore a11y-media-has-caption -->
           <a
           href="https://vimeo.com/1078637488?share=copy"
@@ -159,21 +159,19 @@
   main {
     width: 100%;
     min-height: 100dvh;
-    overflow-y: scroll;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+
+    overflow-y: auto;             /* vertikal scrollen */
+    overflow-x: hidden;
 
     display: flex;
     flex-direction: column;
-    padding-bottom: env(safe-area-inset-bottom);
 
     flex-grow: 1;
 
     padding: 1rem;
-  }
 
-  main::-webkit-scrollbar {
-    display: none;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: auto; /* verhindert iOS-Bounce */
   }
 
   video {
@@ -207,6 +205,7 @@
   }
 
   .work-flex {
+    height: 100%;
     width: 100%;
     margin-top: 8rem;
     margin-bottom: 5rem;
@@ -224,6 +223,10 @@
     top: 0;
     font-size: 1.2vw;
     line-height: 1.2;
+  }
+
+  .work {
+    pointer-events: none;
   }
 
 @media (max-width: 1024px) {

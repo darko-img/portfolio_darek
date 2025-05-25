@@ -19,7 +19,6 @@ body {
   background-color: #f7f5f2;
   color: black;
   font-size: 16px;
-  overflow-x: hidden;
 
   font-family: 'HelveticaNowDisplay';
   font-weight: 600;
@@ -28,6 +27,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 a {
