@@ -102,7 +102,6 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
-    line-height: 1.2;
   }
 
   .me {
@@ -131,6 +130,7 @@ nav {
   .menu {
   flex-direction: row;
   gap: 4rem;
+  line-height: 1.2;
     }
 }
 
