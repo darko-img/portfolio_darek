@@ -158,7 +158,7 @@
 
   main {
     width: 100%;
-    height: 100vh;
+    min-height: 100dvh;
     overflow-y: scroll;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE/Edge */
@@ -166,6 +166,8 @@
     display: flex;
     flex-direction: column;
     padding-bottom: env(safe-area-inset-bottom);
+
+    flex-grow: 1;
 
     padding: 1rem;
   }
