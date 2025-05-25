@@ -44,105 +44,125 @@
 
       <div class="work-section">
 
-    <div class="work">
-      <a
-      href="https://vimeo.com/1078624279?share=copy"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Projekt Nussknagger Cube">
-      <video src="/Videos/cube_nuss_snippet_neu.mp4" autoplay muted loop></video>
-      </a>
-    </div>
+        <div class="work">
+          <video
+            src="/Videos/cube_nuss_snippet_neu.mp4"
+            autoplay
+            muted
+            loop>
+          </video>
+        </div>
 
-    <div class="title">
-      <p class="title-s">
-        Nussknagger_Cube_2024_Animation_3D
-      </p>
-    </div>
-
-    </div>
-
-
-  <div class="work-section">
-
-    <div class="work">
-      <a
-      href="https://vimeo.com/1078458176?share=copy"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Projekt Nussknagger Logo">
-      <video src="/Videos/logo_nuss_snippet_neu.mp4" autoplay muted loop></video>
-      </a>
-    </div>
-
-    <div class="title">
-      <p class="title-s">
-        Nussknagger_Logo_2024_Animation_3D
-      </p>
-    </div>
-
-  </div>
-
-  <div class="work-section">
-
-    <div class="work">
-      <a
-      href="https://vimeo.com/1078455810?share=copy"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Projekt Formen 2">
-      <video src="/Videos/formen_2_snippet_neu.mp4" autoplay muted loop></video>
-      </a>
-    </div>
-
-    <div class="title">
-      <p class="title-s">
-        Formen_02_2024_Animation_3D_SoundFX
-      </p>
-    </div>
-
-  </div>
-
-  <div class="work-section">
-
-      <div class="work">
-        <a
-        href="https://vimeo.com/1078457155?share=copy"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Projekt Tatort">
-        <video src="/Videos/tatort_snippet_neu.mp4" autoplay muted loop></video>
-        </a>
-      </div>
-
-      <div class="title">
-        <p class="title-s">
-          Tatort_2017_Animation_3D_SoundFX
-        </p>
-      </div>
+        <div class="title" title="https://vimeo.com/1078624279">
+          <p>Nussknagger_2024_Animation_3D</p>
+          <p>
+            <a
+              href="https://vimeo.com/1078624279??share=copy"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Projekt Tatort">Play</a>
+              </p>
+        </div>
 
     </div>
 
-      <div class="work-section">
+
+    <div class="work-section">
 
         <div class="work">
-          <!-- svelte-ignore a11y-media-has-caption -->
-          <a
-          href="https://vimeo.com/1078637488?share=copy"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Projekt Formen">
-          <video src="/Videos/formen_snippet_neu.mp4" autoplay muted loop></video>
-          </a>
+          <video
+            src="/Videos/logo_nuss_snippet_neu.mp4"
+            autoplay
+            muted
+            loop>
+          </video>
         </div>
 
-        <div class="title">
-          <p class="title-s">
-            Formen_2017_Animation_SoundFX
-          </p>
+        <div class="title" title="https://vimeo.com/1078624279">
+          <p>Nussknagger_2024_Animation_3D</p>
+          <p>
+            <a
+              href="https://vimeo.com/1078458176?share=copy"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Projekt Tatort">Play</a>
+              </p>
         </div>
 
+    </div>
+
+    <div class="work-section">
+
+        <div class="work">
+          <video
+            src="/Videos/formen_2_snippet_neu.mp4"
+            autoplay
+            muted
+            loop>
+          </video>
         </div>
+
+        <div class="title" title="https://vimeo.com/1078624279">
+          <p>Formen_02_2024_Animation_3D_SoundFX</p>
+          <p>
+            <a
+              href="https://vimeo.com/1078455810?share=copy"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Projekt Tatort">Play</a>
+              </p>
+        </div>
+
+    </div>
+
+    <div class="work-section">
+
+        <div class="work">
+          <video
+            src="/Videos/tatort_snippet_neu.mp4"
+            autoplay
+            muted
+            loop>
+          </video>
+        </div>
+
+        <div class="title" title="https://vimeo.com/1078624279">
+          <p>Tatort_2017_Animation_3D_SoundFX</p>
+          <p>
+            <a
+              href="https://vimeo.com/1078457155?share=copy"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Projekt Tatort">Play</a>
+              </p>
+        </div>
+
+    </div>
+
+
+     <div class="work-section">
+
+        <div class="work">
+          <video
+            src="/Videos/formen_snippet_neu.mp4"
+            autoplay
+            muted
+            loop>
+          </video>
+        </div>
+
+        <div class="title" title="https://vimeo.com/1078624279">
+          <p>Formen_2017_Animation_SoundFX</p>
+          <p>
+            <a
+              href="https://vimeo.com/1078637488?share=copy"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Projekt Tatort">Play</a>
+              </p>
+        </div>
+
+    </div>
 
     </div>
 
@@ -189,7 +209,7 @@
 
   .title {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     text-align: center;
     opacity: 1;
     will-change: opacity;
