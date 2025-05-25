@@ -200,9 +200,7 @@
     width: 100%;
     height: 100%;
 
-    touch-action: none;
-    -webkit-user-select: none;
-    user-select: none;
+    pointer-events: none;
   }
 
   .work-section {
