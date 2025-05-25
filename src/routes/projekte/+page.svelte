@@ -49,6 +49,7 @@
             src="/Videos/cube_nuss_snippet_neu.mp4"
             autoplay
             muted
+            playsinline
             loop>
           </video>
         </div>
@@ -74,6 +75,7 @@
             src="/Videos/logo_nuss_snippet_neu.mp4"
             autoplay
             muted
+            playsinline
             loop>
           </video>
         </div>
@@ -98,6 +100,7 @@
             src="/Videos/formen_2_snippet_neu.mp4"
             autoplay
             muted
+            playsinline
             loop>
           </video>
         </div>
@@ -122,6 +125,7 @@
             src="/Videos/tatort_snippet_neu.mp4"
             autoplay
             muted
+            playsinline
             loop>
           </video>
         </div>
@@ -147,6 +151,7 @@
             src="/Videos/formen_snippet_neu.mp4"
             autoplay
             muted
+            playsinline
             loop>
           </video>
         </div>
