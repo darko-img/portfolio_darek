@@ -17,7 +17,7 @@
 
     // Scrollverhalten beobachten
     const handleScroll = () => {
-      isScrolled.set(window.scrollY > 100);
+      isScrolled.set(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
