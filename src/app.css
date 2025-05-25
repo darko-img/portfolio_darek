@@ -121,3 +121,10 @@ span {
   transform: translateY(0);
   will-change: transform;
 }
+
+@media (max-width: 1024px) {
+    .line::after,
+    .line:hover::after {
+    display: none !important;
+  }
+}
