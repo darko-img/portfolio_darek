@@ -102,6 +102,7 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 0.1rem;
+    line-height: 1.2;
   }
 
   .me {
