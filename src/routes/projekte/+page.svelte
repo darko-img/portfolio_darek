@@ -43,7 +43,7 @@
         </div>
 
         <div class="title" title="https://vimeo.com/1078624279">
-          <p>Nussknagger_2024_Animation_3D</p>
+          <p>Nussknagger [Animation, 3D] 2024</p>
           <p>
             <a
               href="https://vimeo.com/1078624279??share=copy"
@@ -69,7 +69,7 @@
         </div>
 
         <div class="title" title="https://vimeo.com/1078624279">
-          <p>Nussknagger_2024_Animation_3D</p>
+          <p>Nussknagger [Animation, 3D] 2024</p>
           <p>
             <a
               href="https://vimeo.com/1078458176?share=copy"
@@ -94,7 +94,7 @@
         </div>
 
         <div class="title" title="https://vimeo.com/1078624279">
-          <p>Formen_02_2024_Animation_3D_SoundFX</p>
+          <p>Formen 02 [Animation, 3D, SoundFX] 2024</p>
           <p>
             <a
               href="https://vimeo.com/1078455810?share=copy"
@@ -119,7 +119,7 @@
         </div>
 
         <div class="title" title="https://vimeo.com/1078624279">
-          <p>Tatort_2017_Animation_3D_SoundFX</p>
+          <p>Tatort [Animation, 3D, SoundFX] 2017</p>
           <p>
             <a
               href="https://vimeo.com/1078457155?share=copy"
@@ -145,7 +145,7 @@
         </div>
 
         <div class="title" title="https://vimeo.com/1078624279">
-          <p>Formen_2017_Animation_SoundFX</p>
+          <p>Formen [Animation, SoundFX] 2017</p>
           <p>
             <a
               href="https://vimeo.com/1078637488?share=copy"
@@ -173,7 +173,7 @@
     width: 100%;
     min-height: 100dvh;
 
-    overflow-y: auto;             /* vertikal scrollen */
+    overflow-y: auto;
     overflow-x: hidden;
 
     display: flex;

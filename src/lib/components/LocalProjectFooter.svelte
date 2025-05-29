@@ -43,7 +43,6 @@ footer {
     flex-direction: row;
 
     pointer-events: none;
-    margin-top: 5rem;
 
     padding-bottom: env(safe-area-inset-bottom);
   }

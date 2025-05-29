@@ -106,7 +106,7 @@ nav {
 
   .me {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
     pointer-events: auto;
     line-height: 1.2;
   }
