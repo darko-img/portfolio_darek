@@ -30,7 +30,6 @@ export const imageRevealAndMove = () => {
     {
       y: "-150%",
       duration: 2.0,
-      stagger: 0.1,
       ease: "expo.out",
     }
   );
