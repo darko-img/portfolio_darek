@@ -19,7 +19,7 @@
 
   // Line width abhängig von der Gerätegröße
   if (window.innerWidth <= 1024) {
-    ctx.lineWidth = 60;
+    ctx.lineWidth = 65;
   } else {
     ctx.lineWidth = 100;
   }
