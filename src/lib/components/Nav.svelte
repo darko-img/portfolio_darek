@@ -10,12 +10,13 @@
   const isScrolled = writable(false);
 
   onMount(() => {
-    // Trigger die Text-Animation
-    textReveal2(() => {
-      animationFinished = true;
-    });
 
-    // Scrollverhalten beobachten
+  textReveal2(() => {
+    animationFinished = true;
+  });
+
+  // Scroll-Animation nur bei Geräten bis 1024px
+  if (window.innerWidth <= 1024) {
     const handleScroll = () => {
       isScrolled.set(window.scrollY > 50);
     };
@@ -26,7 +27,8 @@
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  });
+  }
+});
 </script>
 
 <nav class:disabled={!animationFinished}>

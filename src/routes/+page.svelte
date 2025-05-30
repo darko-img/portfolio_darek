@@ -5,87 +5,91 @@
   let canvas: HTMLCanvasElement;
 
   onMount(() => {
-    textReveal();
+  textReveal();
 
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
-    ctx.strokeStyle = "#BADA55";
-    ctx.lineJoin = "round";
-    ctx.lineCap = "round";
+  ctx.strokeStyle = "#BADA55";
+  ctx.lineJoin = "round";
+  ctx.lineCap = "round";
+
+  // Line width abhängig von der Gerätegröße
+  if (window.innerWidth <= 1024) {
+    ctx.lineWidth = 70;
+  } else {
     ctx.lineWidth = 100;
+  }
 
-    let isDrawing = false;
-    let lastX = 0;
-    let lastY = 0;
-    let hue = 0;
+  let isDrawing = false;
+  let lastX = 0;
+  let lastY = 0;
+  let hue = 0;
 
-    function drawLine(x: number, y: number) {
-      if (!isDrawing) return;
-      ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
-      ctx.beginPath();
-      ctx.moveTo(lastX, lastY);
-      ctx.lineTo(x, y);
-      ctx.stroke();
-      [lastX, lastY] = [x, y];
-      hue = (hue + 1) % 360;
-    }
+  function drawLine(x: number, y: number) {
+    if (!isDrawing) return;
+    ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+    ctx.beginPath();
+    ctx.moveTo(lastX, lastY);
+    ctx.lineTo(x, y);
+    ctx.stroke();
+    [lastX, lastY] = [x, y];
+    hue = (hue + 1) % 360;
+  }
 
-    function clearCanvas() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-    }
+  function clearCanvas() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
 
-    // ✏️ Maussteuerung
-    canvas.addEventListener("mousedown", (e) => {
-      isDrawing = true;
-      [lastX, lastY] = [e.offsetX, e.offsetY];
-    });
-
-    canvas.addEventListener("mousemove", (e) => drawLine(e.offsetX, e.offsetY));
-
-    canvas.addEventListener("mouseup", () => {
-      isDrawing = false;
-      clearCanvas();
-    });
-
-    canvas.addEventListener("mouseout", () => {
-      isDrawing = false;
-      clearCanvas();
-    });
-
-    // 📱 Touchsteuerung
-    canvas.addEventListener("touchstart", (e) => {
-      e.preventDefault();
-      isDrawing = true;
-      const touch = e.touches[0];
-      const rect = canvas.getBoundingClientRect();
-      lastX = touch.clientX - rect.left;
-      lastY = touch.clientY - rect.top;
-    }, { passive: false });
-
-    canvas.addEventListener("touchmove", (e) => {
-      e.preventDefault();
-      if (!isDrawing) return;
-      const touch = e.touches[0];
-      const rect = canvas.getBoundingClientRect();
-      const x = touch.clientX - rect.left;
-      const y = touch.clientY - rect.top;
-      drawLine(x, y);
-    }, { passive: false });
-
-    canvas.addEventListener("touchend", () => {
-      isDrawing = false;
-      clearCanvas();
-    });
-
-    canvas.addEventListener("touchcancel", () => {
-      isDrawing = false;
-      clearCanvas();
-    });
+  // Maussteuerung
+  canvas.addEventListener("mousedown", (e) => {
+    isDrawing = true;
+    [lastX, lastY] = [e.offsetX, e.offsetY];
   });
+
+  canvas.addEventListener("mousemove", (e) => drawLine(e.offsetX, e.offsetY));
+  canvas.addEventListener("mouseup", () => {
+    isDrawing = false;
+    clearCanvas();
+  });
+  canvas.addEventListener("mouseout", () => {
+    isDrawing = false;
+    clearCanvas();
+  });
+
+  // Touchsteuerung
+  canvas.addEventListener("touchstart", (e) => {
+    e.preventDefault();
+    isDrawing = true;
+    const touch = e.touches[0];
+    const rect = canvas.getBoundingClientRect();
+    lastX = touch.clientX - rect.left;
+    lastY = touch.clientY - rect.top;
+  }, { passive: false });
+
+  canvas.addEventListener("touchmove", (e) => {
+    e.preventDefault();
+    if (!isDrawing) return;
+    const touch = e.touches[0];
+    const rect = canvas.getBoundingClientRect();
+    const x = touch.clientX - rect.left;
+    const y = touch.clientY - rect.top;
+    drawLine(x, y);
+  }, { passive: false });
+
+  canvas.addEventListener("touchend", () => {
+    isDrawing = false;
+    clearCanvas();
+  });
+
+  canvas.addEventListener("touchcancel", () => {
+    isDrawing = false;
+    clearCanvas();
+  });
+});
 </script>
 
 
