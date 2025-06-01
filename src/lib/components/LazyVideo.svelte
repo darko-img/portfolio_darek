@@ -17,7 +17,7 @@
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.5 }
     );
 
     if (videoRef) observer.observe(videoRef);
