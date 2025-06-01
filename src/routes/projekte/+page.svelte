@@ -3,6 +3,7 @@
   import { onMount } from 'svelte';
   import LocalFooter from '$lib/components/LocalProjectFooter.svelte';
   import { imageRevealAndMove } from '$lib/animations/gsap';
+  import LazyVideo from '$lib/components/LazyVideo.svelte';
 
   let showLocalFooter = false;
 
@@ -33,13 +34,13 @@
       <div class="work-section">
 
         <div class="work">
-          <video
-            src="/Videos/cube_nuss_snippet_neu.mp4"
-            autoplay
-            muted
-            playsinline
-            loop>
-          </video>
+          <LazyVideo
+          src="/Videos/cube_nuss_snippet_neu.mp4"
+          autoplay
+          muted
+          playsinline
+          loop
+          />
         </div>
 
         <div class="title" title="https://vimeo.com/1078624279">
@@ -59,14 +60,15 @@
     <div class="work-section">
 
         <div class="work">
-          <video
-            src="/Videos/logo_nuss_snippet_neu.mp4"
-            autoplay
-            muted
-            playsinline
-            loop>
-          </video>
+          <LazyVideo
+          src="/Videos/logo_nuss_snippet_neu.mp4"
+          autoplay
+          muted
+          playsinline
+          loop
+          />
         </div>
+
 
         <div class="title" title="https://vimeo.com/1078624279">
           <p>Nussknagger [Animation, 3D] 2024</p>
@@ -83,15 +85,17 @@
 
     <div class="work-section">
 
+
         <div class="work">
-          <video
-            src="/Videos/formen_2_snippet_neu.mp4"
-            autoplay
-            muted
-            playsinline
-            loop>
-          </video>
+          <LazyVideo
+          src="/Videos/formen_2_snippet_neu.mp4"
+          autoplay
+          muted
+          playsinline
+          loop
+          />
         </div>
+
 
         <div class="title" title="https://vimeo.com/1078624279">
           <p>Formen 02 [Animation, 3D, SoundFX] 2024</p>
@@ -108,15 +112,17 @@
 
     <div class="work-section">
 
+
         <div class="work">
-          <video
-            src="/Videos/tatort_snippet_neu.mp4"
-            autoplay
-            muted
-            playsinline
-            loop>
-          </video>
+          <LazyVideo
+          src="/Videos/tatort_snippet_neu.mp4"
+          autoplay
+          muted
+          playsinline
+          loop
+          />
         </div>
+
 
         <div class="title" title="https://vimeo.com/1078624279">
           <p>Tatort [Animation, 3D, SoundFX] 2017</p>
@@ -134,15 +140,17 @@
 
      <div class="work-section">
 
+
         <div class="work">
-          <video
-            src="/Videos/formen_snippet_neu.mp4"
-            autoplay
-            muted
-            playsinline
-            loop>
-          </video>
+          <LazyVideo
+          src="/Videos/formen_snippet_neu.mp4"
+          autoplay
+          muted
+          playsinline
+          loop
+          />
         </div>
+
 
         <div class="title" title="https://vimeo.com/1078624279">
           <p>Formen [Animation, SoundFX] 2017</p>
@@ -185,15 +193,6 @@
 
     overscroll-behavior: none;
     -webkit-overflow-scrolling: auto; /* verhindert iOS-Bounce */
-  }
-
-  video {
-    object-fit: cover;
-    aspect-ratio: 16 / 9;
-    width: 100%;
-    height: 100%;
-
-    pointer-events: none;
   }
 
   .work-section {
