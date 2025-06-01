@@ -1,5 +1,4 @@
 <script>
-
   import { onMount } from 'svelte';
   import LocalFooter from '$lib/components/LocalProjectFooter.svelte';
   import { imageRevealAndMove } from '$lib/animations/gsap';
@@ -12,7 +11,9 @@
     showLocalFooter = mediaQuery.matches;
 
     const handler = (e) => {
-      showLocalFooter = e.matches;
+      if (showLocalFooter !== e.matches) {
+        showLocalFooter = e.matches;
+      }
     };
     mediaQuery.addEventListener('change', handler);
 
@@ -22,7 +23,6 @@
       mediaQuery.removeEventListener('change', handler);
     };
   });
-
 </script>
 
 <main>
