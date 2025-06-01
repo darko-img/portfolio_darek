@@ -192,7 +192,7 @@
     padding: 1rem;
 
     overscroll-behavior: none;
-    -webkit-overflow-scrolling: auto; /* verhindert iOS-Bounce */
+    -webkit-overflow-scrolling: auto;
   }
 
   .work-section {

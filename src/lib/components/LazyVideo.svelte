@@ -33,13 +33,9 @@
     {loop}
     {playsinline}
     preload="none"
-    style="object-fit: cover; width: 100%; height: 100%; aspect-ratio: 16 / 9;"
   ></video>
 {:else}
-  <div
-    bind:this={videoRef}
-    style="width: 100%; aspect-ratio: 16 / 9; background: #000;"
-  ></div>
+  <div bind:this={videoRef} class="placeholder"></div>
 {/if}
 
 <style>
@@ -49,5 +45,11 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
+  }
+
+  .placeholder {
+    background-color: #888; /* grauer Platzhalter */
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 </style>
