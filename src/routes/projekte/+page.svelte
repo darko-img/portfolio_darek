@@ -195,6 +195,10 @@
     -webkit-overflow-scrolling: auto;
   }
 
+  .work {
+    will-change: transform;
+  }
+
   .work-section {
     display: flex;
     flex-direction: column;
@@ -205,7 +209,6 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
-    opacity: 1;
     will-change: opacity;
   }
 
@@ -215,7 +218,6 @@
     flex-direction: column;
     gap: 1.5rem;
     transform: translateY(0);
-    will-change: transform;
   }
 
   .work-flex {
