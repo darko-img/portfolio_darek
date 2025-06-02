@@ -10,18 +10,21 @@
   let inView = false;
 
   onMount(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          inView = true;
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.5 }
-    );
+  const isMobile = window.innerWidth <= 1024;
+  const thresholdValue = isMobile ? 0.5 : 0.2;
 
-    if (videoRef) observer.observe(videoRef);
-  });
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting) {
+        inView = true;
+        observer.disconnect();
+      }
+    },
+    { threshold: thresholdValue }
+  );
+
+  if (videoRef) observer.observe(videoRef);
+});
 </script>
 
 {#if inView}
