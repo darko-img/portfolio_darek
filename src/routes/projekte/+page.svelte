@@ -195,14 +195,11 @@
     -webkit-overflow-scrolling: auto;
   }
 
-  .work {
-    will-change: transform;
-  }
-
   .work-section {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+    will-change: transform;
   }
 
   .title {
@@ -217,7 +214,6 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    transform: translateY(0);
   }
 
   .work-flex {
