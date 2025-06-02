@@ -17,7 +17,6 @@
   ctx.lineJoin = "round";
   ctx.lineCap = "round";
 
-  // Line width abhängig von der Gerätegröße
   if (window.innerWidth <= 1024) {
     ctx.lineWidth = 65;
   } else {
