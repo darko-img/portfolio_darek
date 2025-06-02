@@ -1,45 +1,55 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
+
   export let src;
-  export let autoplay = true;
   export let muted = true;
   export let loop = true;
   export let playsinline = true;
 
   let videoRef;
+  let containerRef;
   let inView = false;
 
   onMount(() => {
-  const isMobile = window.innerWidth <= 1024;
-  const thresholdValue = isMobile ? 0.5 : 0.1;
+    const isMobile = window.innerWidth <= 1024;
+    const thresholdValue = isMobile ? 0.5 : 0.1;
 
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        inView = true;
-        observer.disconnect();
-      }
-    },
-    { threshold: thresholdValue }
-  );
+    const observer = new IntersectionObserver(
+      async ([entry]) => {
+        if (entry.isIntersecting) {
+          inView = true;
+          observer.disconnect();
+          await tick();
+          try {
+            videoRef?.play();
+          } catch (e) {
+            console.warn('Autoplay failed:', e);
+          }
+        }
+      },
+      { threshold: thresholdValue }
+    );
 
-  if (videoRef) observer.observe(videoRef);
-});
+    if (containerRef) observer.observe(containerRef);
+
+    return () => observer.disconnect();
+  });
 </script>
 
-{#if inView}
-  <video
-    bind:this={videoRef}
-    src={src}
-    {autoplay}
-    {muted}
-    {loop}
-    {playsinline}
-    preload="none"
-  ></video>
-{:else}
-  <div bind:this={videoRef} class="placeholder"></div>
-{/if}
+<div bind:this={containerRef}>
+  {#if inView}
+    <video
+      bind:this={videoRef}
+      src={src}
+      {muted}
+      {loop}
+      {playsinline}
+      preload="none"
+    ></video>
+  {:else}
+    <div class="placeholder"></div>
+  {/if}
+</div>
 
 <style>
   video {
@@ -48,10 +58,11 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
+    display: block;
   }
 
   .placeholder {
-    background-color: #888; /* grauer Platzhalter */
+    background-color: #888;
     width: 100%;
     aspect-ratio: 16 / 9;
   }

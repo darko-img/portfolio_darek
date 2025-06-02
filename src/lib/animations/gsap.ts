@@ -21,7 +21,6 @@ export const textReveal2 = (onFinish?: () => void) => {
     {
     y: 0,
     duration: 1.0,
-    delay: 0.75,
     stagger: 0.1,
     ease: "expo.out",
     onComplete: () => {
@@ -63,7 +62,7 @@ export const imageRevealAndMove = () => {
   tl.fromTo(
     ".work-section",
     {
-    y: "-30%",
+      y: "-30%",
     },
     {
       y: 0,
