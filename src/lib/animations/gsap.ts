@@ -1,86 +1,69 @@
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
 
-export const textReveal = () => {
-  gsap.fromTo(".text-reveal",
-    {
-    y: "-150%",
-    },
-    {
-    y: 0,
-    duration: 1.0,
-    stagger: 0.1,
-    ease: "expo.out",
-  });
+const defaultEase = "expo.out";
+
+const defaultFromTo = (
+  target: string | Element | Element[],
+  fromVars: gsap.TweenVars,
+  toVars: gsap.TweenVars
+) => {
+  return gsap.fromTo(target, fromVars, toVars);
 };
 
-export const textReveal2 = (onFinish?: () => void) => {
-  gsap.fromTo(".text-reveal2",
-    {
-    y: "-150%",
-    },
-    {
-    y: 0,
-    duration: 1.0,
-    stagger: 0.1,
-    ease: "expo.out",
-    onComplete: () => {
-      if (onFinish) onFinish();
-    }
-  });
+export const textReveal = (selector = ".text-reveal", duration = 1, stagger = 0.1) => {
+  return defaultFromTo(
+    selector,
+    { y: "-150%" },
+    { y: "0%", duration, stagger, ease: defaultEase }
+  );
 };
 
-export const imageRevealAndMove = () => {
-  const tl = gsap.timeline();
+export const textReveal2 = (
+  onFinish?: () => void,
+  selector = ".text-reveal2",
+  duration = 1,
+  stagger = 0.1
+) => {
+  return defaultFromTo(
+    selector,
+    { y: "-150%" },
+    { y: "0%", duration, stagger, ease: defaultEase, onComplete: onFinish }
+  );
+};
 
-  tl.fromTo(
-  ".text-reveal3",
-  {
-    y: "-150%",
-  },
-  {
-    y: "0%",
-    duration: 2.0,
-    stagger: 0.1,
-    ease: "expo.out",
+export const imageRevealAndMove = (
+  tl = gsap.timeline(),
+  selectors = {
+    textReveal3: ".text-reveal3",
+    work: ".work",
+    workSection: ".work-section",
+    title: ".title"
   }
-);
-
+) => {
   tl.fromTo(
-    ".work",
-    {
-      clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)"
-    },
-    {
-      clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)",
-      duration: 2.0,
-      stagger: 0.1,
-      ease: "expo.out"
-    },
-    "<0.75"
+    selectors.textReveal3,
+    { y: "-150%" },
+    { y: "0%", duration: 2, stagger: 0.1, ease: defaultEase }
   );
 
   tl.fromTo(
-    ".work-section",
-    {
-      y: "-30%",
-    },
-    {
-      y: 0,
-      duration: 2.0,
-      ease: "expo.out"
-    },
+    selectors.work,
+    { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)" },
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 2, stagger: 0.1, ease: defaultEase },
+    "<0.5"
+  );
+
+  tl.fromTo(
+    selectors.workSection,
+    { y: "-30%" },
+    { y: "0%", duration: 2, ease: defaultEase },
     "<"
   );
 
   tl.fromTo(
-    ".title",
-    {
-    opacity: 0,
-    },
-    {
-    opacity: 1,
-    duration: 0.5,
-    },
+    selectors.title,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5 },
     "<0.25"
   );
 

@@ -107,18 +107,9 @@ span {
   overflow: hidden;
 }
 
-.text-reveal {
-  /* transform: translateY(0); */
-  will-change: transform;
-}
-
-.text-reveal2 {
-  /* transform: translateY(0); */
-  will-change: transform;
-}
-
+.text-reveal,
+.text-reveal2,
 .text-reveal3 {
-  /* transform: translateY(0); */
   will-change: transform;
 }
 
