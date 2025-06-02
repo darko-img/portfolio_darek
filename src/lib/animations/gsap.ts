@@ -56,7 +56,7 @@ export const imageRevealAndMove = (
   tl.fromTo(
     selectors.workSection,
     { y: "-30%" },
-    { y: "0%", duration: 2.5, ease: defaultEase },
+    { y: "0%", duration: 2, ease: defaultEase },
     "<"
   );
 
