@@ -5,7 +5,6 @@
   import Footer from '$lib/components/Footer.svelte';
   import Loader from '$lib/components/Loader.svelte';
   import '../app.css';
-  import { prefetchRoutes } from '$app/navigation';
 
   let isMobile = false;
   let loading = true;
@@ -17,9 +16,6 @@
 
   checkScreen();
   window.addEventListener('resize', checkScreen);
-
-  // hier wird "projekte"-Seite im Hintergrund vorgeladen
-  prefetchRoutes(['projekte']);
 
   const MIN_LOADER_TIME = 500;
   const startTime = performance.now();
