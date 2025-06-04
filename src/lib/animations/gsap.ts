@@ -42,7 +42,7 @@ export const imageRevealAndMove = (
 ) => {
   tl.fromTo(
     selectors.textReveal3,
-    { yPercent: -150 },
+    { yPercent: 150 },
     { yPercent: 0, duration: 1.0, ease: defaultEase, force3D: true }
   );
 
