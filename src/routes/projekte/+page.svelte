@@ -5,8 +5,9 @@
   import LazyVideo from '$lib/components/LazyVideo.svelte';
 
   let showLocalFooter = false;
+  let videosReady = false; // <- NEU
 
-  onMount(() => {
+  onMount(async () => {
     const mediaQuery = window.matchMedia('(max-width: 1024px)');
     showLocalFooter = mediaQuery.matches;
 
@@ -17,7 +18,8 @@
     };
     mediaQuery.addEventListener('change', handler);
 
-    imageRevealAndMove();
+    await imageRevealAndMove(); // <- wichtig: WARTEN!
+    videosReady = true;         // <- Jetzt dürfen Videos abspielen
 
     return () => {
       mediaQuery.removeEventListener('change', handler);
@@ -40,6 +42,7 @@
           muted
           playsinline
           loop
+          ready={videosReady}
           />
         </div>
 
@@ -66,6 +69,7 @@
           muted
           playsinline
           loop
+          ready={videosReady}
           />
         </div>
 
@@ -93,6 +97,7 @@
           muted
           playsinline
           loop
+          ready={videosReady}
           />
         </div>
 
@@ -120,6 +125,7 @@
           muted
           playsinline
           loop
+          ready={videosReady}
           />
         </div>
 
@@ -148,6 +154,7 @@
           muted
           playsinline
           loop
+          ready={videosReady}
           />
         </div>
 

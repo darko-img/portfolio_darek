@@ -5,26 +5,37 @@
   export let muted = true;
   export let loop = true;
   export let playsinline = true;
+  export let autoplay = false;
+  export let ready = false; // <- NEU
 
   let videoRef;
   let containerRef;
   let inView = false;
+  let hasPlayed = false;
+
+  async function tryPlay() {
+    if (autoplay && ready && inView && !hasPlayed && videoRef) {
+      hasPlayed = true;
+      await tick();
+      try {
+        await videoRef.play();
+      } catch (e) {
+        console.warn('Autoplay failed:', e);
+      }
+    }
+  }
+
+  $: tryPlay();
 
   onMount(() => {
     const isMobile = window.innerWidth <= 1024;
     const thresholdValue = isMobile ? 0.3 : 0.01;
 
     const observer = new IntersectionObserver(
-      async ([entry]) => {
+      ([entry]) => {
         if (entry.isIntersecting) {
           inView = true;
           observer.disconnect();
-          await tick();
-          try {
-            videoRef?.play();
-          } catch (e) {
-            console.warn('Autoplay failed:', e);
-          }
         }
       },
       { threshold: thresholdValue }
