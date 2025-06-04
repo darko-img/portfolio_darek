@@ -50,7 +50,7 @@ export const imageRevealAndMove = (
     selectors.work,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
     { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, ease: defaultEase, force3D: true },
-    "<0.5"
+    "<1.0"
   );
 
   tl.fromTo(

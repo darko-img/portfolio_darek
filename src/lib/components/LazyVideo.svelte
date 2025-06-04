@@ -44,7 +44,7 @@
       {muted}
       {loop}
       {playsinline}
-      preload="metadata"
+      preload="auto"
     ></video>
   {:else}
     <div class="placeholder"></div>
