@@ -130,7 +130,7 @@
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">ich besondere Nutzererlebnisse im Web schaffen.</h1>
+      <h1 class="text-reveal">ich besondere Nutzererlebnisse schaffen.</h1>
     </div>
 
   </div>

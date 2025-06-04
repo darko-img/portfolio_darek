@@ -3,10 +3,6 @@
   <ul class="job-block">
 
     <li class="text-wrapper">
-      <div class="text-reveal2">Für Jobs verfügbar</div>
-    </li>
-
-    <li class="text-wrapper">
       <a href="mailto:hi@daro.dev" class="line text-reveal2">hi@daro.dev</a>
   </li>
 
