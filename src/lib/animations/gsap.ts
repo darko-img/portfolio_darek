@@ -43,7 +43,7 @@ export const imageRevealAndMove = (
   tl.fromTo(
     selectors.textReveal3,
     { y: "-150%" },
-    { y: "0%", duration: 2.0, stagger: 0.1, ease: defaultEase }
+    { y: "0%", duration: 2.25, stagger: 0.1, ease: defaultEase }
   );
 
   tl.fromTo(

@@ -184,11 +184,6 @@
     overflow-y: auto;
     overflow-x: hidden;
 
-    /* display: flex;
-    flex-direction: column; */
-
-    /* flex-grow: 1; */
-
     padding: 1rem;
 
     overscroll-behavior: none;
