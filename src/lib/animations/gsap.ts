@@ -14,7 +14,7 @@ export const textReveal = (selector = ".text-reveal", duration = 1, stagger = 0.
   return defaultFromTo(
     selector,
     { yPercent: -150 },
-    { yPercent: 0, duration, stagger, ease: defaultEase }
+    { yPercent: 0, duration, stagger, ease: defaultEase, force3D: true }
   );
 };
 
@@ -27,7 +27,7 @@ export const textReveal2 = (
   return defaultFromTo(
     selector,
     { yPercent: -150 },
-    { yPercent: 0, duration, stagger, ease: defaultEase, onComplete: onFinish }
+    { yPercent: 0, duration, stagger, ease: defaultEase, force3D: true, onComplete: onFinish }
   );
 };
 
@@ -49,21 +49,21 @@ export const imageRevealAndMove = (
   tl.fromTo(
     selectors.work,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
-    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, stagger: 0.05, ease: defaultEase },
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, ease: defaultEase, force3D: true },
     "<0.9"
   );
 
   tl.fromTo(
     selectors.workSection,
     { yPercent: -25 },
-    { yPercent: 0, duration: 1.5, ease: defaultEase },
+    { yPercent: 0, duration: 1.5, ease: defaultEase, force3D: true },
     "<"
   );
 
   tl.fromTo(
     selectors.title,
     { opacity: 0 },
-    { opacity: 1, duration: 0.25 },
+    { opacity: 1, duration: 0.25, force3D: true },
     "<0.5"
   );
 
