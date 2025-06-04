@@ -1,34 +1,45 @@
 <script lang="ts">
-  import { page } from '$app/state';
   import { onMount } from 'svelte';
-  import { textReveal2 } from '$lib/animations/gsap';
+  import { afterNavigate } from '$app/navigation';
+  import { page } from '$app/state';
+  import { textReveal2, textReveal3 } from '$lib/animations/gsap';
   import { writable } from 'svelte/store';
 
   let animationFinished = false;
-
-  // Scrollzustand
   const isScrolled = writable(false);
 
+  // Initiale Animation bei erstem Mount
   onMount(() => {
+    textReveal2(() => {
+      animationFinished = true;
+    });
 
-  textReveal2(() => {
-    animationFinished = true;
+    // Initialer Check – falls man direkt auf /projekte landet
+    if (page.url.pathname.startsWith('/projekte')) {
+      textReveal3();
+    }
+
+    // Scroll-Verhalten bei kleinen Viewports
+    if (window.innerWidth <= 1024) {
+      const handleScroll = () => {
+        isScrolled.set(window.scrollY > 50);
+      };
+
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }
   });
 
-  // Scroll-Animation nur bei Geräten bis 1024px
-  if (window.innerWidth <= 1024) {
-    const handleScroll = () => {
-      isScrolled.set(window.scrollY > 50);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial aufrufen
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }
-});
+  // Reagiere auf jede Navigation
+  afterNavigate(() => {
+    if (page.url.pathname.startsWith('/projekte')) {
+      textReveal3(); // Animation erneut triggern
+    }
+  });
 </script>
 
 <nav class:disabled={!animationFinished}>
