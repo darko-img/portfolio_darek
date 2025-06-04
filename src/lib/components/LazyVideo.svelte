@@ -12,7 +12,7 @@
 
   onMount(() => {
     const isMobile = window.innerWidth <= 1024;
-    const thresholdValue = isMobile ? 0.3 : 0.01;
+    const thresholdValue = isMobile ? 0.3 : 0.1;
 
     const observer = new IntersectionObserver(
       async ([entry]) => {
@@ -44,7 +44,7 @@
       {muted}
       {loop}
       {playsinline}
-      preload="none"
+      preload="metadata"
     ></video>
   {:else}
     <div class="placeholder"></div>
