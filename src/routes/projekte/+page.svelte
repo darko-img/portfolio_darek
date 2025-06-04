@@ -17,7 +17,11 @@
     };
     mediaQuery.addEventListener('change', handler);
 
-    imageRevealAndMove();
+    // Animation erst starten, wenn Browser „Leerlauf“ hat
+    const idle = window.requestIdleCallback || ((cb) => setTimeout(cb, 150));
+    idle(() => {
+      imageRevealAndMove();
+    });
 
     return () => {
       mediaQuery.removeEventListener('change', handler);

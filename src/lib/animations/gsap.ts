@@ -43,20 +43,20 @@ export const imageRevealAndMove = (
   tl.fromTo(
     selectors.textReveal3,
     { yPercent: -150 },
-    { yPercent: 0, duration: 1.0, stagger: 0.05, ease: defaultEase }
+    { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
   );
 
   tl.fromTo(
     selectors.work,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
-    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, ease: defaultEase },
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, stagger: 0.05, ease: defaultEase, force3D: true },
     "<0.75"
   );
 
   tl.fromTo(
     selectors.workSection,
     { yPercent: -25 },
-    { yPercent: 0, duration: 1.5, ease: defaultEase },
+    { yPercent: 0, duration: 1.5, ease: defaultEase, force3D: true },
     "<"
   );
 
