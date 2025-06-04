@@ -18,7 +18,7 @@
   checkScreen();
   window.addEventListener('resize', checkScreen);
 
-  // 👇 hier wird "projekte"-Seite im Hintergrund vorgeladen
+  // hier wird "projekte"-Seite im Hintergrund vorgeladen
   prefetchRoutes(['projekte']);
 
   const MIN_LOADER_TIME = 500;
