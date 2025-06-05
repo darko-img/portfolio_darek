@@ -44,7 +44,7 @@
       {muted}
       {loop}
       {playsinline}
-      preload="auto"
+      preload="none"
     ></video>
   {:else}
     <div class="placeholder"></div>
@@ -62,7 +62,7 @@
   }
 
   .placeholder {
-    background-color: #888;
+    background-color: #f7f5f2;
     width: 100%;
     aspect-ratio: 16 / 9;
   }

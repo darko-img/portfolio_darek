@@ -37,26 +37,27 @@ export const imageRevealAndMove = (
     textReveal3: ".text-reveal3",
     work: ".work",
     workSection: ".work-section",
-    title: ".title"
+    title: ".title",
+    place: ".placeholder"
   }
 ) => {
   tl.fromTo(
     selectors.textReveal3,
     { yPercent: -150 },
-    { yPercent: 0, duration: 1.0, ease: defaultEase, force3D: true }
+    { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
   );
 
   tl.fromTo(
     selectors.work,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
-    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, ease: defaultEase, force3D: true },
-    "<1.0"
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.25, ease: defaultEase, force3D: true },
+    "<0.75"
   );
 
   tl.fromTo(
     selectors.workSection,
-    { yPercent: -25, scale: 0.5 },
-    { yPercent: 0, scale: 1, duration: 1.5, ease: defaultEase, force3D: true },
+    { yPercent: -20, scale: 0.5 },
+    { yPercent: 0, scale: 1, duration: 1.25, ease: defaultEase, force3D: true },
     "<"
   );
 
