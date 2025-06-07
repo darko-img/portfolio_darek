@@ -26,7 +26,7 @@
 
 <div class="about">
   <div class="col-1">
-    <p>Geboren 1991 in Stettin, Polen, war ich schon früh der Junge,
+    <p class="t-reveal">Geboren 1991 in Stettin, Polen, war ich schon früh der Junge,
       der immer ein Blatt Papier und einen Stift zur Hand hatte.
       Kunst war für mich mehr als nur Zeitvertreib – sie war mein
       Fenster zur Welt. Mit vier Jahren zog ich mit meiner Mutter
@@ -39,13 +39,13 @@
 
   <div class="col-2">
     <div class="section">
-      <p>Heute bin ich Motion Designer und angehender Webdesigner –
+      <p class="t-reveal">Heute bin ich Motion Designer und angehender Webdesigner –
         mit einer tiefen Leidenschaft für Gestaltung, die sich bewegt und
         verändert. Ich liebe es, Ideen nicht nur sichtbar, sondern
         auch erlebbar zu machen.</p>
     </div>
     <div class="section">
-      <p>Der Weg dahin war alles andere als linear. Ich habe ausprobiert,
+      <p class="t-reveal">Der Weg dahin war alles andere als linear. Ich habe ausprobiert,
         verworfen, neu angefangen. Was sich aber nie geändert hat:
         Mein Blick für Details und mein Wunsch, Emotionen durch Design
         auszulösen. Ich glaube fest daran, dass gutes Design nicht nur
@@ -54,7 +54,7 @@
         Mutig, klar und aufregend.</p>
     </div>
     <div class="section">
-      <p>Gestaltung beginnt für mich mit Beobachtung. Wenn ich nicht
+      <p class="t-reveal">Gestaltung beginnt für mich mit Beobachtung. Wenn ich nicht
         entwerfe, zeichne ich – oder lasse mich von Natur, alten Schriften
         oder der Stadt inspirieren. Ich mag den Kontrast zwischen Alt
         und Neu, zwischen Gefühl und System. Und: Gute Gestaltung lebt
@@ -62,19 +62,19 @@
         zwischen Mensch und Medium.</p>
     </div>
     <div class="section">
-      <p>Ich liebe es, Dinge zum Leben zu erwecken – ob durch Animationen
+      <p class="t-reveal">Ich liebe es, Dinge zum Leben zu erwecken – ob durch Animationen
         oder durch eine durchdachte visuelle Struktur. Ich achte sehr auf
         die Feinheiten, die andere vielleicht übersehen, weil ich weiß, dass
         genau dort oft die Magie liegt.</p>
     </div>
      <div class="section">
-      <p>Ich arbeite besonders gern mit Menschen, die neugierig und mit
+      <p class="t-reveal">Ich arbeite besonders gern mit Menschen, die neugierig und mit
         dem Herzen bei der Sache sind. Die verstehen, dass Design mehr
         ist als Dekoration – es ist Kommunikation, Leidenschaft und
         Liebe.</p>
     </div>
     <div class="section">
-      <p>&#169; Dariusz Tomaszewski</p>
+      <p class="t-reveal">&#169; Dariusz Tomaszewski</p>
     </div>
 
   </div>
