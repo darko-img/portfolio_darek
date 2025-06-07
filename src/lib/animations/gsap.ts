@@ -81,7 +81,7 @@ export const aboutReveal = (
 ) => {
   tl.fromTo(
     selectors.about,
-    { yPercent: -30, opacity: 0, },
+    { yPercent: -40, opacity: 0, },
     { yPercent: 0, opacity: 1, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
   );
 
