@@ -144,7 +144,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding-right: 10rem;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
 }
 
 .spacer {
@@ -218,9 +218,6 @@ header {
   } */
   .letter2 {
   font-size: 45.5vw;
-  }
-  .about-wrapper {
-  padding-bottom: 5rem;
   }
 }
 

@@ -41,8 +41,6 @@ footer {
     pointer-events: none;
 
     padding-bottom: env(safe-area-inset-bottom);
-
-    margin-top: 2.5rem;
   }
 
   .social-block {

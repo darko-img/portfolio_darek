@@ -215,7 +215,7 @@
     height: 100%;
     width: 100%;
     margin-top: 8rem;
-    margin-bottom: 5rem;
+    padding-bottom: 5rem;
 
     padding-right: 10rem;
 
