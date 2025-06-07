@@ -188,6 +188,10 @@ header {
   will-change: opacity;
 }
 
+.trev {
+  overflow: hidden;
+}
+
 @media (max-width: 1024px) {
   main {
     margin-top: 2rem;
