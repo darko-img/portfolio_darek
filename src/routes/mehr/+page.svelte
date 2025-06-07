@@ -11,11 +11,18 @@
 
 <header>
 
-<span class="daro">
+<!-- <span class="daro">
   <span class="letter about-reveal">D</span>
   <span class="letter about-reveal">A</span>
   <span class="letter about-reveal">R</span>
   <span class="letter about-reveal">O</span>
+</span> -->
+
+<span class="year">
+  <span class="letter2 about-reveal">1</span>
+  <span class="letter2 about-reveal">9</span>
+  <span class="letter2 about-reveal">9</span>
+  <span class="letter2 about-reveal">1</span>
 </span>
 
 </header>
@@ -82,14 +89,6 @@
 
 </div>
 
-
-<span class="year">
-  <span class="letter2 about-reveal">1</span>
-  <span class="letter2 about-reveal">9</span>
-  <span class="letter2 about-reveal">9</span>
-  <span class="letter2 about-reveal">1</span>
-</span>
-
 </main>
 
 <style>
@@ -108,12 +107,12 @@ header {
   position: static;
 }
 
-.daro {
+/* .daro {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-}
+} */
 
 .year {
   width: 100%;
@@ -123,13 +122,13 @@ header {
   position: static;
 }
 
-.letter {
+/* .letter {
   font-size: 32vw;
   line-height: 0.8;
   display: inline-block;
   margin: 0;
   padding: 0;
-}
+} */
 
 .letter2 {
   font-size: 32vw;
@@ -145,6 +144,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding-right: 10rem;
+  padding-bottom: 2rem;
 }
 
 .spacer {
@@ -198,9 +198,9 @@ header {
   .spacer {
   display: none;
   }
-  .letter {
+  /* .letter {
   font-size: 33.5vw;
-  }
+  } */
   .letter2 {
   font-size: 46vw;
   }
@@ -213,11 +213,14 @@ header {
   .about p {
   font-size: 2vw;
   }
-  .letter {
+  /* .letter {
   font-size: 33vw;
-  }
+  } */
   .letter2 {
   font-size: 45.5vw;
+  }
+  .about-wrapper {
+  padding-bottom: 5rem;
   }
 }
 
@@ -225,9 +228,9 @@ header {
   .about p {
   font-size: 3vw;
   }
-  .letter {
+  /* .letter {
   font-size: 31.75vw;
-  }
+  } */
   .letter2 {
   font-size: 43.5vw;
   }
