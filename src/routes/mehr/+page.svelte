@@ -100,6 +100,7 @@ main {
   height: 100vh;
   padding: 1rem;
   pointer-events: none;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 header {
