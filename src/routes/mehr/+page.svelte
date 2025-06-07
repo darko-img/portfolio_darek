@@ -202,7 +202,10 @@ header {
   font-size: 33.5vw;
   } */
   .letter2 {
-  font-size: 46vw;
+  font-size: 49vw;
+  }
+  .year {
+  justify-content: center;
   }
 }
 
@@ -217,7 +220,10 @@ header {
   font-size: 33vw;
   } */
   .letter2 {
-  font-size: 45.5vw;
+  font-size: 49vw;
+  }
+  .year {
+  justify-content: center;
   }
 }
 
@@ -229,7 +235,10 @@ header {
   font-size: 31.75vw;
   } */
   .letter2 {
-  font-size: 43.5vw;
+  font-size: 48vw;
+  }
+  .year {
+  justify-content: center;
   }
 }
 
