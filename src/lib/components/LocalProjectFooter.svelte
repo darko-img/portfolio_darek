@@ -74,7 +74,7 @@ footer {
 
 
 
-@media (max-width: 390px) {
+@media (max-width: 450px) {
   footer {
     font-size: 3vw;
     }

@@ -62,7 +62,7 @@
   }
 
   .placeholder {
-    background-color: #f7f5f2;
+    background-color: #888;
     width: 100%;
     aspect-ratio: 16 / 9;
   }

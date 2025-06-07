@@ -81,7 +81,7 @@
 
 
 
-@media (max-width: 390px) {
+@media (max-width: 450px) {
   .warten {
     font-size: 1.5vw;
     }

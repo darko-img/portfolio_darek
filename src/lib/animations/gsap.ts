@@ -64,8 +64,32 @@ export const imageRevealAndMove = (
   tl.fromTo(
     selectors.title,
     { opacity: 0 },
-    { opacity: 1, duration: 0.1, force3D: true },
+    { opacity: 1, duration: 0.1, ease: defaultEase, force3D: true },
     "<0.5"
+  );
+
+  return tl;
+};
+
+export const aboutReveal = (
+  tl = gsap.timeline(),
+  selectors = {
+    about: ".about-reveal",
+    portrait: ".portrait",
+    aboutText: ".about",
+  }
+) => {
+  tl.fromTo(
+    selectors.about,
+    { yPercent: -50, opacity: 0, },
+    { yPercent: 0, opacity: 1, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
+  );
+
+  tl.fromTo(
+    selectors.portrait,
+    { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.25, ease: defaultEase, force3D: true },
+    "<0.75"
   );
 
   return tl;

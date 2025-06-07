@@ -178,7 +178,7 @@ canvas {
 @media (max-width: 1024px) {
 
   .info-block {
-    margin-top: 5rem;
+    margin-top: 3.5rem;
   }
 
   h1, h2 {
@@ -188,14 +188,7 @@ canvas {
   }
 }
 
-
-
-@media (max-width: 390px) {
-
-  .info-block {
-    margin-top: 5rem;
-  }
-
+@media (max-width: 450px) {
   h1, h2 {
   font-size: 3.2vw;
   line-height: 1.35;

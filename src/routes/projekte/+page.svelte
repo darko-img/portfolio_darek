@@ -205,7 +205,7 @@
   }
 
   .work-wrapper {
-    width: 60vw;
+    width: 65vw;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -242,7 +242,7 @@
 
 
 
-@media (max-width: 390px) {
+@media (max-width: 450px) {
 
   p {
     font-size: 3vw;

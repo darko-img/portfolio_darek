@@ -74,6 +74,17 @@
       >Projekte</a>
     </li>
 
+    <li class="projekte text-wrapper">
+      <a
+      href="/mehr"
+      class="line text-reveal2"
+      class:active={page.url.pathname.startsWith('/mehr')}
+      class:inactive={!animationFinished}
+      tabindex={animationFinished ? 0 : -1}
+      aria-disabled={!animationFinished}
+      >Mehr</a>
+    </li>
+
   </ul>
 
 </nav>
@@ -131,14 +142,14 @@ nav {
 
   .menu {
   flex-direction: row;
-  gap: 4rem;
+  gap: 2.25rem;
   line-height: 1.2;
     }
 }
 
 
 
-@media (max-width: 390px) {
+@media (max-width: 450px) {
   nav {
     font-size: 3vw;
     }
