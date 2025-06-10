@@ -159,11 +159,10 @@ main {
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Zwei gleich breite Spalten */
-  gap: 2rem; /* Abstand zwischen den Spalten */
   max-width: 1000px;
   margin: 0 auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  gap: 1rem;
+  margin-top: 2rem;
   position: relative;
 }
 
