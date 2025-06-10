@@ -96,7 +96,7 @@ export const aboutReveal = (
     selectors.tReveal,
     { opacity: 0 },
     { opacity: 1, duration: 0.5, ease: defaultEase, force3D: true },
-    "<0.5"
+    "<0.35"
   );
 
   return tl;
