@@ -214,7 +214,7 @@
   .work-flex {
     height: 100%;
     width: 100%;
-    margin-top: 8rem;
+    margin-top: 10rem;
     padding-bottom: 5rem;
 
     padding-right: 10rem;

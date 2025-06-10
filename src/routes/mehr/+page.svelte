@@ -23,18 +23,19 @@
   </div>
 
   <div class="col-1">
-    <p class="t-reveal">Geboren 1991 in Stettin, Polen, war ich schon früh der Junge,
+    <div class="section">
+      <p class="t-reveal">Geboren 1991 in Stettin, Polen, war ich schon früh der Junge,
       der immer ein Blatt Papier und einen Stift zur Hand hatte.
       Kunst war für mich mehr als nur Zeitvertreib – sie war mein
       Fenster zur Welt. Mit vier Jahren zog ich mit meiner Mutter
       nach Berlin – ganz spontan, ohne zu wissen, was uns erwartet.
       Die Stadt hat mich geprägt, ihr Rhythmus, ihre Farben, ihre
       Vielfalt und Dynamik.</p>
+     </div>
 
+    <div class="section">
       <img src="/darek_jung.webp" alt="Dariusz Porträt" class="portrait" />
-  </div>
-
-  <div class="col-2">
+    </div>
 
     <div class="section">
       <p class="t-reveal">2017 habe ich meinen Abschluss als Grafikdesigner am
@@ -45,12 +46,14 @@
         perfekt zu meiner eigenen Arbeitsweise und hat mich auf meinem Weg als
         Designer entscheidend geprägt.</p>
       </div>
-    <div class="section">
+
+      <div class="section">
       <p class="t-reveal">Heute bin ich Motion Designer und angehender Webdesigner –
         mit einer tiefen Leidenschaft für Gestaltung, die sich bewegt und
         verändert. Ich liebe es, Ideen nicht nur sichtbar, sondern
         auch erlebbar zu machen.</p>
     </div>
+
     <div class="section">
       <p class="t-reveal">Der Weg dahin war alles andere als linear.
         Ich habe ausprobiert, verworfen, neu angefangen. Was sich aber nie geändert hat:
@@ -60,6 +63,11 @@
         Funktion erfüllt, Design ist nie willkürlich, es ist eine Reise.
         Mutig, klar und aufregend.</p>
     </div>
+
+  </div>
+
+  <div class="col-2">
+
     <div class="section">
       <p class="t-reveal">Heute beginnt Gestaltung für mich mit Beobachtung – sei es in
         der Natur, in alten Schriften oder im Stadtbild. Ich mag den Kontrast
@@ -68,6 +76,7 @@
         Objekt, zwischen Mensch und Medium. Der kreative Freiraum,
         den mir Graffiti damals eröffnet hat, inspiriert mich bis heute.</p>
     </div>
+
     <div class="section">
       <p class="t-reveal">2025 habe ich erfolgreich ein Full-Stack-Web-Developer-Bootcamp
         bei Le Wagon in Berlin abgeschlossen. Diese intensive Ausbildung hat meine
@@ -76,6 +85,11 @@
         kann ich heute Projekte gestalten, die nicht nur visuell überzeugen, sondern auch
         funktional und interaktiv sind.</p>
     </div>
+
+    <div class="section">
+      <img src="/abschluss_lewagon.webp" alt="Abschluss LeWagon" class="portrait" />
+    </div>
+
     <div class="section">
       <p class="t-reveal">Ich liebe es, Dinge zum Leben zu erwecken – ob durch Animationen
         oder durch eine durchdachte visuelle Struktur. Ich achte sehr auf
@@ -86,10 +100,9 @@
       <p class="t-reveal">Ich arbeite besonders gern mit Menschen, die neugierig und mit
         dem Herzen bei der Sache sind. Die verstehen, dass Design mehr
         ist als Dekoration – es ist Kommunikation – und damit der Beginn jeder
-        echten Beziehung zwischen Mensch und Idee.</p>
-    </div>
-    <div class="section">
-      <p class="t-reveal">&#169; Dariusz Tomaszewski</p>
+        echten Beziehung zwischen Mensch und Idee.<br><br>
+
+        &#169; 2025 Dariusz Tomaszewski</p>
     </div>
 
   </div>
@@ -155,7 +168,7 @@ main {
 }
 
 .section + .section {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .about p {
@@ -168,7 +181,6 @@ main {
 .portrait {
   width: 100%;
   height: auto;
-  margin-top: 2rem;
   object-fit: cover;
 }
 
