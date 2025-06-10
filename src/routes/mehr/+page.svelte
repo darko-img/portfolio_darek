@@ -32,7 +32,7 @@
       Fenster zur Welt. Mit vier Jahren zog ich mit meiner Mutter
       nach Berlin – ganz spontan, ohne zu wissen, was uns erwartet.
       Die Stadt hat mich geprägt, ihr Rhythmus, ihre Farben, ihre
-      Vielfalt, ihre Dynamik.</p>
+      Vielfalt und Dynamik.</p>
 
       <img src="/darek_jung.webp" alt="Dariusz Porträt" class="portrait" />
   </div>
@@ -45,8 +45,8 @@
         auch erlebbar zu machen.</p>
     </div>
     <div class="section">
-      <p class="t-reveal">Der Weg dahin war alles andere als linear. Ich habe ausprobiert,
-        verworfen, neu angefangen. Was sich aber nie geändert hat:
+      <p class="t-reveal">Der Weg dahin war alles andere als linear.
+        Ich habe ausprobiert, verworfen, neu angefangen. Was sich aber nie geändert hat:
         Mein Blick für Details und mein Wunsch, Emotionen durch Design
         auszulösen. Ich glaube fest daran, dass gutes Design nicht nur
         gut aussieht – sondern etwas in uns auslöst und gleichzeitig eine
@@ -54,12 +54,15 @@
         Mutig, klar und aufregend.</p>
     </div>
     <div class="section">
-      <p class="t-reveal">Gestaltung beginnt für mich mit Beobachtung. Wenn ich nicht
-        entwerfe, zeichne ich – oder lasse mich von Natur, alten Schriften
-        oder der Stadt inspirieren. Ich mag den Kontrast zwischen Alt
-        und Neu, zwischen Gefühl und System. Und: Gute Gestaltung lebt
-        für mich von Interaktion – zwischen Nutzer und Objekt,
-        zwischen Mensch und Medium.</p>
+      <p class="t-reveal">Die Wände der Stadt waren meine ersten Leinwände, der urbane
+        Raum mein Atelier. Diese frühen Erfahrungen haben mich geprägt
+        und meine Sicht auf Gestaltung grundlegend beeinflusst.
+        Heute beginnt Gestaltung für mich mit Beobachtung – sei es in
+        der Natur, in alten Schriften oder im Stadtbild. Ich mag den Kontrast
+        zwischen Alt und Neu, zwischen Gefühl und System. Und: Gute
+        Gestaltung lebt für mich von Interaktion – zwischen Nutzer*in und
+        Objekt, zwischen Mensch und Medium. Der kreative Freiraum,
+        den mir Graffiti damals eröffnet hat, inspiriert mich bis heute.</p>
     </div>
     <div class="section">
       <p class="t-reveal">Ich liebe es, Dinge zum Leben zu erwecken – ob durch Animationen
@@ -70,8 +73,8 @@
      <div class="section">
       <p class="t-reveal">Ich arbeite besonders gern mit Menschen, die neugierig und mit
         dem Herzen bei der Sache sind. Die verstehen, dass Design mehr
-        ist als Dekoration – es ist Kommunikation, Leidenschaft und
-        Liebe.</p>
+        ist als Dekoration – es ist Kommunikation – und damit der Beginn jeder
+        echten Beziehung zwischen Mensch und Idee.</p>
     </div>
     <div class="section">
       <p class="t-reveal">&#169; Dariusz Tomaszewski</p>
@@ -92,6 +95,7 @@ main {
   height: 100vh;
   padding: 1rem;
   pointer-events: none;
+  margin: 0;
 }
 
 header {
@@ -172,7 +176,7 @@ header {
 
 @media (max-width: 1024px) {
   main {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
   .about-wrapper {
   padding-right: 0;
@@ -180,9 +184,6 @@ header {
   .spacer {
   display: none;
   }
-  /* .letter {
-  font-size: 33.5vw;
-  } */
   .letter2 {
   font-size: 49vw;
   }
@@ -195,9 +196,6 @@ header {
   .about p {
   font-size: 2vw;
   }
-  /* .letter {
-  font-size: 33vw;
-  } */
   .letter2 {
   font-size: 49vw;
   }
@@ -207,9 +205,6 @@ header {
   .about p {
   font-size: 3vw;
   }
-  /* .letter {
-  font-size: 31.75vw;
-  } */
   .letter2 {
   font-size: 48vw;
   }
