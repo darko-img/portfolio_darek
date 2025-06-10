@@ -120,7 +120,7 @@ main {
   width: 100%;
   flex-wrap: nowrap;
   max-width: 100vw;
-  gap: 0.05rem;
+  gap: 0.025rem;
 }
 
 .letter2 {
@@ -215,7 +215,7 @@ main {
   font-size: 3.5vw;
   }
   .letter2 {
-  font-size: 48vw;
+  font-size: 47vw;
   }
 }
 
