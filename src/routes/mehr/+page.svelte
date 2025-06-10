@@ -9,29 +9,22 @@
 
 <main>
 
-<header>
+<header></header>
 
-<!-- <span class="daro">
-  <span class="letter about-reveal">D</span>
-  <span class="letter about-reveal">A</span>
-  <span class="letter about-reveal">R</span>
-  <span class="letter about-reveal">O</span>
-</span> -->
-
-<span class="year">
-  <span class="letter2 about-reveal">1</span>
-  <span class="letter2 about-reveal">9</span>
-  <span class="letter2 about-reveal">9</span>
-  <span class="letter2 about-reveal">1</span>
-</span>
-
-</header>
 
 <div class="about-wrapper">
 
 <div class="spacer"></div>
 
 <div class="about">
+
+   <div class="year-row">
+    <span class="letter2 about-reveal">1</span>
+    <span class="letter2 about-reveal">9</span>
+    <span class="letter2 about-reveal">9</span>
+    <span class="letter2 about-reveal">1</span>
+  </div>
+
   <div class="col-1">
     <p class="t-reveal">Geboren 1991 in Stettin, Polen, war ich schon früh der Junge,
       der immer ein Blatt Papier und einen Stift zur Hand hatte.
@@ -107,32 +100,20 @@ header {
   position: static;
 }
 
-/* .daro {
-  width: 100%;
+.year-row {
+  grid-column: 1 / -1;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-} */
-
-.year {
+  justify-content: center;
+  overflow: hidden;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  position: static;
+  flex-wrap: nowrap;
+  max-width: 100vw;
 }
 
-/* .letter {
-  font-size: 32vw;
-  line-height: 0.8;
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-} */
-
 .letter2 {
-  font-size: 32vw;
+  font-size: 34vw;
   line-height: 0.8;
+  white-space: nowrap;
   display: inline-block;
   margin: 0;
   padding: 0;
@@ -160,6 +141,7 @@ header {
   margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  position: relative;
 }
 
 .section + .section {
@@ -188,10 +170,6 @@ header {
   will-change: opacity;
 }
 
-.trev {
-  overflow: hidden;
-}
-
 @media (max-width: 1024px) {
   main {
     margin-top: 2rem;
@@ -208,9 +186,6 @@ header {
   .letter2 {
   font-size: 49vw;
   }
-  .year {
-  justify-content: center;
-  }
 }
 
 @media (max-width: 768px) {
@@ -226,9 +201,6 @@ header {
   .letter2 {
   font-size: 49vw;
   }
-  .year {
-  justify-content: center;
-  }
 }
 
 @media (max-width: 450px) {
@@ -240,9 +212,6 @@ header {
   } */
   .letter2 {
   font-size: 48vw;
-  }
-  .year {
-  justify-content: center;
   }
 }
 
