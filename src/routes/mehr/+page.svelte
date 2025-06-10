@@ -30,7 +30,7 @@
       Fenster zur Welt. Mit vier Jahren zog ich mit meiner Mutter
       nach Berlin – ganz spontan, ohne zu wissen, was uns erwartet.
       Die Stadt hat mich geprägt, ihr Rhythmus, ihre Farben, ihre
-      Vielfalt und Dynamik.</p>
+      Vielfalt.</p>
      </div>
 
     <div class="section">
