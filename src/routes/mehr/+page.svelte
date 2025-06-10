@@ -9,9 +9,6 @@
 
 <main>
 
-<header></header>
-
-
 <div class="about-wrapper">
 
 <div class="spacer"></div>
@@ -38,6 +35,16 @@
   </div>
 
   <div class="col-2">
+
+    <div class="section">
+      <p class="t-reveal">2017 habe ich meinen Abschluss als Grafikdesigner am
+        Lette-Verein in Berlin gemacht. Diese Ausbildung hat mir nicht nur fundierte
+        technische Fähigkeiten vermittelt, sondern auch meinen gestalterischen
+        Blick geschärft und meine kreative Persönlichkeit weiterentwickelt.
+        Der Lette-Verein, mit seiner Mischung aus Tradition und Innovation, passte
+        perfekt zu meiner eigenen Arbeitsweise und hat mich auf meinem Weg als
+        Designer entscheidend geprägt.</p>
+      </div>
     <div class="section">
       <p class="t-reveal">Heute bin ich Motion Designer und angehender Webdesigner –
         mit einer tiefen Leidenschaft für Gestaltung, die sich bewegt und
@@ -63,6 +70,14 @@
         Gestaltung lebt für mich von Interaktion – zwischen Nutzer*in und
         Objekt, zwischen Mensch und Medium. Der kreative Freiraum,
         den mir Graffiti damals eröffnet hat, inspiriert mich bis heute.</p>
+    </div>
+    <div class="section">
+      <p class="t-reveal">2025 habe ich erfolgreich ein Full-Stack-Web-Developer-Bootcamp
+        bei Le Wagon in Berlin abgeschlossen. Diese intensive Ausbildung hat meine
+        technischen Fähigkeiten erweitert und mir ermöglicht, kreative Konzepte auch digital
+        ganzheitlich umzusetzen. Durch die Kombination aus Design- und Programmierkenntnissen
+        kann ich heute Projekte gestalten, die nicht nur visuell überzeugen, sondern auch
+        funktional und interaktiv sind.</p>
     </div>
     <div class="section">
       <p class="t-reveal">Ich liebe es, Dinge zum Leben zu erwecken – ob durch Animationen
@@ -95,13 +110,6 @@ main {
   height: 100vh;
   padding: 1rem;
   pointer-events: none;
-  margin: 0;
-}
-
-header {
-  width: 100%;
-  top: 0;
-  position: static;
 }
 
 .year-row {
@@ -112,6 +120,7 @@ header {
   width: 100%;
   flex-wrap: nowrap;
   max-width: 100vw;
+  gap: 0.05rem;
 }
 
 .letter2 {
@@ -175,9 +184,6 @@ header {
 }
 
 @media (max-width: 1024px) {
-  main {
-    margin-top: 1rem;
-  }
   .about-wrapper {
   padding-right: 0;
   }
@@ -185,8 +191,11 @@ header {
   display: none;
   }
   .letter2 {
-  font-size: 49vw;
+  font-size: 50vw;
   }
+  .year-row {
+  gap: 0;
+}
 }
 
 @media (max-width: 768px) {
@@ -203,7 +212,7 @@ header {
 
 @media (max-width: 450px) {
   .about p {
-  font-size: 3vw;
+  font-size: 3.5vw;
   }
   .letter2 {
   font-size: 48vw;
