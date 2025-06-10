@@ -61,10 +61,7 @@
         Mutig, klar und aufregend.</p>
     </div>
     <div class="section">
-      <p class="t-reveal">Die Wände der Stadt waren meine ersten Leinwände, der urbane
-        Raum mein Atelier. Diese frühen Erfahrungen haben mich geprägt
-        und meine Sicht auf Gestaltung grundlegend beeinflusst.
-        Heute beginnt Gestaltung für mich mit Beobachtung – sei es in
+      <p class="t-reveal">Heute beginnt Gestaltung für mich mit Beobachtung – sei es in
         der Natur, in alten Schriften oder im Stadtbild. Ich mag den Kontrast
         zwischen Alt und Neu, zwischen Gefühl und System. Und: Gute
         Gestaltung lebt für mich von Interaktion – zwischen Nutzer*in und
