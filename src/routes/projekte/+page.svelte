@@ -243,7 +243,7 @@ span {
 
 @media (max-width: 1024px) {
   main {
-    padding: 12rem 1rem 1rem 1rem;
+    padding: 10rem 1rem 1rem 1rem;
   }
 
   p {
