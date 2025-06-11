@@ -7,7 +7,7 @@
   });
 </script>
 
-<main>
+<main class="main">
 
 <div class="about-wrapper">
 
@@ -16,13 +16,14 @@
 <div class="about">
 
    <div class="year-row">
-    <span class="letter2 about-reveal">1</span>
-    <span class="letter2 about-reveal">9</span>
-    <span class="letter2 about-reveal">9</span>
-    <span class="letter2 about-reveal">1</span>
+    <span class="letter about-reveal">1</span>
+    <span class="letter about-reveal">9</span>
+    <span class="letter about-reveal">9</span>
+    <span class="letter about-reveal">1</span>
   </div>
 
   <div class="col-1">
+
     <div class="section">
       <p class="t-reveal">Geboren 1991 in Stettin, Polen, war ich schon früh der Junge,
       der immer ein Blatt Papier und einen Stift zur Hand hatte.
@@ -73,8 +74,7 @@
         der Natur, in alten Schriften oder im Stadtbild. Ich mag den Kontrast
         zwischen Alt und Neu, zwischen Gefühl und System. Und: Gute
         Gestaltung lebt für mich von Interaktion – zwischen Nutzer*in und
-        Objekt, zwischen Mensch und Medium. Der kreative Freiraum,
-        den mir Graffiti damals eröffnet hat, inspiriert mich bis heute.</p>
+        Objekt, zwischen Mensch und Medium.</p>
     </div>
 
     <div class="section">
@@ -96,16 +96,18 @@
         die Feinheiten, die andere vielleicht übersehen, weil ich weiß, dass
         genau dort oft die Magie liegt.</p>
     </div>
+
      <div class="section">
       <p class="t-reveal">Ich arbeite besonders gern mit Menschen, die neugierig und mit
         dem Herzen bei der Sache sind. Die verstehen, dass Design mehr
         ist als Dekoration – es ist Kommunikation – und damit der Beginn jeder
         echten Beziehung zwischen Mensch und Idee.<br><br>
 
-        &#169; 2025 Dariusz Tomaszewski</p>
-    </div>
+        &copy; 2025 Dariusz Tomaszewski.<br>Alle Rechte vorbehalten.</p>
+      </div>
 
   </div>
+
 </div>
 
 </div>
@@ -118,8 +120,12 @@ main {
   inset: 0;
   width: 100%;
   height: 100vh;
-  padding: 1rem;
   pointer-events: none;
+
+  padding: 1rem 12rem 1rem 1rem;
+
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
 }
 
 .year-row {
@@ -129,17 +135,16 @@ main {
   overflow: hidden;
   width: 100%;
   flex-wrap: nowrap;
-  max-width: 100vw;
-  gap: 0.025rem;
 }
 
-.letter2 {
+.letter {
   font-size: 34vw;
   line-height: 0.8;
   white-space: nowrap;
   display: inline-block;
   margin: 0;
   padding: 0;
+  /* outline: 1px solid red; */
 }
 
 .about-wrapper {
@@ -147,8 +152,8 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-right: 10rem;
-  padding-bottom: 5rem;
+
+  padding-bottom: 7rem;
 }
 
 .spacer {
@@ -158,11 +163,10 @@ main {
 
 .about {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Zwei gleich breite Spalten */
+  grid-template-columns: 1fr 1fr;
   max-width: 1000px;
   margin: 0 auto;
   gap: 1rem;
-  margin-top: 2rem;
   position: relative;
 }
 
@@ -175,6 +179,10 @@ main {
   hyphens: auto;
   font-size: 1vw;
   line-height: 1.35;
+}
+
+.col-1 .section:first-of-type p {
+  text-indent: 2em;
 }
 
 .portrait {
@@ -192,13 +200,13 @@ main {
 }
 
 @media (max-width: 1024px) {
-  .about-wrapper {
-  padding-right: 0;
+  main {
+  padding: 2rem 1rem 1rem 1rem;
   }
   .spacer {
   display: none;
   }
-  .letter2 {
+  .letter {
   font-size: 50vw;
   }
   .year-row {
@@ -213,16 +221,16 @@ main {
   .about p {
   font-size: 2vw;
   }
-  .letter2 {
+  .letter {
   font-size: 49vw;
   }
 }
 
 @media (max-width: 450px) {
   .about p {
-  font-size: 3.5vw;
+  font-size: 3vw;
   }
-  .letter2 {
+  .letter {
   font-size: 47vw;
   }
 }

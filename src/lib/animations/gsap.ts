@@ -35,10 +35,10 @@ export const imageRevealAndMove = (
   tl = gsap.timeline(),
   selectors = {
     textReveal3: ".text-reveal3",
-    work: ".work",
+    work: ".work-video",
     workSection: ".work-section",
     title: ".title",
-    place: ".placeholder"
+    project: ".projekt-text"
   }
 ) => {
   tl.fromTo(
@@ -62,10 +62,17 @@ export const imageRevealAndMove = (
   );
 
   tl.fromTo(
-    selectors.title,
+    selectors.project,
     { opacity: 0 },
     { opacity: 1, duration: 0.1, ease: defaultEase, force3D: true },
     "<0.5"
+  );
+
+  tl.fromTo(
+    selectors.title,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.1, ease: defaultEase, force3D: true },
+    "<"
   );
 
   return tl;

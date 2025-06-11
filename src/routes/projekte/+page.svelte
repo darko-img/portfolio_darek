@@ -1,4 +1,5 @@
 <script>
+
   import { onMount } from 'svelte';
   import LocalFooter from '$lib/components/LocalProjectFooter.svelte';
   import { imageRevealAndMove } from '$lib/animations/gsap';
@@ -23,238 +24,257 @@
       mediaQuery.removeEventListener('change', handler);
     };
   });
+
 </script>
 
-<main>
+<main class="main">
 
-  <div class="work-flex">
+  <div class="work-wrapper">
 
-    <div class="work-wrapper">
+    <div class="work">
 
-      <div class="work-section">
+      <div class="col-1">
 
-        <div class="work">
-          <LazyVideo
-          src="/Videos/cube_nuss_snippet_neu.mp4"
-          autoplay
-          muted
-          playsinline
-          loop
-          />
+        <div class="projekt-text">
+          <span>2017–</span>
+          <span>24</span>
         </div>
 
-        <div class="title" title="https://vimeo.com/1078624279">
-          <p>Nussknagger [Animation, 3D] 2024</p>
-          <p>
-            <a
-              href="https://vimeo.com/1078624279??share=copy"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Projekt Tatort">Play</a>
-              </p>
-        </div>
+      </div>
 
-    </div>
+      <div class="col-2">
 
+        <section>
+          <div class="work-video">
+            <LazyVideo
+              src="/Videos/cube_nuss_snippet_neu.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            />
+          </div>
+          <div class="title" title="https://vimeo.com/1078624279">
+            <p>Nussknagger, 2024</p>
+            <p>
+              <a
+                href="https://vimeo.com/1078624279??share=copy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Projekt Tatort"
+              >Play</a>
+            </p>
+          </div>
+        </section>
 
-    <div class="work-section">
+        <section>
+          <div class="work-video">
+            <LazyVideo
+              src="/Videos/logo_nuss_snippet_neu.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            />
+          </div>
+          <div class="title" title="https://vimeo.com/1078624279">
+            <p>Nussknagger, 2024</p>
+            <p>
+              <a
+                href="https://vimeo.com/1078458176?share=copy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Projekt Tatort"
+              >Play</a>
+            </p>
+          </div>
+        </section>
 
-        <div class="work">
-          <LazyVideo
-          src="/Videos/logo_nuss_snippet_neu.mp4"
-          autoplay
-          muted
-          playsinline
-          loop
-          />
-        </div>
+        <section>
+          <div class="work-video">
+            <LazyVideo
+              src="/Videos/formen_2_snippet_neu.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            />
+          </div>
+          <div class="title" title="https://vimeo.com/1078624279">
+            <p>Formen 02, 2024</p>
+            <p>
+              <a
+                href="https://vimeo.com/1078455810?share=copy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Projekt Tatort"
+              >Play</a>
+            </p>
+          </div>
+        </section>
 
+        <section>
+          <div class="work-video">
+            <LazyVideo
+              src="/Videos/tatort_snippet_neu.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            />
+          </div>
+          <div class="title" title="https://vimeo.com/1078624279">
+            <p>Tatort, 2017</p>
+            <p>
+              <a
+                href="https://vimeo.com/1078457155?share=copy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Projekt Tatort"
+              >Play</a>
+            </p>
+          </div>
+        </section>
 
-        <div class="title" title="https://vimeo.com/1078624279">
-          <p>Nussknagger [Animation, 3D] 2024</p>
-          <p>
-            <a
-              href="https://vimeo.com/1078458176?share=copy"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Projekt Tatort">Play</a>
-              </p>
-        </div>
+        <section>
+          <div class="work-video">
+            <LazyVideo
+              src="/Videos/formen_snippet_neu.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            />
+          </div>
+          <div class="title" title="https://vimeo.com/1078624279">
+            <p>Formen, 2017</p>
+            <p>
+              <a
+                href="https://vimeo.com/1078637488?share=copy"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Projekt Tatort"
+              >Play</a>
+            </p>
+          </div>
+        </section>
 
-    </div>
-
-    <div class="work-section">
-
-
-        <div class="work">
-          <LazyVideo
-          src="/Videos/formen_2_snippet_neu.mp4"
-          autoplay
-          muted
-          playsinline
-          loop
-          />
-        </div>
-
-
-        <div class="title" title="https://vimeo.com/1078624279">
-          <p>Formen 02 [Animation, 3D, SoundFX] 2024</p>
-          <p>
-            <a
-              href="https://vimeo.com/1078455810?share=copy"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Projekt Tatort">Play</a>
-              </p>
-        </div>
-
-    </div>
-
-    <div class="work-section">
-
-
-        <div class="work">
-          <LazyVideo
-          src="/Videos/tatort_snippet_neu.mp4"
-          autoplay
-          muted
-          playsinline
-          loop
-          />
-        </div>
-
-
-        <div class="title" title="https://vimeo.com/1078624279">
-          <p>Tatort [Animation, 3D, SoundFX] 2017</p>
-          <p>
-            <a
-              href="https://vimeo.com/1078457155?share=copy"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Projekt Tatort">Play</a>
-              </p>
-        </div>
-
-    </div>
-
-
-     <div class="work-section">
-
-
-        <div class="work">
-          <LazyVideo
-          src="/Videos/formen_snippet_neu.mp4"
-          autoplay
-          muted
-          playsinline
-          loop
-          />
-        </div>
-
-
-        <div class="title" title="https://vimeo.com/1078624279">
-          <p>Formen [Animation, SoundFX] 2017</p>
-          <p>
-            <a
-              href="https://vimeo.com/1078637488?share=copy"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Projekt Tatort">Play</a>
-              </p>
-        </div>
-
-    </div>
+      </div>
 
     </div>
 
   </div>
 
   {#if showLocalFooter}
+  <div class="footer-wrapper">
     <LocalFooter />
-  {/if}
+  </div>
+{/if}
 
 </main>
 
 <style>
 
-  main {
-    width: 100%;
-    min-height: 100dvh;
+main {
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
 
-    overflow-y: auto;
-    overflow-x: hidden;
+  padding: 12rem 12rem 1rem 1rem;
 
-    padding: 1rem;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+}
 
-    overscroll-behavior: none;
-    -webkit-overflow-scrolling: auto;
-  }
+section + section {
+  margin-top: 1rem;
+}
 
-  .work-section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3rem;
-    will-change: transform;
-  }
+span {
+  font-size: 3vw;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
 
-  .title {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    will-change: opacity;
-  }
+.title {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  will-change: opacity;
+}
 
-  .work-wrapper {
-    width: 65vw;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+.work-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-  .work-flex {
-    height: 100%;
-    width: 100%;
-    margin-top: 10rem;
-    padding-bottom: 5rem;
+  padding-bottom: 7rem;
+}
 
-    padding-right: 10rem;
+.work {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin: 0 auto;
+  gap: 1rem;
+  position: relative;
+}
 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-  }
+.col-2 {
+  width: 1000px;
+}
 
+.col-1 {
+  width: 100%;
+}
+
+.projekt-text {
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-wrapper {
+  padding-bottom: 1rem;
+}
 
 @media (max-width: 1024px) {
+  main {
+    padding: 10rem 1rem 1rem 1rem;
+  }
 
   p {
     font-size: 1.5vw;
-    }
-
-  .work-flex {
-    padding-right: 0;
-    }
-
-  .work-wrapper {
-    width: 100%;
-    }
   }
 
+  .work {
+  grid-template-columns: 1fr;
+  }
 
+  .col-2 {
+  width: 100%;
+  }
+
+  .projekt-text {
+  position: static;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  }
+
+  span {
+  font-size: 5vw;
+  }
+}
 
 @media (max-width: 450px) {
-
   p {
     font-size: 3vw;
-    }
-
-  .work-flex {
-    padding-right: 0;
-    }
-
-  .work-wrapper {
-    width: 100%;
-    }
   }
+}
 
 </style>
