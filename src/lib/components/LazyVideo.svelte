@@ -54,7 +54,6 @@
   <video
     bind:this={videoRef}
     src={src}
-    poster="/preview.jpg"
     {muted}
     {loop}
     {playsinline}

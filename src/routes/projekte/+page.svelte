@@ -211,6 +211,8 @@ span {
   will-change: opacity;
 
   margin-top: 0.15rem;
+
+  opacity: 0;
 }
 
 .work-wrapper {
