@@ -14,7 +14,7 @@
 
   onMount(() => {
     const isMobile = window.innerWidth <= 1024;
-    const thresholdValue = isMobile ? 0.75 : 0.2;
+    const thresholdValue = isMobile ? 0.35 : 0.25;
 
     const observer = new IntersectionObserver(
       async ([entry]) => {
