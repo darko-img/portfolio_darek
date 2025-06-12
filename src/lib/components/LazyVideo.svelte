@@ -9,6 +9,8 @@
   export let playsinline = true;
 
   let videoRef;
+  let containerRef;
+  let inView = false;
 
   onMount(() => {
     const isMobile = window.innerWidth <= 1024;
@@ -17,21 +19,23 @@
     const observer = new IntersectionObserver(
       async ([entry]) => {
         if (entry.isIntersecting) {
+          inView = true;
           observer.disconnect();
           await tick();
 
           try {
-            await videoRef?.play();
+            videoRef?.play();
           } catch (e) {
             console.warn('Autoplay failed:', e);
           }
 
+          // ✨ Animation starten
           const section = entry.target.closest('section');
           if (section) {
             const selectors = {
               work: section.querySelector('.work-video'),
               workSection: section,
-              title: section.querySelector('.title'),
+              title: section.querySelector('.title')
             };
             const tl = gsap.timeline();
             observeReveal(tl, selectors);
@@ -41,30 +45,35 @@
       { threshold: thresholdValue }
     );
 
-    if (videoRef) observer.observe(videoRef);
+    if (containerRef) observer.observe(containerRef);
 
     return () => observer.disconnect();
   });
 </script>
 
-<video
-  bind:this={videoRef}
-  src={src}
-  {muted}
-  {loop}
-  {playsinline}
-  preload="none"
-  class="lazy-video"
-></video>
+<div bind:this={containerRef} class="video-wrapper">
+  <video
+    bind:this={videoRef}
+    src={src}
+    {muted}
+    {loop}
+    {playsinline}
+    preload="none"
+  ></video>
+</div>
 
 <style>
-  .lazy-video {
+  .video-wrapper {
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
+    position: relative;
+  }
+
+  video {
     object-fit: cover;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
     display: block;
-    will-change: clip-path;
+    aspect-ratio: 16 / 9;
   }
 </style>
