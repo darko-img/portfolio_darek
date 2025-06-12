@@ -23,7 +23,7 @@ export const textReveal2 = (
   selector = ".text-reveal2",
   duration = 1,
   stagger = 0.1,
-  delay = 0.5
+  delay = 0.35
 ) => {
   return defaultFromTo(
     selector,
@@ -33,7 +33,7 @@ export const textReveal2 = (
 };
 
 export const textRevealProject = (
-  tl = gsap.timeline(),
+  tl = gsap.timeline({ delay: 0.5 }),
   selectors = {
     textReveal3: ".text-reveal3",
   }
@@ -93,7 +93,7 @@ export const observeReveal = (
 
   tl.fromTo(
     selectors.workSection,
-    { yPercent: -40, scale: 0.5 },
+    { yPercent: -50, scale: 0.5 },
     { yPercent: 0, scale: 1, duration: 1.25, ease: defaultEase, force3D: true },
     "<"
   );
