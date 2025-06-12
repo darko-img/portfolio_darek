@@ -14,7 +14,7 @@
 
   onMount(() => {
     const isMobile = window.innerWidth <= 1024;
-    const thresholdValue = isMobile ? 0.35 : 0.2;
+    const thresholdValue = isMobile ? 0.3 : 0.2;
 
     const observer = new IntersectionObserver(
       async ([entry]) => {
@@ -29,7 +29,6 @@
             console.warn('Autoplay failed:', e);
           }
 
-          // ✨ Animation starten
           const section = entry.target.closest('section');
           if (section) {
             const selectors = {
@@ -64,16 +63,18 @@
 
 <style>
   .video-wrapper {
-    width: 100%;
-    position: relative;
-  }
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  background: #f7f5f2; /* optional, aber hilft beim Übergang */
+  overflow: hidden;
+}
 
-  video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    display: block;
-    aspect-ratio: 16 / 9;
-  }
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: block;
+}
 </style>
