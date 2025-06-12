@@ -69,7 +69,6 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Projekt Tatort"
-                class="inline"
               >Vimeo<ion-icon name="arrow-forward-outline"></ion-icon></a>
             </p>
           </div>
@@ -214,12 +213,6 @@ span {
   margin-top: 0.15rem;
 
   opacity: 0;
-}
-
-.inline {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.05rem;
 }
 
 ion-icon {
