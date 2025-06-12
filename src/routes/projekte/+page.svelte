@@ -69,7 +69,8 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Projekt Tatort"
-              >Play</a>
+                class="inline"
+              >Vimeo<ion-icon name="arrow-forward-outline"></ion-icon></a>
             </p>
           </div>
         </section>
@@ -92,7 +93,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Projekt Tatort"
-              >Play</a>
+              >Vimeo<ion-icon name="arrow-forward-outline"></ion-icon></a>
             </p>
           </div>
         </section>
@@ -115,7 +116,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Projekt Tatort"
-              >Play</a>
+              >Vimeo<ion-icon name="arrow-forward-outline"></ion-icon></a>
             </p>
           </div>
         </section>
@@ -138,7 +139,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Projekt Tatort"
-              >Play</a>
+              >Vimeo<ion-icon name="arrow-forward-outline"></ion-icon></a>
             </p>
           </div>
         </section>
@@ -161,7 +162,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Projekt Tatort"
-              >Play</a>
+              >Vimeo<ion-icon name="arrow-forward-outline"></ion-icon></a>
             </p>
           </div>
         </section>
@@ -213,6 +214,19 @@ span {
   margin-top: 0.15rem;
 
   opacity: 0;
+}
+
+.inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.05rem;
+}
+
+ion-icon {
+  color: black;
+  font-size: 1vw;
+  vertical-align: middle;
+  transform: rotate(-45deg);
 }
 
 .work-wrapper {
@@ -273,7 +287,7 @@ span {
   font-size: 3.5vw;
   }
 
-  p {
+  p, ion-icon {
     font-size: 1.5vw;
   }
 
@@ -295,7 +309,7 @@ span {
 }
 
 @media (max-width: 450px) {
-  p {
+  p, ion-icon {
     font-size: 3vw;
   }
   span {
