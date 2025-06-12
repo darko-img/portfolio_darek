@@ -51,7 +51,6 @@
   });
 </script>
 
-<!-- 💡 Video immer im DOM, aber erst sichtbar wenn inView -->
 <div bind:this={containerRef} class="video-wrapper">
   <video
     bind:this={videoRef}
@@ -60,7 +59,6 @@
     {loop}
     {playsinline}
     preload="none"
-    class:invisible={!inView}
   ></video>
 </div>
 
@@ -77,11 +75,12 @@
     height: 100%;
     pointer-events: none;
     display: block;
-    will-change: clip-path;
-  }
 
-  /* Sichtbarkeit steuern, ohne Layout zu verändern */
-  .invisible {
-    visibility: hidden;
+    will-change: clip-path, transform, opacity;
+
+    /* ✨ Anfangszustand für GSAP */
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transform: translateY(-40%) scale(0.5);
+    opacity: 0;
   }
 </style>
