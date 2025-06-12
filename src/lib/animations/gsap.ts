@@ -63,7 +63,7 @@ export const aboutReveal = (
   tl.fromTo(
     selectors.portrait,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
-    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, ease: defaultEase, force3D: true },
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, stagger: 0.1, ease: defaultEase, force3D: true },
     "<0.5"
   );
 
