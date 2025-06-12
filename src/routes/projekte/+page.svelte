@@ -270,7 +270,7 @@ span {
   }
 
   span {
-  font-size: 3vw;
+  font-size: 3.5vw;
   }
 
   p {
