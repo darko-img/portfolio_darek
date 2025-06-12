@@ -75,6 +75,5 @@
     height: 100%;
     pointer-events: none;
     display: block;
-    will-change: clip-path;
   }
 </style>
