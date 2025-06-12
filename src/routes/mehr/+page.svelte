@@ -103,7 +103,7 @@
         ist als Dekoration – es ist Kommunikation – und damit der Beginn jeder
         echten Beziehung zwischen Mensch und Idee.<br><br>
 
-        &copy; 2025 Dariusz Tomaszewski<br>Alle Rechte vorbehalten.</p>
+        &copy;2025 Dariusz Tomaszewski<br>Alle Rechte vorbehalten.</p>
       </div>
 
   </div>
