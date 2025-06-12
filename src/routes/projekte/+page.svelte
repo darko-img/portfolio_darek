@@ -2,7 +2,7 @@
 
   import { onMount } from 'svelte';
   import LocalFooter from '$lib/components/LocalProjectFooter.svelte';
-  import { imageRevealAndMove } from '$lib/animations/gsap';
+  import { textRevealProject } from '$lib/animations/gsap';
   import LazyVideo from '$lib/components/LazyVideo.svelte';
 
   let showLocalFooter = false;
@@ -18,7 +18,7 @@
     };
     mediaQuery.addEventListener('change', handler);
 
-    imageRevealAndMove();
+    textRevealProject();
 
     return () => {
       mediaQuery.removeEventListener('change', handler);
@@ -38,15 +38,15 @@
         <div class="projekt-text">
 
           <span class="year-text">
-            <span class="year">2017</span>
+            <span class="text-reveal3">2017</span>
           </span>
 
           <span class="year-text">
-            <span class="year">Projekte</span>
+            <span class="text-reveal3">Projekte</span>
           </span>
 
           <span class="year-text">
-            <span class="year">–24</span>
+            <span class="text-reveal3">–24</span>
           </span>
 
         </div>
@@ -233,6 +233,10 @@ span {
   position: relative;
 }
 
+.work-video {
+  will-change: clip-path;
+}
+
 .col-2 {
   width: 1000px;
 }
@@ -254,10 +258,6 @@ span {
 
 .year-text {
   overflow: hidden;
-}
-
-.year {
-  will-change: transform;
 }
 
 @media (max-width: 1024px) {

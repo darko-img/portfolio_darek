@@ -32,14 +32,10 @@ export const textReveal2 = (
   );
 };
 
-export const imageRevealAndMove = (
+export const textRevealProject = (
   tl = gsap.timeline(),
   selectors = {
     textReveal3: ".text-reveal3",
-    work: ".work-video",
-    workSection: ".work-section",
-    title: ".title",
-    project: ".year"
   }
 ) => {
   tl.fromTo(
@@ -47,35 +43,6 @@ export const imageRevealAndMove = (
     { yPercent: -150 },
     { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
   );
-
-  tl.fromTo(
-    selectors.project,
-    { yPercent: -150 },
-    { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true },
-    "<0.25"
-  );
-
-  tl.fromTo(
-    selectors.work,
-    { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
-    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.25, ease: defaultEase, force3D: true },
-    "<0.75"
-  );
-
-  tl.fromTo(
-    selectors.workSection,
-    { yPercent: -20, scale: 0.5 },
-    { yPercent: 0, scale: 1, duration: 1.25, ease: defaultEase, force3D: true },
-    "<"
-  );
-
-  tl.fromTo(
-    selectors.title,
-    { opacity: 0 },
-    { opacity: 1, duration: 0.1, ease: defaultEase, force3D: true },
-    "<0.5"
-  );
-
   return tl;
 };
 
@@ -105,6 +72,37 @@ export const aboutReveal = (
     { opacity: 0 },
     { opacity: 1, duration: 0.5, ease: defaultEase, force3D: true },
     "<0.4"
+  );
+
+  return tl;
+};
+
+export const observeReveal = (
+  tl = gsap.timeline(),
+  selectors = {
+    work: ".work-video",
+    workSection: ".work-section",
+    title: ".title",
+  }
+) => {
+  tl.fromTo(
+    selectors.work,
+    { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.25, ease: defaultEase, force3D: true },
+  );
+
+  tl.fromTo(
+    selectors.workSection,
+    { yPercent: -40, scale: 0.5 },
+    { yPercent: 0, scale: 1, duration: 1.25, ease: defaultEase, force3D: true },
+    "<"
+  );
+
+  tl.fromTo(
+    selectors.title,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.1, ease: defaultEase, force3D: true },
+    "<0.25"
   );
 
   return tl;

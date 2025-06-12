@@ -1,5 +1,7 @@
 <script>
   import { onMount, tick } from 'svelte';
+  import { observeReveal } from '$lib/animations/gsap';
+  import { gsap } from 'gsap';
 
   export let src;
   export let muted = true;
@@ -12,7 +14,7 @@
 
   onMount(() => {
     const isMobile = window.innerWidth <= 1024;
-    const thresholdValue = isMobile ? 0.3 : 0.05;
+    const thresholdValue = isMobile ? 0.3 : 0.2;
 
     const observer = new IntersectionObserver(
       async ([entry]) => {
@@ -20,10 +22,23 @@
           inView = true;
           observer.disconnect();
           await tick();
+
           try {
             videoRef?.play();
           } catch (e) {
             console.warn('Autoplay failed:', e);
+          }
+
+          // ✨ Animation starten
+          const section = entry.target.closest('section');
+          if (section) {
+            const selectors = {
+              work: section.querySelector('.work-video'),
+              workSection: section,
+              title: section.querySelector('.title')
+            };
+            const tl = gsap.timeline();
+            observeReveal(tl, selectors);
           }
         }
       },
@@ -36,34 +51,37 @@
   });
 </script>
 
-<div bind:this={containerRef}>
-  {#if inView}
-    <video
-      bind:this={videoRef}
-      src={src}
-      {muted}
-      {loop}
-      {playsinline}
-      preload="none"
-    ></video>
-  {:else}
-    <div class="placeholder"></div>
-  {/if}
+<!-- 💡 Video immer im DOM, aber erst sichtbar wenn inView -->
+<div bind:this={containerRef} class="video-wrapper">
+  <video
+    bind:this={videoRef}
+    src={src}
+    {muted}
+    {loop}
+    {playsinline}
+    preload="none"
+    class:invisible={!inView}
+  ></video>
 </div>
 
 <style>
+  .video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+  }
+
   video {
     object-fit: cover;
-    aspect-ratio: 16 / 9;
     width: 100%;
     height: 100%;
     pointer-events: none;
     display: block;
+    will-change: clip-path;
   }
 
-  .placeholder {
-    background-color: #888;
-    width: 100%;
-    aspect-ratio: 16 / 9;
+  /* Sichtbarkeit steuern, ohne Layout zu verändern */
+  .invisible {
+    visibility: hidden;
   }
 </style>

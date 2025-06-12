@@ -189,6 +189,8 @@ main {
   width: 100%;
   height: auto;
   object-fit: cover;
+
+  will-change: clip-path;
 }
 
 .about-reveal {
