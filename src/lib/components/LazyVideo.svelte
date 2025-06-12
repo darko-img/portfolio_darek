@@ -21,7 +21,7 @@
           await tick();
 
           try {
-            videoRef?.play();
+            await videoRef?.play();
           } catch (e) {
             console.warn('Autoplay failed:', e);
           }
