@@ -101,8 +101,8 @@ export const observeReveal = (
   tl.fromTo(
     selectors.title,
     { opacity: 0 },
-    { opacity: 1, duration: 0.1, ease: defaultEase, force3D: true },
-    "<0.25"
+    { opacity: 1, duration: 0.15, ease: defaultEase, force3D: true },
+    "<0.3"
   );
 
   return tl;
