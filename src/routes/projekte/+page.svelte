@@ -51,7 +51,7 @@
 
       <div class="col-2">
 
-        <section>
+        <section class="work-section">
           <div class="work-video">
             <LazyVideo
               src="/Videos/cube_nuss_snippet_neu.mp4"
@@ -74,7 +74,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="work-section">
           <div class="work-video">
             <LazyVideo
               src="/Videos/logo_nuss_snippet_neu.mp4"
@@ -97,7 +97,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="work-section">
           <div class="work-video">
             <LazyVideo
               src="/Videos/formen_2_snippet_neu.mp4"
@@ -120,7 +120,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="work-section">
           <div class="work-video">
             <LazyVideo
               src="/Videos/tatort_snippet_neu.mp4"
@@ -143,7 +143,7 @@
           </div>
         </section>
 
-        <section>
+        <section class="work-section">
           <div class="work-video">
             <LazyVideo
               src="/Videos/formen_snippet_neu.mp4"
