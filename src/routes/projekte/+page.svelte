@@ -42,10 +42,6 @@
           </span>
 
           <span class="year-text">
-            <span class="text-reveal3">Projekte</span>
-          </span>
-
-          <span class="year-text">
             <span class="text-reveal3">–24</span>
           </span>
 
