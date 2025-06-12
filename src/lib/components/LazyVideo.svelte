@@ -51,7 +51,6 @@
   });
 </script>
 
-<!-- 💡 Video immer im DOM, aber erst sichtbar wenn inView -->
 <div bind:this={containerRef} class="video-wrapper">
   <video
     bind:this={videoRef}

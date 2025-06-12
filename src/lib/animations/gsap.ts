@@ -93,8 +93,8 @@ export const observeReveal = (
 
   tl.fromTo(
     selectors.workSection,
-    { yPercent: -30, scale: 0.5 },
-    { yPercent: 0, scale: 1, duration: 1.25, ease: defaultEase, force3D: true },
+    { yPercent: -30, },
+    { yPercent: 0, duration: 1.25, ease: defaultEase, force3D: true },
     "<"
   );
 
