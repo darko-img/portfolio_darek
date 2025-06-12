@@ -88,13 +88,13 @@ export const observeReveal = (
   tl.fromTo(
     selectors.work,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
-    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.25, ease: defaultEase, force3D: true },
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.25, stagger: 0.1, ease: defaultEase, force3D: true },
   );
 
   tl.fromTo(
     selectors.workSection,
     { yPercent: -30, scale: 0.5 },
-    { yPercent: 0, scale: 1, duration: 1.25, ease: defaultEase, force3D: true },
+    { yPercent: 0, scale: 1, duration: 1.25, stagger: 0.1, ease: defaultEase, force3D: true },
     "<"
   );
 
