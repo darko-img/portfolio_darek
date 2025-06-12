@@ -86,8 +86,8 @@ export const observeReveal = (
 ) => {
   tl.fromTo(
     selectors.work,
-    { opacity: 0.001 },
-    { opacity: 1, duration: 0.1, ease: defaultEase, force3D: true, },
+    { opacity: 0.000001 },
+    { opacity: 1, duration: 0.1, force3D: true, },
   );
 
   tl.fromTo(
@@ -107,8 +107,8 @@ export const observeReveal = (
   tl.fromTo(
     selectors.title,
     { opacity: 0 },
-    { opacity: 1, duration: 0.15, ease: defaultEase, force3D: true },
-    "<0.3"
+    { opacity: 1, duration: 0.1, force3D: true },
+    "<0.25"
   );
   return tl;
 };
