@@ -73,7 +73,6 @@ export const aboutReveal = (
     { opacity: 1, duration: 0.5, ease: defaultEase, force3D: true },
     "<0.4"
   );
-
   return tl;
 };
 
@@ -104,6 +103,5 @@ export const observeReveal = (
     { opacity: 1, duration: 0.15, ease: defaultEase, force3D: true },
     "<0.3"
   );
-
   return tl;
 };

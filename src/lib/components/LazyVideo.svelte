@@ -54,6 +54,7 @@
   <video
     bind:this={videoRef}
     src={src}
+    poster="/preview.jpg"
     {muted}
     {loop}
     {playsinline}
@@ -66,7 +67,6 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   position: relative;
-  background: #f7f5f2; /* optional, aber hilft beim Übergang */
   overflow: hidden;
 }
 

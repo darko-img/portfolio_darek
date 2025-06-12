@@ -209,6 +209,8 @@ span {
   justify-content: space-between;
   text-align: center;
   will-change: opacity;
+
+  margin-top: 0.15rem;
 }
 
 .work-wrapper {
