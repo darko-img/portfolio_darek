@@ -22,12 +22,13 @@ export const textReveal2 = (
   onFinish?: () => void,
   selector = ".text-reveal2",
   duration = 1,
-  stagger = 0.1
+  stagger = 0.1,
+  delay = 0.5
 ) => {
   return defaultFromTo(
     selector,
     { yPercent: -150 },
-    { yPercent: 0, duration, stagger, ease: defaultEase, force3D: true, onComplete: onFinish }
+    { yPercent: 0, delay, duration, stagger, ease: defaultEase, force3D: true, onComplete: onFinish }
   );
 };
 
@@ -38,13 +39,20 @@ export const imageRevealAndMove = (
     work: ".work-video",
     workSection: ".work-section",
     title: ".title",
-    project: ".projekt-text"
+    project: ".year"
   }
 ) => {
   tl.fromTo(
     selectors.textReveal3,
     { yPercent: -150 },
     { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
+  );
+
+  tl.fromTo(
+    selectors.project,
+    { yPercent: -150 },
+    { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true },
+    "<0.25"
   );
 
   tl.fromTo(
@@ -62,17 +70,10 @@ export const imageRevealAndMove = (
   );
 
   tl.fromTo(
-    selectors.project,
-    { opacity: 0 },
-    { opacity: 1, duration: 0.1, ease: defaultEase, force3D: true },
-    "<0.5"
-  );
-
-  tl.fromTo(
     selectors.title,
     { opacity: 0 },
     { opacity: 1, duration: 0.1, ease: defaultEase, force3D: true },
-    "<"
+    "<0.5"
   );
 
   return tl;

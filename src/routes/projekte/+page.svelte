@@ -36,8 +36,19 @@
       <div class="col-1">
 
         <div class="projekt-text">
-          <span>2017–</span>
-          <span>24</span>
+
+          <span class="year-text">
+            <span class="year">2017</span>
+          </span>
+
+          <span class="year-text">
+            <span class="year">Projekte</span>
+          </span>
+
+          <span class="year-text">
+            <span class="year">–24</span>
+          </span>
+
         </div>
 
       </div>
@@ -191,8 +202,8 @@ section + section {
 }
 
 span {
-  font-size: 3vw;
-  line-height: 1;
+  font-size: 2.5vw;
+  line-height: 1.2;
   margin: 0;
   padding: 0;
 }
@@ -241,9 +252,21 @@ span {
   padding-bottom: 1rem;
 }
 
+.year-text {
+  overflow: hidden;
+}
+
+.year {
+  will-change: transform;
+}
+
 @media (max-width: 1024px) {
   main {
     padding: 10rem 1rem 1rem 1rem;
+  }
+
+  span {
+  font-size: 3vw;
   }
 
   p {
@@ -265,15 +288,14 @@ span {
   flex-direction: row;
   justify-content: space-between;
   }
-
-  span {
-  font-size: 5vw;
-  }
 }
 
 @media (max-width: 450px) {
   p {
     font-size: 3vw;
+  }
+  span {
+  font-size: 4vw;
   }
 }
 

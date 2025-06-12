@@ -165,7 +165,7 @@ canvas {
   }
 
   .info-block {
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: column;
     gap: 1rem;
