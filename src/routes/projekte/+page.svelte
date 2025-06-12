@@ -234,7 +234,7 @@ span {
 }
 
 .work-video {
-  will-change: clip-path;
+  will-change: opacity, clip-path;
 }
 
 .col-2 {
@@ -258,6 +258,10 @@ span {
 
 .year-text {
   overflow: hidden;
+}
+
+.work-section {
+  will-change: transform;
 }
 
 @media (max-width: 1024px) {
