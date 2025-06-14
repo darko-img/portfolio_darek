@@ -52,6 +52,7 @@ export const aboutReveal = (
     about: ".about-reveal",
     portrait: ".portrait",
     tReveal: ".t-reveal",
+    figcaption: "figcaption"
   }
 ) => {
   tl.fromTo(
@@ -72,6 +73,12 @@ export const aboutReveal = (
     { opacity: 0 },
     { opacity: 1, duration: 0.5, ease: defaultEase, force3D: true },
     "<0.4"
+  );
+  tl.fromTo(
+    selectors.figcaption,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.5, ease: defaultEase, force3D: true },
+    "<"
   );
   return tl;
 };
