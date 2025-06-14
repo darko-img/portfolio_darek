@@ -118,7 +118,7 @@
       <p class="t-reveal">Ich liebe es, Dinge zum Leben zu erwecken – ob durch Animationen
         oder durch eine durchdachte visuelle Struktur. Ich achte sehr auf
         die Feinheiten, die andere vielleicht übersehen, weil ich weiß, dass
-        genau dort oft die Magie liegt.</p>
+        genau oft dort die Magie liegt.</p>
     </div>
 
      <div class="section">
