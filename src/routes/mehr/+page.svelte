@@ -108,8 +108,11 @@
     </div>
 
     <div class="section">
-      <img src="/abschluss_lewagon.webp" alt="Abschluss LeWagon" class="portrait" />
-    </div>
+  <figure class="image-caption">
+    <img src="/abschluss_lewagon.webp" alt="Abschluss LeWagon" class="portrait" />
+    <figcaption>Abschluss bei Le Wagon</figcaption>
+  </figure>
+</div>
 
     <div class="section">
       <p class="t-reveal">Ich liebe es, Dinge zum Leben zu erwecken – ob durch Animationen
