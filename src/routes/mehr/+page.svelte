@@ -55,7 +55,7 @@
     <div class="section">
       <figure class="image-caption">
         <img src="/darek_jung.webp" alt="Dariusz Porträt" class="portrait" />
-        <figcaption>Mit 10 Jahren</figcaption>
+        <figcaption>10 Jahre alt</figcaption>
       </figure>
     </div>
 
@@ -264,27 +264,37 @@ figcaption {
   }
   .year-row {
   gap: 0;
-}
+  }
+  .about p {
+  font-size: 2vw;
+  }
+  figcaption {
+    font-size: 1.5vw;
+  }
 }
 
 @media (max-width: 768px) {
   .about {
     grid-template-columns: 1fr;
   }
-  .about p {
-  font-size: 2vw;
-  }
   .letter {
   font-size: 49vw;
+  }
+  .about p {
+  font-size: 2.5vw;
+  line-height: 1.3;
   }
 }
 
 @media (max-width: 450px) {
   .about p {
-  font-size: 3vw;
+  font-size: 3.75vw;
   }
   .letter {
   font-size: 47vw;
+  }
+  figcaption {
+    font-size: 3vw;
   }
 }
 
