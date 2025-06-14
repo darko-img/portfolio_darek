@@ -283,6 +283,9 @@ figcaption {
   .letter {
   font-size: 49vw;
   }
+  .about {
+  gap: 1rem;
+  }
   .about p {
   font-size: 2.5vw;
   line-height: 1.3;
