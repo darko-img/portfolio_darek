@@ -1,9 +1,27 @@
 <script>
   import { onMount } from 'svelte';
+  import LocalFooter from '$lib/components/LocalProjectFooter.svelte';
   import { aboutReveal } from '$lib/animations/gsap';
+
+  let showLocalFooter = false;
 
   onMount(() => {
     aboutReveal();
+
+    const mediaQuery = window.matchMedia('(max-width: 1024px)');
+    showLocalFooter = mediaQuery.matches;
+
+    const handler = (e) => {
+      if (showLocalFooter !== e.matches) {
+        showLocalFooter = e.matches;
+      }
+    };
+
+    mediaQuery.addEventListener('change', handler);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handler);
+    };
   });
 </script>
 
@@ -35,7 +53,10 @@
      </div>
 
     <div class="section">
-      <img src="/darek_jung.webp" alt="Dariusz Porträt" class="portrait" />
+      <figure class="image-caption">
+        <img src="/darek_jung.webp" alt="Dariusz Porträt" class="portrait" />
+        <figcaption>Mit 10 Jahren</figcaption>
+      </figure>
     </div>
 
     <div class="section">
@@ -112,6 +133,12 @@
 
 </div>
 
+{#if showLocalFooter}
+  <div class="footer-wrapper">
+    <LocalFooter />
+  </div>
+{/if}
+
 </main>
 
 <style>
@@ -153,7 +180,7 @@ main {
   flex-direction: row;
   justify-content: space-between;
 
-  padding-bottom: 7rem;
+  /* padding-bottom: 7rem; */
 }
 
 .spacer {
@@ -175,10 +202,14 @@ main {
 }
 
 .about p {
+  font-family: 'HelveticaNowDisplay';
+  font-weight: 600;
+  font-style: normal;
+
   text-align: justify;
   hyphens: auto;
   font-size: 1vw;
-  line-height: 1.35;
+  line-height: 1.2;
 }
 
 .col-1 .section:first-of-type p {
@@ -199,6 +230,17 @@ main {
 
 .t-reveal {
   will-change: opacity;
+}
+
+.footer-wrapper {
+  padding-bottom: 1rem;
+}
+
+figcaption {
+  font-size: 0.9vw;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @media (max-width: 1024px) {

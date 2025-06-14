@@ -51,13 +51,6 @@ a {
   cursor: default;
 }
 
-p {
-  font-size: 0.9vw;
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
 h1 {
   font-size: 1.5vw;
   line-height: 1.18;

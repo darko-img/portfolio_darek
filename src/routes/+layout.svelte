@@ -42,6 +42,7 @@
   });
 
   $: isProjectPage = $page.url.pathname.startsWith('/projekte');
+  $: isMehrPage = $page.url.pathname.startsWith('/mehr');
 </script>
 
 {#if loading}
@@ -49,7 +50,7 @@
 {:else}
   <Nav />
   <slot />
-  {#if !isProjectPage || !isMobile}
+  {#if (!isProjectPage && !isMehrPage) || !isMobile}
     <Footer />
   {/if}
 {/if}

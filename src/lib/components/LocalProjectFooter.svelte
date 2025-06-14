@@ -40,6 +40,8 @@ footer {
 
     pointer-events: none;
 
+    padding-top: 6.5rem;
+
     padding-bottom: env(safe-area-inset-bottom);
   }
 

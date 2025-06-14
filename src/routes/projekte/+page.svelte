@@ -221,7 +221,7 @@ span {
   flex-direction: row;
   justify-content: space-between;
 
-  padding-bottom: 7rem;
+  /* padding-bottom: 7rem; */
 }
 
 .work {
@@ -262,6 +262,13 @@ span {
 
 .work-section {
   will-change: transform;
+}
+
+p {
+  font-size: 0.9vw;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @media (max-width: 1024px) {
