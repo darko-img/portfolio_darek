@@ -1,7 +1,6 @@
 <script>
   import { page } from '$app/stores';
-  import { afterNavigate } from '$app/navigation';
-  import { onMount, tick } from 'svelte';
+  import { onMount } from 'svelte';
   import Nav from '$lib/components/Nav.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import Loader from '$lib/components/Loader.svelte';
@@ -9,38 +8,17 @@
 
   let isMobile = false;
   let loading = true;
-  let isInitialLoad = true;
-
-  const MIN_LOADER_TIME = 500;
-
-  const checkScreen = () => {
-    isMobile = window.innerWidth <= 1024;
-  };
 
   onMount(() => {
+    const checkScreen = () => {
+      isMobile = window.innerWidth <= 1024;
+    };
+
     checkScreen();
     window.addEventListener('resize', checkScreen);
 
-    // Initialer Seitenaufruf – Loader immer zeigen
-    startLoading();
-
-    // Nach Navigation: Nur bei Projekten + Mobile
-    afterNavigate(({ to }) => {
-      checkScreen(); // ggf. geänderte Breite beachten
-      if (!isInitialLoad && isMobile && to?.url.pathname.startsWith('/projekte')) {
-        startLoading();
-      }
-      isInitialLoad = false;
-    });
-
-    return () => window.removeEventListener('resize', checkScreen);
-  });
-
-  async function startLoading() {
-    loading = true;
+    const MIN_LOADER_TIME = 500;
     const startTime = performance.now();
-
-    await tick(); // Damit loading sofort wirksam ist
 
     const finishLoading = () => {
       const elapsed = performance.now() - startTime;
@@ -55,11 +33,13 @@
     } else {
       const onLoad = () => {
         finishLoading();
-        window.removeEventListener('load', onLoad);
       };
       window.addEventListener('load', onLoad);
+      return () => window.removeEventListener('load', onLoad);
     }
-  }
+
+    return () => window.removeEventListener('resize', checkScreen);
+  });
 
   $: isProjectPage = $page.url.pathname.startsWith('/projekte');
 </script>
