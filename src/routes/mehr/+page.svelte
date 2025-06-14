@@ -243,7 +243,16 @@ figcaption {
   font-style: normal;
 }
 
+@media (max-width: 1600px) {
+  .about-wrapper {
+  padding-bottom: 7rem;
+  }
+}
+
 @media (max-width: 1024px) {
+  .about-wrapper {
+  padding-bottom: 0;
+  }
   main {
   padding: 2rem 1rem 1rem 1rem;
   }

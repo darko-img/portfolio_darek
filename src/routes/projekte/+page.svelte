@@ -271,7 +271,16 @@ p {
   font-style: normal;
 }
 
+@media (max-width: 1600px) {
+  .work-wrapper {
+  padding-bottom: 7rem;
+  }
+}
+
 @media (max-width: 1024px) {
+  .work-wrapper {
+  padding-bottom: 0;
+  }
   main {
     padding: 10rem 1rem 1rem 1rem;
   }
