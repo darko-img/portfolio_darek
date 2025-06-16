@@ -10,7 +10,6 @@
   let isMobile = false;
   let loading = true;
   let routeLoading = false;
-  let projectReady = false;
 
   // Bildschirmbreite prüfen und auf Resize reagieren
   onMount(() => {
@@ -72,13 +71,10 @@
 </script>
 
 {#if loading || routeLoading}
-  <Loader on:complete={() => {
-    loading = false;
-    projectReady = true;
-  }} />
+  <Loader />
 {:else}
   <Nav />
-  <slot {projectReady} />
+  <slot />
   {#if (!isProjectPage && !isMehrPage) || !isMobile}
     <Footer />
   {/if}
