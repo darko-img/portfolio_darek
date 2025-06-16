@@ -2,6 +2,7 @@
   import { page } from '$app/stores';
   import { afterNavigate, beforeNavigate } from '$app/navigation';
   import { onMount } from 'svelte';
+  import { globalLoading } from '$lib/stores/loading.js';
   import Nav from '$lib/components/Nav.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import Loader from '$lib/components/Loader.svelte';
@@ -70,7 +71,7 @@
   });
 </script>
 
-{#if loading || routeLoading}
+{#if loading || $globalLoading}
   <Loader />
 {:else}
   <Nav />
