@@ -1,25 +1,13 @@
 <script>
-  import { onMount, tick } from 'svelte';
-  import { globalLoading } from '$lib/stores/loading.js';
+
+  import { onMount } from 'svelte';
   import LocalFooter from '$lib/components/LocalProjectFooter.svelte';
   import { textRevealProject } from '$lib/animations/gsap';
   import LazyVideo from '$lib/components/LazyVideo.svelte';
 
   let showLocalFooter = false;
 
-  async function waitForVideos() {
-    const videos = document.querySelectorAll('video');
-    await Promise.all(Array.from(videos).map(video => {
-      return new Promise((resolve) => {
-        if (video.readyState >= 3) resolve(); // already loaded
-        else {
-          video.addEventListener('canplaythrough', resolve, { once: true });
-        }
-      });
-    }));
-  }
-
-  onMount(async () => {
+  onMount(() => {
     const mediaQuery = window.matchMedia('(max-width: 1024px)');
     showLocalFooter = mediaQuery.matches;
 
@@ -30,16 +18,13 @@
     };
     mediaQuery.addEventListener('change', handler);
 
-    await tick(); // warte bis DOM fertig
-    await waitForVideos(); // warte auf Videos
-    await textRevealProject(); // führe Animation aus
-
-    globalLoading.set(false); // Loader ausblenden
+    textRevealProject();
 
     return () => {
       mediaQuery.removeEventListener('change', handler);
     };
   });
+
 </script>
 
 <main class="main">
