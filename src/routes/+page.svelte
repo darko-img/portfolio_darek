@@ -178,7 +178,6 @@ canvas {
 @media (max-width: 1024px) {
   h1, h2 {
   font-size: 2vw;
-  line-height: 1.2;
   font-style: normal;
   }
 }
@@ -190,7 +189,6 @@ canvas {
 
   h1, h2 {
   font-size: 3.2vw;
-  line-height: 1.35;
   font-style: normal;
   }
 }
