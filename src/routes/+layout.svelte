@@ -17,7 +17,7 @@
     checkScreen();
     window.addEventListener('resize', checkScreen);
 
-    const MIN_LOADER_TIME = 350;
+    const MIN_LOADER_TIME = 425;
     const startTime = performance.now();
 
     const finishLoading = () => {
