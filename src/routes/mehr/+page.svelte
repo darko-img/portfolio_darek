@@ -189,6 +189,7 @@ main {
   margin: 0;
   padding: 0;
   /* outline: 1px solid red; */
+  transform: translateY(-6%);
 }
 
 .about-wrapper {
@@ -273,7 +274,7 @@ figcaption {
   padding-bottom: 0;
   }
   main {
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 3rem 1rem 1rem 1rem;
   }
   .spacer {
   display: none;
