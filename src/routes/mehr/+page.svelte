@@ -100,7 +100,7 @@
     <div class="section">
   <figure class="image-caption">
     <img src="/graffiti.webp" alt="Graffiti" class="portrait" />
-    <figcaption>Graffiti</figcaption>
+    <figcaption>Graffiti-Hauptstadt</figcaption>
   </figure>
 </div>
 
@@ -262,6 +262,8 @@ figcaption {
   font-family: "IBM Plex Mono", monospace;
   font-weight: 400;
   font-style: normal;
+
+  opacity: 0;
 }
 
 @media (max-width: 3000px) {
