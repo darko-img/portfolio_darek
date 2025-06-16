@@ -11,16 +11,17 @@
   let loading = true;
   let routeLoading = false;
 
+  // Bildschirmbreite prüfen und auf Resize reagieren
   onMount(() => {
+    const MIN_LOADER_TIME = 350;
+    const startTime = performance.now();
+
     const checkScreen = () => {
       isMobile = window.innerWidth <= 1024;
     };
 
     checkScreen();
     window.addEventListener('resize', checkScreen);
-
-    const MIN_LOADER_TIME = 350;
-    const startTime = performance.now();
 
     const finishInitialLoading = () => {
       const elapsed = performance.now() - startTime;
@@ -30,30 +31,38 @@
       }, remaining);
     };
 
+    const onLoad = () => {
+      finishInitialLoading();
+      window.removeEventListener('load', onLoad);
+    };
+
     if (document.readyState === 'complete') {
       finishInitialLoading();
     } else {
-      const onLoad = () => finishInitialLoading();
       window.addEventListener('load', onLoad);
-      return () => window.removeEventListener('load', onLoad);
     }
 
-    return () => window.removeEventListener('resize', checkScreen);
+    return () => {
+      window.removeEventListener('resize', checkScreen);
+      window.removeEventListener('load', onLoad);
+    };
   });
 
+  // Reaktive Ableitungen für bestimmte Seiten
   $: isProjectPage = $page.url.pathname.startsWith('/projekte');
   $: isMehrPage = $page.url.pathname.startsWith('/mehr');
 
-  // Loader bei Navigation zu /projekte auf Mobilgeräten
+  // Navigation: Ladezustand aktivieren vor dem Wechsel
   beforeNavigate(({ to }) => {
     if (isMobile && to?.url.pathname.startsWith('/projekte')) {
       routeLoading = true;
     }
   });
 
+  // Nach Navigation: Ladezustand zurücksetzen nach kurzer Zeit
   afterNavigate(() => {
     if (routeLoading) {
-      const DELAY = 1000; // Zeit für Loader bei Navigation
+      const DELAY = 1000;
       setTimeout(() => {
         routeLoading = false;
       }, DELAY);
