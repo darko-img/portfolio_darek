@@ -1,6 +1,5 @@
 <script>
   import { page } from '$app/stores';
-  import { afterNavigate, beforeNavigate } from '$app/navigation';
   import { onMount } from 'svelte';
   import Nav from '$lib/components/Nav.svelte';
   import Footer from '$lib/components/Footer.svelte';
@@ -9,13 +8,8 @@
 
   let isMobile = false;
   let loading = true;
-  let routeLoading = false;
 
-  // Bildschirmbreite prüfen und auf Resize reagieren
   onMount(() => {
-    const MIN_LOADER_TIME = 350;
-    const startTime = performance.now();
-
     const checkScreen = () => {
       isMobile = window.innerWidth <= 1024;
     };
@@ -23,7 +17,10 @@
     checkScreen();
     window.addEventListener('resize', checkScreen);
 
-    const finishInitialLoading = () => {
+    const MIN_LOADER_TIME = 350;
+    const startTime = performance.now();
+
+    const finishLoading = () => {
       const elapsed = performance.now() - startTime;
       const remaining = Math.max(0, MIN_LOADER_TIME - elapsed);
       setTimeout(() => {
@@ -31,46 +28,24 @@
       }, remaining);
     };
 
-    const onLoad = () => {
-      finishInitialLoading();
-      window.removeEventListener('load', onLoad);
-    };
-
     if (document.readyState === 'complete') {
-      finishInitialLoading();
+      finishLoading();
     } else {
+      const onLoad = () => {
+        finishLoading();
+      };
       window.addEventListener('load', onLoad);
+      return () => window.removeEventListener('load', onLoad);
     }
 
-    return () => {
-      window.removeEventListener('resize', checkScreen);
-      window.removeEventListener('load', onLoad);
-    };
+    return () => window.removeEventListener('resize', checkScreen);
   });
 
-  // Reaktive Ableitungen für bestimmte Seiten
   $: isProjectPage = $page.url.pathname.startsWith('/projekte');
   $: isMehrPage = $page.url.pathname.startsWith('/mehr');
-
-  // Navigation: Ladezustand aktivieren vor dem Wechsel
-  beforeNavigate(({ to }) => {
-    if (isMobile && to?.url.pathname.startsWith('/projekte')) {
-      routeLoading = true;
-    }
-  });
-
-  // Nach Navigation: Ladezustand zurücksetzen nach kurzer Zeit
-  afterNavigate(() => {
-    if (routeLoading) {
-      const DELAY = 1000;
-      setTimeout(() => {
-        routeLoading = false;
-      }, DELAY);
-    }
-  });
 </script>
 
-{#if loading || routeLoading}
+{#if loading}
   <Loader />
 {:else}
   <Nav />
