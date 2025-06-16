@@ -7,7 +7,6 @@
   export let muted = true;
   export let loop = true;
   export let playsinline = true;
-  export let autoplay = false;  // neu
 
   let videoRef;
   let containerRef;
@@ -25,9 +24,7 @@
           await tick();
 
           try {
-            if (autoplay) {
-              await videoRef?.play();
-            }
+            videoRef?.play();
           } catch (e) {
             console.warn('Autoplay failed:', e);
           }
@@ -60,24 +57,23 @@
     {muted}
     {loop}
     {playsinline}
-    {autoplay}
-    preload="auto"
+    preload="none"
   ></video>
 </div>
 
 <style>
   .video-wrapper {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    position: relative;
-    overflow: hidden;
-  }
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
+}
 
-  video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    display: block;
-  }
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  display: block;
+}
 </style>

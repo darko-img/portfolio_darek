@@ -1,4 +1,5 @@
 <script>
+
   import { onMount } from 'svelte';
   import LocalFooter from '$lib/components/LocalProjectFooter.svelte';
   import { textRevealProject } from '$lib/animations/gsap';
@@ -6,34 +7,7 @@
 
   let showLocalFooter = false;
 
-  // Die originalen Video-Pfade
-  const videoPaths = [
-    '/Videos/cube_nuss_snippet_neu.mp4',
-    '/Videos/logo_nuss_snippet_neu.mp4',
-    '/Videos/formen_2_snippet_neu.mp4',
-    '/Videos/tatort_snippet_neu.mp4',
-    '/Videos/formen_snippet_neu.mp4'
-  ];
-
-  // Objekt mit Blob URLs
-  let videos = {};
-
-  // Funktion: Videos per fetch preloaden & Blob-URLs generieren
-  async function preloadVideos() {
-    const entries = await Promise.all(
-      videoPaths.map(async (path) => {
-        const res = await fetch(path);
-        const blob = await res.blob();
-        const blobUrl = URL.createObjectURL(blob);
-        return [path, blobUrl];
-      })
-    );
-    videos = Object.fromEntries(entries);
-  }
-
   onMount(() => {
-    preloadVideos();
-
     const mediaQuery = window.matchMedia('(max-width: 1024px)');
     showLocalFooter = mediaQuery.matches;
 
@@ -48,37 +22,44 @@
 
     return () => {
       mediaQuery.removeEventListener('change', handler);
-      // Blob URLs freigeben, wenn Komponente zerstört wird (optional)
-      Object.values(videos).forEach(url => URL.revokeObjectURL(url));
     };
   });
+
 </script>
 
 <main class="main">
 
   <div class="work-wrapper">
+
     <div class="work">
 
       <div class="col-1">
+
         <div class="projekt-text">
-          <span class="year-text"><span class="text-reveal3">2017</span></span>
-          <span class="year-text"><span class="text-reveal3">–24</span></span>
+
+          <span class="year-text">
+            <span class="text-reveal3">2017</span>
+          </span>
+
+          <span class="year-text">
+            <span class="text-reveal3">–24</span>
+          </span>
+
         </div>
+
       </div>
 
       <div class="col-2">
 
         <section class="work-section">
           <div class="work-video">
-            {#if videos['/Videos/cube_nuss_snippet_neu.mp4']}
-              <LazyVideo
-                src={videos['/Videos/cube_nuss_snippet_neu.mp4']}
-                autoplay
-                muted
-                playsinline
-                loop
-              />
-            {/if}
+            <LazyVideo
+              src="/Videos/cube_nuss_snippet_neu.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            />
           </div>
           <div class="title" title="https://vimeo.com/1078624279">
             <p>Nussknagger, 2024</p>
@@ -95,15 +76,13 @@
 
         <section class="work-section">
           <div class="work-video">
-            {#if videos['/Videos/logo_nuss_snippet_neu.mp4']}
-              <LazyVideo
-                src={videos['/Videos/logo_nuss_snippet_neu.mp4']}
-                autoplay
-                muted
-                playsinline
-                loop
-              />
-            {/if}
+            <LazyVideo
+              src="/Videos/logo_nuss_snippet_neu.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            />
           </div>
           <div class="title" title="https://vimeo.com/1078624279">
             <p>Nussknagger, 2024</p>
@@ -120,15 +99,13 @@
 
         <section class="work-section">
           <div class="work-video">
-            {#if videos['/Videos/formen_2_snippet_neu.mp4']}
-              <LazyVideo
-                src={videos['/Videos/formen_2_snippet_neu.mp4']}
-                autoplay
-                muted
-                playsinline
-                loop
-              />
-            {/if}
+            <LazyVideo
+              src="/Videos/formen_2_snippet_neu.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            />
           </div>
           <div class="title" title="https://vimeo.com/1078624279">
             <p>Formen – Kapitel 2, 2024</p>
@@ -145,15 +122,13 @@
 
         <section class="work-section">
           <div class="work-video">
-            {#if videos['/Videos/tatort_snippet_neu.mp4']}
-              <LazyVideo
-                src={videos['/Videos/tatort_snippet_neu.mp4']}
-                autoplay
-                muted
-                playsinline
-                loop
-              />
-            {/if}
+            <LazyVideo
+              src="/Videos/tatort_snippet_neu.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            />
           </div>
           <div class="title" title="https://vimeo.com/1078624279">
             <p>Tatort, 2017</p>
@@ -170,15 +145,13 @@
 
         <section class="work-section">
           <div class="work-video">
-            {#if videos['/Videos/formen_snippet_neu.mp4']}
-              <LazyVideo
-                src={videos['/Videos/formen_snippet_neu.mp4']}
-                autoplay
-                muted
-                playsinline
-                loop
-              />
-            {/if}
+            <LazyVideo
+              src="/Videos/formen_snippet_neu.mp4"
+              autoplay
+              muted
+              playsinline
+              loop
+            />
           </div>
           <div class="title" title="https://vimeo.com/1078624279">
             <p>Formen, 2017</p>
@@ -196,149 +169,150 @@
       </div>
 
     </div>
+
   </div>
 
   {#if showLocalFooter}
-    <div class="footer-wrapper">
-      <LocalFooter />
-    </div>
-  {/if}
+  <div class="footer-wrapper">
+    <LocalFooter />
+  </div>
+{/if}
 
 </main>
 
 <style>
-  /* Deins unverändert, kann so bleiben */
-  main {
-    inset: 0;
-    width: 100%;
-    height: 100dvh;
 
-    padding: 12rem 12rem 1rem 1rem;
+main {
+  inset: 0;
+  width: 100%;
+  height: 100dvh;
 
-    overscroll-behavior: none;
-    -webkit-overflow-scrolling: auto;
-  }
+  padding: 12rem 12rem 1rem 1rem;
 
-  section + section {
-    margin-top: 1rem;
-  }
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+}
 
-  span {
-    font-size: 2.5vw;
-    line-height: 1.2;
-    margin: 0;
-    padding: 0;
-  }
+section + section {
+  margin-top: 1rem;
+}
 
-  .title {
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    will-change: opacity;
+span {
+  font-size: 2.5vw;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
 
-    margin-top: 0.15rem;
+.title {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  will-change: opacity;
 
-    opacity: 0;
-  }
+  margin-top: 0.15rem;
 
+  opacity: 0;
+}
+
+.work-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  /* padding-bottom: 7rem; */
+}
+
+.work {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin: 0 auto;
+  gap: 1rem;
+  position: relative;
+}
+
+.work-video {
+  will-change: opacity, clip-path;
+}
+
+.col-2 {
+  width: 1000px;
+}
+
+.col-1 {
+  width: 100%;
+}
+
+.projekt-text {
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.year-text {
+  overflow: hidden;
+}
+
+.work-section {
+  will-change: transform;
+}
+
+p {
+  font-size: 0.9vw;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 3000px) {
   .work-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    /* padding-bottom: 7rem; */
+  padding-bottom: 7rem;
   }
+}
 
-  .work {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    margin: 0 auto;
-    gap: 1rem;
-    position: relative;
-  }
-
-  .work-video {
-    will-change: opacity, clip-path;
-  }
-
+@media (max-width: 1380px) {
   .col-2 {
-    width: 1000px;
+  width: 62.5vw;
   }
+}
 
-  .col-1 {
-    width: 100%;
+@media (max-width: 1024px) {
+  .work-wrapper {
+  padding-bottom: 0;
   }
-
-  .projekt-text {
-    position: fixed;
-
-    display: flex;
-    flex-direction: column;
+  span {
+  font-size: 3.5vw;
   }
-
-  .year-text {
-    overflow: hidden;
-  }
-
-  .work-section {
-    will-change: transform;
-  }
-
   p {
-    font-size: 0.9vw;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 400;
-    font-style: normal;
+    font-size: 1.5vw;
   }
-
-  @media (max-width: 3000px) {
-    .work-wrapper {
-      padding-bottom: 7rem;
-    }
+  main {
+    padding: 10rem 1rem 1rem 1rem;
   }
-
-  @media (max-width: 1380px) {
-    .col-2 {
-      width: 62.5vw;
-    }
+  .col-2 {
+  width: 100%;
   }
+  .projekt-text {
+  position: static;
 
-  @media (max-width: 1024px) {
-    .work-wrapper {
-      padding-bottom: 0;
-    }
-    span {
-      font-size: 3.5vw;
-    }
-    p {
-      font-size: 1.5vw;
-    }
-    main {
-      padding: 10rem 1rem 1rem 1rem;
-    }
-    .col-2 {
-      width: 100%;
-    }
-    .projekt-text {
-      position: static;
-
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    .work {
-      grid-template-columns: 1fr;
-    }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   }
-
-  @media (max-width: 450px) {
-    p {
-      font-size: 3vw;
-    }
-    span {
-      font-size: 5vw;
-    }
+  .work {
+  grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 450px) {
+  p {
+    font-size: 3vw;
+  }
+  span {
+  font-size: 5vw;
+  }
+}
 </style>
