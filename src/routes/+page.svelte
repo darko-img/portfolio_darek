@@ -184,7 +184,7 @@ canvas {
 
 @media (max-width: 450px) {
   .info-block {
-    margin-top: 3.5rem;
+    margin-top: 4rem;
   }
 
   h1, h2 {
