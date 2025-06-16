@@ -1,6 +1,6 @@
 <script>
   import { page } from '$app/stores';
-  import { onMount, tick } from 'svelte';
+  import { onMount } from 'svelte';
   import Nav from '$lib/components/Nav.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import Loader from '$lib/components/Loader.svelte';
@@ -8,6 +8,8 @@
 
   let isMobile = false;
   let loading = true;
+
+  const MIN_LOADER_TIME = 450;
 
   onMount(() => {
     const checkScreen = () => {
@@ -17,7 +19,7 @@
     checkScreen();
     window.addEventListener('resize', checkScreen);
 
-    const MIN_LOADER_TIME = 450;
+    // Ursprüngliche Seite lädt: Loader mind. MIN_LOADER_TIME anzeigen
     const startTime = performance.now();
 
     const finishLoading = () => {
@@ -41,38 +43,21 @@
     return () => window.removeEventListener('resize', checkScreen);
   });
 
-  let currentPath = '';
-
-  // Reagiere auf Navigation zu /projekte nur bei mobilen Geräten
-  $: if ($page.url.pathname !== currentPath) {
-    const newPath = $page.url.pathname;
-    // Nur wenn sich die Route ändert
-    if (newPath !== currentPath) {
-      currentPath = newPath;
-
-      if (isMobile && currentPath.startsWith('/projekte')) {
-        loading = true;
-
-        const start = performance.now();
-
-        (async () => {
-          await tick(); // Svelte Update abwarten
-
-          const elapsed = performance.now() - start;
-          const remaining = Math.max(0, 450 - elapsed);
-
-          setTimeout(() => {
-            loading = false;
-          }, remaining);
-        })();
-      } else {
-        loading = false;
-      }
-    }
-  }
-
+  // Reaktive Variablen für Pfad prüfen
   $: isProjectPage = $page.url.pathname.startsWith('/projekte');
   $: isMehrPage = $page.url.pathname.startsWith('/mehr');
+
+  // Loader beim Navigieren zu /projekte und mobil triggern
+  // Das setzt loading auf true und nach MIN_LOADER_TIME auf false
+  $: if (isMobile && isProjectPage) {
+    loading = true;
+
+    // Verzögertes Ausschalten des Loaders
+    setTimeout(() => {
+      loading = false;
+    }, MIN_LOADER_TIME);
+  }
+
 </script>
 
 {#if loading}
