@@ -285,7 +285,7 @@ figcaption {
   gap: 0;
   }
   .about p {
-  font-size: 2vw;
+  font-size: 1.75vw;
   }
   figcaption {
     font-size: 1.5vw;
