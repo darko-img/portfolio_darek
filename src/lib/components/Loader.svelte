@@ -37,18 +37,27 @@
     ];
 
     let loaded = 0;
+    let called = false;
+
+    function callOnComplete() {
+      if (!called) {
+        called = true;
+        onComplete();
+      }
+    }
 
     preloadVideos.forEach((src) => {
       const video = document.createElement('video');
       video.src = src;
       video.preload = 'auto';
       video.muted = true;
-      video.playsInline = true;
+      video.setAttribute('playsinline', ''); // Sicherstellen
       video.style.display = 'none';
       video.onloadeddata = () => {
         loaded++;
+        document.body.removeChild(video);
         if (loaded === preloadVideos.length) {
-          onComplete();
+          callOnComplete();
         }
       };
       document.body.appendChild(video);
@@ -56,7 +65,7 @@
 
     // Fallback nach 5s
     setTimeout(() => {
-      onComplete();
+      callOnComplete();
     }, 5000);
   });
 </script>
