@@ -69,3 +69,51 @@
   {/each}
   <div class="lade">Lade ...</div>
 </div>
+
+<style>
+  .loader-screen {
+    position: fixed;
+    inset: 0;
+    color: black;
+    z-index: 9999;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+  }
+
+  .warten {
+    position: absolute;
+    pointer-events: none;
+    font-size: 0.85vw;
+    letter-spacing: -0.02em;
+  }
+
+  .lade {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1vw;
+  }
+
+  @media (max-width: 1024px) {
+    .warten {
+      font-size: 0.9vw;
+    }
+    .lade {
+      font-size: 1.5vw;
+    }
+  }
+
+  @media (max-width: 450px) {
+    .warten {
+      font-size: 1.5vw;
+    }
+    .lade {
+      font-size: 3vw;
+    }
+  }
+</style>
