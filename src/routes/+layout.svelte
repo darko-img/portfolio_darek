@@ -13,7 +13,8 @@
   const isProjectPage = derived(page, $page => $page.url.pathname.startsWith('/projekte'));
   const isMehrPage = derived(page, $page => $page.url.pathname.startsWith('/mehr'));
 
-  let showFooter = true;
+  let MIN_LOADER_TIME = 500;
+  let loaderStart = 0;
 
   onMount(() => {
     const checkScreen = () => {
@@ -25,28 +26,8 @@
 
     const unsubscribe = isProjectPage.subscribe((isProj) => {
       if (isProj && isMobile) {
+        loaderStart = performance.now();
         loading = true;
-
-        const MIN_LOADER_TIME = 350;
-        const startTime = performance.now();
-
-        const finishLoading = () => {
-          const elapsed = performance.now() - startTime;
-          const remaining = Math.max(0, MIN_LOADER_TIME - elapsed);
-          setTimeout(() => {
-            loading = false;
-          }, remaining);
-        };
-
-        if (document.readyState === 'complete') {
-          finishLoading();
-        } else {
-          const onLoad = () => {
-            finishLoading();
-          };
-          window.addEventListener('load', onLoad);
-          return () => window.removeEventListener('load', onLoad);
-        }
       }
     });
 
@@ -55,10 +36,19 @@
       unsubscribe();
     };
   });
+
+  function handleLoaderReady() {
+    const elapsed = performance.now() - loaderStart;
+    const remaining = Math.max(0, MIN_LOADER_TIME - elapsed);
+
+    setTimeout(() => {
+      loading = false;
+    }, remaining);
+  }
 </script>
 
 {#if loading}
-  <Loader />
+  <Loader on:ready={handleLoaderReady} />
 {:else}
   <Nav />
   <slot />

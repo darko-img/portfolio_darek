@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte';
+  import { onMount, createEventDispatcher } from 'svelte';
   import gsap from 'gsap';
 
   export let warten = [
@@ -7,27 +7,30 @@
     'Vänta', 'Ждать', 'Czekać', '等待', '待つ'
   ];
 
+  const dispatch = createEventDispatcher();
+  let loaderEl;
+
   onMount(() => {
-    // Animation
-    const elements = document.querySelectorAll('.warten');
+    const elements = loaderEl.querySelectorAll('.warten');
+
     elements.forEach((el) => {
       gsap.set(el, {
         x: `${gsap.utils.random(-10, 10)}vw`,
-        y: `${gsap.utils.random(-10, 10)}vh`,
+        y: `${gsap.utils.random(-10, 10)}vh`
       });
 
       gsap.to(el, {
         x: () => `${gsap.utils.random(-15, 15)}vw`,
         y: () => `${gsap.utils.random(-15, 15)}vh`,
-        duration: 0.1,
-        ease: "expo.out",
+        duration: 1.5,
+        ease: 'expo.out',
         repeat: -1,
         repeatRefresh: true,
         yoyo: true
       });
     });
 
-    // Video-Preloading
+    // Videos preloaden
     const preloadVideos = [
       '/Videos/cube_nuss_snippet_neu.mp4',
       '/Videos/logo_nuss_snippet_neu.mp4',
@@ -36,6 +39,7 @@
       '/Videos/formen_snippet_neu.mp4'
     ];
 
+    let loadedCount = 0;
     preloadVideos.forEach((src) => {
       const video = document.createElement('video');
       video.src = src;
@@ -43,13 +47,16 @@
       video.muted = true;
       video.playsInline = true;
       video.style.display = 'none';
+
+      video.oncanplaythrough = () => {
+        loadedCount++;
+        if (loadedCount === preloadVideos.length) {
+          dispatch('ready');
+        }
+      };
+
       document.body.appendChild(video);
     });
-
-    // Optional: nach 10 Sekunden aufräumen
-    setTimeout(() => {
-      document.querySelectorAll('video[preload="auto"][style*="none"]')?.forEach(v => v.remove());
-    }, 10000);
   });
 </script>
 
