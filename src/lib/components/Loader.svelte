@@ -60,14 +60,9 @@
   });
 </script>
 
-<div class="loader-screen">
+<div class="loader-screen" bind:this={loaderEl}>
   {#each warten as word}
-    <div
-      class="warten"
-      style={`transform: translate(${Math.random() * 20 - 10}vw, ${Math.random() * 20 - 10}vh);`}
-    >
-      {word}
-    </div>
+    <div class="warten">{word}</div>
   {/each}
   <div class="lade">Lade ...</div>
 </div>
