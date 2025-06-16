@@ -54,9 +54,9 @@
 
   // Navigation: Ladezustand aktivieren vor dem Wechsel
   beforeNavigate(({ to }) => {
-  if (isMobile && to?.url.pathname.startsWith('/projekte')) {
-    loading = true;
-  }
+    if (isMobile && to?.url.pathname.startsWith('/projekte')) {
+      routeLoading = true;
+    }
   });
 
   // Nach Navigation: Ladezustand zurücksetzen nach kurzer Zeit
@@ -70,8 +70,8 @@
   });
 </script>
 
-{#if loading}
-  <Loader on:complete={() => loading = false} />
+{#if loading || routeLoading}
+  <Loader />
 {:else}
   <Nav />
   <slot />

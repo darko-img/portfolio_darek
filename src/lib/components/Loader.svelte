@@ -1,5 +1,5 @@
 <script>
-  import { onMount, createEventDispatcher } from 'svelte';
+  import { onMount } from 'svelte';
   import gsap from 'gsap';
 
   export let warten = [
@@ -7,10 +7,9 @@
     'Vänta', 'Ждать', 'Czekać', '等待', '待つ'
   ];
 
-  const dispatch = createEventDispatcher();
+  export let onComplete = () => {};
 
   onMount(() => {
-    // Animationen starten
     const elements = document.querySelectorAll('.warten');
     elements.forEach((el) => {
       gsap.set(el, {
@@ -29,7 +28,6 @@
       });
     });
 
-    // Videos vorladen
     const preloadVideos = [
       '/Videos/cube_nuss_snippet_neu.mp4',
       '/Videos/logo_nuss_snippet_neu.mp4',
@@ -39,14 +37,6 @@
     ];
 
     let loaded = 0;
-    let finished = false;
-
-    const maybeComplete = () => {
-      if (!finished && loaded === preloadVideos.length) {
-        finished = true;
-        dispatch('complete');
-      }
-    };
 
     preloadVideos.forEach((src) => {
       const video = document.createElement('video');
@@ -57,17 +47,16 @@
       video.style.display = 'none';
       video.onloadeddata = () => {
         loaded++;
-        maybeComplete();
+        if (loaded === preloadVideos.length) {
+          onComplete();
+        }
       };
       document.body.appendChild(video);
     });
 
     // Fallback nach 5s
     setTimeout(() => {
-      if (!finished) {
-        finished = true;
-        dispatch('complete');
-      }
+      onComplete();
     }, 5000);
   });
 </script>
@@ -92,7 +81,6 @@
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    background: white;
   }
 
   .warten {
