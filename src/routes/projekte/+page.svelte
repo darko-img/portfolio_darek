@@ -1,30 +1,29 @@
 <script>
-
   import { onMount } from 'svelte';
   import LocalFooter from '$lib/components/LocalProjectFooter.svelte';
   import { textRevealProject } from '$lib/animations/gsap';
   import LazyVideo from '$lib/components/LazyVideo.svelte';
 
+  export let projectReady = false; // <-- kommt aus dem Slot im Layout
   let showLocalFooter = false;
+
+  $: if (projectReady) {
+    textRevealProject(); // <-- nur starten wenn alle Daten da
+  }
 
   onMount(() => {
     const mediaQuery = window.matchMedia('(max-width: 1024px)');
     showLocalFooter = mediaQuery.matches;
 
     const handler = (e) => {
-      if (showLocalFooter !== e.matches) {
-        showLocalFooter = e.matches;
-      }
+      showLocalFooter = e.matches;
     };
     mediaQuery.addEventListener('change', handler);
-
-    textRevealProject();
 
     return () => {
       mediaQuery.removeEventListener('change', handler);
     };
   });
-
 </script>
 
 <main class="main">
