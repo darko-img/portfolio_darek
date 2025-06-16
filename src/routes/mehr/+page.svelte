@@ -189,7 +189,7 @@ main {
   margin: 0;
   padding: 0;
   /* outline: 1px solid red; */
-  transform: translateY(-6%);
+  transform: translateY(-5%);
 }
 
 .about-wrapper {
