@@ -109,6 +109,10 @@ span {
   will-change: transform;
 }
 
+.footer-wrapper {
+  padding-bottom: 1rem;
+}
+
 @media (max-width: 1024px) {
     .line::after,
     .line:hover::after {

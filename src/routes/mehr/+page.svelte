@@ -100,7 +100,7 @@
     <div class="section">
   <figure class="image-caption">
     <img src="/graffiti.webp" alt="Graffiti" class="portrait" />
-    <figcaption>Graffiti-Hauptstadt</figcaption>
+    <figcaption>Graffiti in der City</figcaption>
   </figure>
 </div>
 
@@ -251,10 +251,6 @@ main {
 
 .t-reveal {
   will-change: opacity;
-}
-
-.footer-wrapper {
-  padding-bottom: 1rem;
 }
 
 figcaption {

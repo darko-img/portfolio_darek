@@ -252,10 +252,6 @@ span {
   flex-direction: column;
 }
 
-.footer-wrapper {
-  padding-bottom: 1rem;
-}
-
 .year-text {
   overflow: hidden;
 }
