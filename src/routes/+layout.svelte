@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores';
+  import { afterNavigate, beforeNavigate } from '$app/navigation';
   import { onMount } from 'svelte';
   import Nav from '$lib/components/Nav.svelte';
   import Footer from '$lib/components/Footer.svelte';
@@ -8,6 +9,7 @@
 
   let isMobile = false;
   let loading = true;
+  let routeLoading = false;
 
   onMount(() => {
     const checkScreen = () => {
@@ -20,7 +22,7 @@
     const MIN_LOADER_TIME = 350;
     const startTime = performance.now();
 
-    const finishLoading = () => {
+    const finishInitialLoading = () => {
       const elapsed = performance.now() - startTime;
       const remaining = Math.max(0, MIN_LOADER_TIME - elapsed);
       setTimeout(() => {
@@ -29,11 +31,9 @@
     };
 
     if (document.readyState === 'complete') {
-      finishLoading();
+      finishInitialLoading();
     } else {
-      const onLoad = () => {
-        finishLoading();
-      };
+      const onLoad = () => finishInitialLoading();
       window.addEventListener('load', onLoad);
       return () => window.removeEventListener('load', onLoad);
     }
@@ -43,9 +43,25 @@
 
   $: isProjectPage = $page.url.pathname.startsWith('/projekte');
   $: isMehrPage = $page.url.pathname.startsWith('/mehr');
+
+  // Loader bei Navigation zu /projekte auf Mobilgeräten
+  beforeNavigate(({ to }) => {
+    if (isMobile && to?.url.pathname.startsWith('/projekte')) {
+      routeLoading = true;
+    }
+  });
+
+  afterNavigate(() => {
+    if (routeLoading) {
+      const DELAY = 1000; // Zeit für Loader bei Navigation
+      setTimeout(() => {
+        routeLoading = false;
+      }, DELAY);
+    }
+  });
 </script>
 
-{#if loading}
+{#if loading || routeLoading}
   <Loader />
 {:else}
   <Nav />
