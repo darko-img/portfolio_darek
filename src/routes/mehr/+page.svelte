@@ -100,7 +100,7 @@
     <div class="section">
   <figure class="image-caption">
     <img src="/graffiti.webp" alt="Graffiti" class="portrait" />
-    <figcaption>Graffiti in der City</figcaption>
+    <figcaption>Alte Liebe</figcaption>
   </figure>
 </div>
 
