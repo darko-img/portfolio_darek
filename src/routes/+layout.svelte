@@ -1,23 +1,24 @@
 <script>
   import { page } from '$app/stores';
-  import { onMount } from 'svelte';
+  import { onMount, tick } from 'svelte';
   import Nav from '$lib/components/Nav.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import Loader from '$lib/components/Loader.svelte';
   import '../app.css';
 
   let isMobile = false;
-  let loading = true;
+  let loading = true; // Loader beim ersten Laden an
+
+  const MIN_LOADER_TIME = 450;
+
+  const checkScreen = () => {
+    isMobile = window.innerWidth <= 1024;
+  };
 
   onMount(() => {
-    const checkScreen = () => {
-      isMobile = window.innerWidth <= 1024;
-    };
-
     checkScreen();
     window.addEventListener('resize', checkScreen);
 
-    const MIN_LOADER_TIME = 450;
     const startTime = performance.now();
 
     const finishLoading = () => {
@@ -40,6 +41,33 @@
 
     return () => window.removeEventListener('resize', checkScreen);
   });
+
+  let currentPath = '';
+
+  $: if ($page.url.pathname !== currentPath) {
+    currentPath = $page.url.pathname;
+
+    // Loader nur bei mobile + /projekte Navigation an
+    if (currentPath.startsWith('/projekte') && isMobile) {
+      loading = true;
+
+      const start = performance.now();
+
+      (async () => {
+        await tick();
+
+        const elapsed = performance.now() - start;
+        const remaining = Math.max(0, MIN_LOADER_TIME - elapsed);
+
+        setTimeout(() => {
+          loading = false;
+        }, remaining);
+      })();
+    } else {
+      // Sonst sofort Loader aus
+      loading = false;
+    }
+  }
 
   $: isProjectPage = $page.url.pathname.startsWith('/projekte');
   $: isMehrPage = $page.url.pathname.startsWith('/mehr');
