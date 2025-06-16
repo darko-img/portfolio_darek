@@ -264,7 +264,7 @@ figcaption {
   font-style: normal;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 3000px) {
   .about-wrapper {
   padding-bottom: 7rem;
   }

@@ -279,7 +279,7 @@ p {
 
 @media (max-width: 1380px) {
   .col-2 {
-  width: 900px;
+  width: 62.5vw;
   }
 }
 
@@ -287,32 +287,27 @@ p {
   .work-wrapper {
   padding-bottom: 0;
   }
-  main {
-    padding: 10rem 1rem 1rem 1rem;
-  }
-
   span {
   font-size: 3.5vw;
   }
-
   p {
     font-size: 1.5vw;
   }
-
-  .work {
-  grid-template-columns: 1fr;
+  main {
+    padding: 10rem 1rem 1rem 1rem;
   }
-
   .col-2 {
   width: 100%;
   }
-
   .projekt-text {
   position: static;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  }
+  .work {
+  grid-template-columns: 1fr;
   }
 }
 
@@ -324,5 +319,4 @@ p {
   font-size: 5vw;
   }
 }
-
 </style>
