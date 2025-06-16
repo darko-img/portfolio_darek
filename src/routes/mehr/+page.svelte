@@ -55,7 +55,7 @@
     <div class="section">
       <figure class="image-caption">
         <img src="/darek_jung.webp" alt="Dariusz Porträt" class="portrait" />
-        <figcaption>10 Jahre alt</figcaption>
+        <figcaption>2001</figcaption>
       </figure>
     </div>
 
@@ -77,6 +77,13 @@
     </div>
 
     <div class="section">
+  <figure class="image-caption">
+    <img src="/in_den_bergen.webp" alt="In den Bergen" class="portrait" />
+    <figcaption>Ausgleich</figcaption>
+  </figure>
+</div>
+
+    <div class="section">
       <p class="t-reveal">Der Weg dahin war alles andere als linear.
         Ich habe ausprobiert, verworfen, neu angefangen. Was sich aber nie geändert hat:
         Mein Blick für Details und mein Wunsch, Emotionen durch Design
@@ -89,6 +96,13 @@
   </div>
 
   <div class="col-2">
+
+    <div class="section">
+  <figure class="image-caption">
+    <img src="/graffiti.webp" alt="Graffiti" class="portrait" />
+    <figcaption>Graffiti</figcaption>
+  </figure>
+</div>
 
     <div class="section">
       <p class="t-reveal">Gestaltung beginnt für mich mit Beobachtung – sei es in
@@ -110,7 +124,7 @@
     <div class="section">
   <figure class="image-caption">
     <img src="/abschluss_lewagon.webp" alt="Abschluss LeWagon" class="portrait" />
-    <figcaption>Abschluss bei Le Wagon</figcaption>
+    <figcaption>Absolventen, Le Wagon</figcaption>
   </figure>
 </div>
 
@@ -118,7 +132,7 @@
       <p class="t-reveal">Ich liebe es, Dinge zum Leben zu erwecken – ob durch Animationen
         oder durch eine durchdachte visuelle Struktur. Ich achte sehr auf
         die Feinheiten, die andere vielleicht übersehen, weil ich weiß, dass
-        genau oft dort die Magie liegt.</p>
+        genau dort oft die Magie liegt.</p>
     </div>
 
      <div class="section">
@@ -216,7 +230,11 @@ main {
 }
 
 .col-1 .section:first-of-type p {
-  text-indent: 2em;
+  text-indent: 1em;
+}
+
+.col-2 .section:nth-of-type(2) p {
+  text-indent: 1em;
 }
 
 .portrait {
@@ -288,7 +306,7 @@ figcaption {
   }
   .about p {
   font-size: 2.5vw;
-  line-height: 1.3;
+  line-height: 1.25;
   }
 }
 

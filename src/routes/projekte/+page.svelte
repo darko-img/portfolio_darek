@@ -108,7 +108,7 @@
             />
           </div>
           <div class="title" title="https://vimeo.com/1078624279">
-            <p>Formen 02, 2024</p>
+            <p>Formen – Kapitel 2, 2024</p>
             <p>
               <a
                 href="https://vimeo.com/1078455810?share=copy"
@@ -271,9 +271,15 @@ p {
   font-style: normal;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 3000px) {
   .work-wrapper {
   padding-bottom: 7rem;
+  }
+}
+
+@media (max-width: 1380px) {
+  .col-2 {
+  width: 900px;
   }
 }
 
