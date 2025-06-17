@@ -90,7 +90,7 @@ export const observeReveal = (
   selectors = {
     work: ".work-video",
     workSection: ".work-section",
-    title: ".title",
+    title: ".title"
   }
 ) => {
     tl.fromTo(

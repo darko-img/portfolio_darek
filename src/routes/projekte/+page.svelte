@@ -34,11 +34,11 @@
 
         <div class="projekt-text">
           <span class="year-text">
-            <span class="text-reveal3">2017</span>
+            <span>2017</span>
           </span>
 
           <span class="year-text">
-            <span class="text-reveal3">–24</span>
+            <span>–24</span>
           </span>
         </div>
 
@@ -192,7 +192,7 @@
 
   span {
     font-size: 2.5vw;
-    line-height: 1.2;
+    line-height: 1;
     margin: 0;
     padding: 0;
   }
