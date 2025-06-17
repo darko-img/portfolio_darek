@@ -43,6 +43,7 @@ export const textRevealProject = (
     { yPercent: -150 },
     { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
   );
+
   return tl;
 };
 
@@ -57,15 +58,15 @@ export const aboutReveal = (
 ) => {
   tl.fromTo(
     selectors.about,
-    { yPercent: -150, },
+    { yPercent: 150, },
     { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
   );
 
   tl.fromTo(
     selectors.portrait,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
-    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, stagger: 0.05, ease: defaultEase, force3D: true },
-    "<0.5"
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, stagger: 0.025, ease: defaultEase, force3D: true },
+    "<0.25"
   );
 
   tl.fromTo(
@@ -74,12 +75,14 @@ export const aboutReveal = (
     { opacity: 1, duration: 0.5, ease: defaultEase, force3D: true },
     "<0.4"
   );
+
   tl.fromTo(
     selectors.figcaption,
     { opacity: 0 },
     { opacity: 1, duration: 0.5, ease: defaultEase, force3D: true },
     "<"
   );
+
   return tl;
 };
 
@@ -106,7 +109,7 @@ export const observeReveal = (
 
   tl.fromTo(
     selectors.workSection,
-    { yPercent: -30, },
+    { yPercent: -30 },
     { yPercent: 0, duration: 1.3, ease: defaultEase, force3D: true },
     "<"
   );
@@ -117,5 +120,6 @@ export const observeReveal = (
     { opacity: 1, duration: 0.1, force3D: true },
     "<0.25"
   );
+
   return tl;
 };

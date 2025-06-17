@@ -275,7 +275,7 @@ p {
 
 @media (max-width: 1380px) {
   .col-2 {
-  width: 62.5vw;
+  width: 65vw;
   }
 }
 

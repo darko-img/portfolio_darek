@@ -9,8 +9,6 @@
   let isMobile = false;
   let loading = true;
 
-  const MIN_LOADER_TIME = 450;
-
   onMount(() => {
     const checkScreen = () => {
       isMobile = window.innerWidth <= 1024;
@@ -19,7 +17,7 @@
     checkScreen();
     window.addEventListener('resize', checkScreen);
 
-    // Ursprüngliche Seite lädt: Loader mind. MIN_LOADER_TIME anzeigen
+    const MIN_LOADER_TIME = 450;
     const startTime = performance.now();
 
     const finishLoading = () => {
@@ -43,21 +41,8 @@
     return () => window.removeEventListener('resize', checkScreen);
   });
 
-  // Reaktive Variablen für Pfad prüfen
   $: isProjectPage = $page.url.pathname.startsWith('/projekte');
   $: isMehrPage = $page.url.pathname.startsWith('/mehr');
-
-  // Loader beim Navigieren zu /projekte und mobil triggern
-  // Das setzt loading auf true und nach MIN_LOADER_TIME auf false
-  $: if (isMobile && isProjectPage) {
-    loading = true;
-
-    // Verzögertes Ausschalten des Loaders
-    setTimeout(() => {
-      loading = false;
-    }, MIN_LOADER_TIME);
-  }
-
 </script>
 
 {#if loading}

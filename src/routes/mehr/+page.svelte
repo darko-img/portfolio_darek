@@ -79,7 +79,7 @@
     <div class="section">
   <figure class="image-caption">
     <img src="/in_den_bergen.webp" alt="In den Bergen" class="portrait" />
-    <figcaption>Ausgleich</figcaption>
+    <figcaption>Gleichgewicht finden</figcaption>
   </figure>
 </div>
 
@@ -124,7 +124,7 @@
     <div class="section">
   <figure class="image-caption">
     <img src="/abschluss_lewagon.webp" alt="Abschluss LeWagon" class="portrait" />
-    <figcaption>Absolventen, Le Wagon</figcaption>
+    <figcaption>Absolventen–Wand, Le Wagon</figcaption>
   </figure>
 </div>
 
@@ -230,11 +230,11 @@ main {
 }
 
 .col-1 .section:first-of-type p {
-  text-indent: 1em;
+  text-indent: 1.5em;
 }
 
 .col-2 .section:nth-of-type(2) p {
-  text-indent: 1em;
+  text-indent: 1.5em;
 }
 
 .portrait {
