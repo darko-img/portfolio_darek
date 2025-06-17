@@ -41,7 +41,7 @@
     preloadVideos.forEach((src) => {
       const video = document.createElement('video');
       video.src = src;
-      video.preload = 'auto';
+      video.preload = 'none';
       video.muted = true;
       video.playsInline = true;
       video.style.display = 'none';

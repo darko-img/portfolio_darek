@@ -32,21 +32,6 @@ export const textReveal2 = (
   );
 };
 
-// export const textRevealProject = (
-//   tl = gsap.timeline(),
-//   selectors = {
-//     textReveal3: ".text-reveal3",
-//   }
-
-// ) => {
-//   tl.fromTo(
-//     selectors.textReveal3,
-//     { yPercent: -150 },
-//     { yPercent: 0, duration: 1.0, stagger: 0.05, ease: defaultEase, force3D: true }
-//   );
-//   return tl;
-// };
-
 // ABOUT //
 // ABOUT //
 // ABOUT //
