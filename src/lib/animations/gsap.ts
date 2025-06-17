@@ -103,7 +103,7 @@ export const observeReveal = (
     selectors.work,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
     { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, ease: defaultEase, force3D: true, },
-    "<0.25"
+    "<0.35"
   );
 
   tl.fromTo(
