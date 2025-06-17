@@ -228,7 +228,6 @@
 
   .work-video {
     opacity: 0;
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
     will-change: opacity, clip-path;
   }
 
