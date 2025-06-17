@@ -14,7 +14,7 @@ export const textReveal = (selector = ".text-reveal", duration = 1, stagger = 0.
   return defaultFromTo(
     selector,
     { yPercent: -150 },
-    { yPercent: 0, duration, stagger, ease: defaultEase, force3D: true }
+    { yPercent: 0, duration, stagger, ease: defaultEase }
   );
 };
 
@@ -28,27 +28,31 @@ export const textReveal2 = (
   return defaultFromTo(
     selector,
     { yPercent: -150 },
-    { yPercent: 0, delay, duration, stagger, ease: defaultEase, force3D: true, onComplete: onFinish }
+    { yPercent: 0, delay, duration, stagger, ease: defaultEase, onComplete: onFinish }
   );
 };
 
-export const textRevealProject = (
-  tl = gsap.timeline(),
-  selectors = {
-    textReveal3: ".text-reveal3",
-  }
+// export const textRevealProject = (
+//   tl = gsap.timeline(),
+//   selectors = {
+//     textReveal3: ".text-reveal3",
+//   }
 
-) => {
-  tl.fromTo(
-    selectors.textReveal3,
-    { yPercent: -150 },
-    { yPercent: 0, duration: 1.0, stagger: 0.05, ease: defaultEase, force3D: true }
-  );
-  return tl;
-};
+// ) => {
+//   tl.fromTo(
+//     selectors.textReveal3,
+//     { yPercent: -150 },
+//     { yPercent: 0, duration: 1.0, stagger: 0.05, ease: defaultEase, force3D: true }
+//   );
+//   return tl;
+// };
+
+// ABOUT //
+// ABOUT //
+// ABOUT //
 
 export const aboutReveal = (
-  tl = gsap.timeline(),
+  tl = gsap.timeline({ defaults: { lazy: true } }),
   selectors = {
     about: ".about-reveal",
     portrait: ".portrait",
@@ -85,8 +89,12 @@ export const aboutReveal = (
   return tl;
 };
 
+// OBSERVER //
+// OBSERVER //
+// OBSERVER //
+
 export const observeReveal = (
-  tl = gsap.timeline(),
+  tl = gsap.timeline({ defaults: { lazy: true } }),
   selectors = {
     work: ".work-video",
     workSection: ".work-section",
