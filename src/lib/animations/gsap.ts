@@ -94,7 +94,7 @@ export const observeReveal = (
   }
 ) => {
     tl.fromTo(
-    selectors.work,
+    selectors.workSection,
     { opacity: 0 },
     { opacity: 1, duration: 0.1, force3D: true, },
   );
