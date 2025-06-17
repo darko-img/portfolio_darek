@@ -1,6 +1,6 @@
 <script>
   import { onMount, tick } from 'svelte';
-  import { observeReveal, textRevealProject } from '$lib/animations/gsap';
+  import { observeReveal } from '$lib/animations/gsap';
   import { gsap } from 'gsap';
 
   export let src;
@@ -14,11 +14,6 @@
   let inView = false;
 
   onMount(() => {
-    const tl = gsap.timeline();
-
-    // 1. Sofort die Text-Reveal Animation starten
-    textRevealProject(tl);
-
     const isMobile = window.innerWidth <= 1024;
     const thresholdValue = isMobile ? 0.3 : 0.1;
 
