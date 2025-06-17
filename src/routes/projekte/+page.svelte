@@ -58,7 +58,7 @@
             />
           </div>
           <div class="title" title="https://vimeo.com/1078624279">
-            <p>Nussknagger, 2024</p>
+            <p>Nussknagger, &copy;2024</p>
             <p>
               <a
                 href="https://vimeo.com/1078624279"
@@ -81,7 +81,7 @@
             />
           </div>
           <div class="title">
-            <p>Nussknagger, 2024</p>
+            <p>Nussknagger, &copy;2024</p>
             <p>
               <a
                 href="https://vimeo.com/1078458176"
@@ -104,7 +104,7 @@
             />
           </div>
           <div class="title">
-            <p>Formen – Kapitel 2, 2024</p>
+            <p>Formen – Kapitel 2, &copy;2024</p>
             <p>
               <a
                 href="https://vimeo.com/1078455810"
@@ -127,7 +127,7 @@
             />
           </div>
           <div class="title">
-            <p>Tatort, 2017</p>
+            <p>Tatort, &copy;2017</p>
             <p>
               <a
                 href="https://vimeo.com/1078457155"
@@ -150,7 +150,7 @@
             />
           </div>
           <div class="title">
-            <p>Formen, 2017</p>
+            <p>Formen, &copy;2017</p>
             <p>
               <a
                 href="https://vimeo.com/1078637488"
