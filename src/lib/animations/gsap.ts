@@ -93,11 +93,17 @@ export const observeReveal = (
     title: ".title",
   }
 ) => {
+    tl.fromTo(
+    selectors.work,
+    { opacity: 0 },
+    { opacity: 1, duration: 0.1, force3D: true, },
+  );
+
   tl.fromTo(
     selectors.work,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
     { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, ease: defaultEase, force3D: true, },
-    "<"
+    "<0.25"
   );
 
   tl.fromTo(
@@ -111,7 +117,7 @@ export const observeReveal = (
     selectors.title,
     { opacity: 0 },
     { opacity: 1, duration: 0.1, force3D: true },
-    "<0.3"
+    "<0.25"
   );
   return tl;
 };
