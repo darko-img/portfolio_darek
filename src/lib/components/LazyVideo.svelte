@@ -8,10 +8,10 @@
   export let loop = true;
   export let playsinline = true;
   export let section;
+  export let autoplayAfterReveal = true;
 
   let videoRef;
   let containerRef;
-  let inView = false;
 
   onMount(() => {
     const isMobile = window.innerWidth <= 1024;
@@ -20,7 +20,6 @@
     const observer = new IntersectionObserver(
       async ([entry]) => {
         if (entry.isIntersecting) {
-          inView = true;
           observer.disconnect();
           await tick();
 
@@ -32,16 +31,26 @@
             };
 
             const tl = gsap.timeline({
-              onComplete: () => {
-                try {
-                  videoRef?.play();
-                } catch (e) {
-                  console.warn('Autoplay failed:', e);
+              onComplete: async () => {
+                if (autoplayAfterReveal) {
+                  try {
+                    await videoRef?.play();
+                  } catch (e) {
+                    console.warn('Autoplay failed:', e);
+                  }
                 }
-              },
+              }
             });
 
             observeReveal(tl, selectors);
+          }
+
+          if (!autoplayAfterReveal) {
+            try {
+              await videoRef?.play();
+            } catch (e) {
+              console.warn('Autoplay failed:', e);
+            }
           }
         }
       },

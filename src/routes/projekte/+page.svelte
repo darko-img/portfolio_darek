@@ -25,9 +25,13 @@
 </script>
 
 <main class="main">
+
   <div class="work-wrapper">
+
     <div class="work">
+
       <div class="col-1">
+
         <div class="projekt-text">
           <span class="year-text">
             <span class="text-reveal3">2017</span>
@@ -37,15 +41,17 @@
             <span class="text-reveal3">–24</span>
           </span>
         </div>
+
       </div>
 
       <div class="col-2">
+
         <section class="work-section" bind:this={section1}>
           <div class="work-video">
             <LazyVideo
               src="/Videos/cube_nuss_snippet_neu.mp4"
               section={section1}
-              autoplay
+              autoplayAfterReveal={true}
               muted
               playsinline
               loop
@@ -68,7 +74,7 @@
             <LazyVideo
               src="/Videos/logo_nuss_snippet_neu.mp4"
               section={section2}
-              autoplay
+              autoplayAfterReveal={true}
               muted
               playsinline
               loop
@@ -154,8 +160,11 @@
             </p>
           </div>
         </section>
+
       </div>
+
     </div>
+
   </div>
 
   {#if showLocalFooter}
