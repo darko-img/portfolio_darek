@@ -32,20 +32,20 @@ export const textReveal2 = (
   );
 };
 
-export const textRevealProject = (
-  tl = gsap.timeline({ delay: 0.5 }),
-  selectors = {
-    textReveal3: ".text-reveal3",
-  }
-) => {
-  tl.fromTo(
-    selectors.textReveal3,
-    { yPercent: -150 },
-    { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
-  );
+// export const textRevealProject = (
+//   tl = gsap.timeline({ delay: 0.5 }),
+//   selectors = {
+//     textReveal3: ".text-reveal3",
+//   }
+// ) => {
+//   tl.fromTo(
+//     selectors.textReveal3,
+//     { yPercent: -150 },
+//     { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
+//   );
 
-  return tl;
-};
+//   return tl;
+// };
 
 export const aboutReveal = (
   tl = gsap.timeline(),
@@ -92,8 +92,15 @@ export const observeReveal = (
     work: ".work-video",
     workSection: ".work-section",
     title: ".title",
+    textReveal3: ".text-reveal3"
   }
 ) => {
+  tl.fromTo(
+    selectors.textReveal3,
+    { yPercent: -150 },
+    { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true },
+  );
+
   tl.fromTo(
     selectors.work,
     { opacity: 0.000001 },

@@ -7,6 +7,7 @@
   export let muted = true;
   export let loop = true;
   export let playsinline = true;
+  export let section; // Direkt als DOM-Element
 
   let videoRef;
   let containerRef;
@@ -29,12 +30,11 @@
             console.warn('Autoplay failed:', e);
           }
 
-          const section = entry.target.closest('section');
           if (section) {
             const selectors = {
               work: section.querySelector('.work-video'),
               workSection: section,
-              title: section.querySelector('.title')
+              title: section.querySelector('.title'),
             };
             const tl = gsap.timeline();
             observeReveal(tl, selectors);
@@ -62,7 +62,7 @@
 </div>
 
 <style>
-  .video-wrapper {
+.video-wrapper {
   width: 100%;
   aspect-ratio: 16 / 9;
   position: relative;
