@@ -110,7 +110,7 @@ export const observeReveal = (
     selectors.workSection,
     { yPercent: -30 },
     { yPercent: 0, duration: 1.0, ease: defaultEase, force3D: true },
-    "<"
+    "-=1.0"
   );
 
   tl.fromTo(

@@ -43,24 +43,25 @@
   <div class="col-1">
 
     <div class="section">
-      <p class="t-reveal">Geboren 1991 in Stettin, Polen, war ich schon früh der Junge,
-      der immer ein Blatt Papier und einen Stift zur Hand hatte.
-      Kunst war für mich mehr als nur Zeitvertreib – sie war mein
-      Fenster zur Welt. Mit vier Jahren zog ich mit meiner Mutter
-      nach Berlin – ganz spontan, ohne zu wissen, was uns erwartet.
-      Die Stadt hat mich geprägt, ihr Rhythmus, ihre Farben, ihre
-      Vielfalt.</p>
+      <p class="t-reveal">Geboren 1991 in Stettin, Polen, war ich
+      schon früh der Junge, der immer ein Blatt Papier und einen
+      Stift zur Hand hatte. Kunst war für mich mehr als nur Zeitvertreib –
+      sie war mein Fenster zur Welt. Schon als Kind formte ich mit meinen Bildern
+      kleine Welten – intuitiv, ohne Regeln, nur mit meiner Fantasie.
+      Mit vier Jahren zog ich mit meiner Mutter nach Berlin – ganz spontan,
+      ohne zu wissen, was uns erwartet. Die Stadt hat mich geprägt, ihr Rhythmus,
+      ihre Farben, ihre Vielfalt.</p>
      </div>
 
-     <div class="section">
+    <div class="section">
+        <img src="/darek.webp" alt="Dariusz Portrait" class="portrait" />
+    </div>
+
+    <div class="section">
       <p class="t-reveal">Heute bin ich Motion Designer und angehender Webdesigner –
         mit einer tiefen Leidenschaft für Gestaltung, die sich bewegt und
         verändert. Ich liebe es, Ideen nicht nur sichtbar, sondern
         auch erlebbar zu machen.</p>
-    </div>
-
-    <div class="section">
-        <img src="/darek.webp" alt="Dariusz Portrait" class="portrait" />
     </div>
 
     <div class="section">
@@ -218,10 +219,6 @@ main {
 }
 
 .col-1 .section:first-of-type p {
-  text-indent: 1.5em;
-}
-
-.col-2 .section:nth-of-type(2) p {
   text-indent: 1.5em;
 }
 
