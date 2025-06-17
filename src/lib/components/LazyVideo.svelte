@@ -7,7 +7,7 @@
   export let muted = true;
   export let loop = true;
   export let playsinline = true;
-  export let section; // Direkt als DOM-Element
+  export let section;
 
   let videoRef;
   let containerRef;
@@ -24,19 +24,23 @@
           observer.disconnect();
           await tick();
 
-          try {
-            videoRef?.play();
-          } catch (e) {
-            console.warn('Autoplay failed:', e);
-          }
-
           if (section) {
             const selectors = {
               work: section.querySelector('.work-video'),
               workSection: section,
               title: section.querySelector('.title'),
             };
-            const tl = gsap.timeline();
+
+            const tl = gsap.timeline({
+              onComplete: () => {
+                try {
+                  videoRef?.play();
+                } catch (e) {
+                  console.warn('Autoplay failed:', e);
+                }
+              },
+            });
+
             observeReveal(tl, selectors);
           }
         }
