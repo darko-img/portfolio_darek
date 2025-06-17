@@ -57,7 +57,6 @@ export const aboutReveal = (
     about: ".about-reveal",
     portrait: ".portrait",
     tReveal: ".t-reveal",
-    figcaption: "figcaption"
   }
 ) => {
   tl.fromTo(
@@ -69,7 +68,7 @@ export const aboutReveal = (
   tl.fromTo(
     selectors.portrait,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
-    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, stagger: 0.025, ease: defaultEase, force3D: true },
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.5, stagger: 0.05, ease: defaultEase, force3D: true },
     "<0.25"
   );
 
@@ -78,13 +77,6 @@ export const aboutReveal = (
     { opacity: 0 },
     { opacity: 1, duration: 0.5, ease: defaultEase, force3D: true },
     "<0.4"
-  );
-
-  tl.fromTo(
-    selectors.figcaption,
-    { opacity: 0 },
-    { opacity: 1, duration: 0.5, ease: defaultEase, force3D: true },
-    "<"
   );
   return tl;
 };

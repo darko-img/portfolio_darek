@@ -53,10 +53,7 @@
      </div>
 
     <div class="section">
-      <figure class="image-caption">
         <img src="/darek_jung.webp" alt="Dariusz Porträt" class="portrait" />
-        <figcaption>2001</figcaption>
-      </figure>
     </div>
 
     <div class="section">
@@ -77,10 +74,7 @@
     </div>
 
     <div class="section">
-  <figure class="image-caption">
     <img src="/in_den_bergen.webp" alt="In den Bergen" class="portrait" />
-    <figcaption>Gleichgewicht finden</figcaption>
-  </figure>
 </div>
 
     <div class="section">
@@ -98,10 +92,7 @@
   <div class="col-2">
 
     <div class="section">
-  <figure class="image-caption">
     <img src="/graffiti.webp" alt="Graffiti" class="portrait" />
-    <figcaption>Alte Liebe</figcaption>
-  </figure>
 </div>
 
     <div class="section">
@@ -122,10 +113,7 @@
     </div>
 
     <div class="section">
-  <figure class="image-caption">
     <img src="/abschluss_lewagon.webp" alt="Abschluss LeWagon" class="portrait" />
-    <figcaption>Absolventen–Wand, Le Wagon</figcaption>
-  </figure>
 </div>
 
     <div class="section">
@@ -253,15 +241,6 @@ main {
   will-change: opacity;
 }
 
-figcaption {
-  font-size: 0.9vw;
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-
-  opacity: 0;
-}
-
 @media (max-width: 3000px) {
   .about-wrapper {
   padding-bottom: 7rem;
@@ -287,9 +266,6 @@ figcaption {
   .about p {
   font-size: 1.75vw;
   }
-  figcaption {
-    font-size: 1.5vw;
-  }
 }
 
 @media (max-width: 768px) {
@@ -314,9 +290,6 @@ figcaption {
   }
   .letter {
   font-size: 47vw;
-  }
-  figcaption {
-    font-size: 3vw;
   }
 }
 
