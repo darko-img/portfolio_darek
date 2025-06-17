@@ -7,11 +7,11 @@
   export let muted = true;
   export let loop = true;
   export let playsinline = true;
-  export let section;
-  export let autoplayAfterReveal = true;
+  export let section; // Direkt als DOM-Element
 
   let videoRef;
   let containerRef;
+  let inView = false;
 
   onMount(() => {
     const isMobile = window.innerWidth <= 1024;
@@ -20,8 +20,15 @@
     const observer = new IntersectionObserver(
       async ([entry]) => {
         if (entry.isIntersecting) {
+          inView = true;
           observer.disconnect();
           await tick();
+
+          try {
+            videoRef?.play();
+          } catch (e) {
+            console.warn('Autoplay failed:', e);
+          }
 
           if (section) {
             const selectors = {
@@ -29,28 +36,8 @@
               workSection: section,
               title: section.querySelector('.title'),
             };
-
-            const tl = gsap.timeline({
-              onComplete: async () => {
-                if (autoplayAfterReveal) {
-                  try {
-                    await videoRef?.play();
-                  } catch (e) {
-                    console.warn('Autoplay failed:', e);
-                  }
-                }
-              }
-            });
-
+            const tl = gsap.timeline();
             observeReveal(tl, selectors);
-          }
-
-          if (!autoplayAfterReveal) {
-            try {
-              await videoRef?.play();
-            } catch (e) {
-              console.warn('Autoplay failed:', e);
-            }
           }
         }
       },

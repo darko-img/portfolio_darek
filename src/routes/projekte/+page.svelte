@@ -51,7 +51,7 @@
             <LazyVideo
               src="/Videos/cube_nuss_snippet_neu.mp4"
               section={section1}
-              autoplayAfterReveal={true}
+              autoplay
               muted
               playsinline
               loop
@@ -74,7 +74,7 @@
             <LazyVideo
               src="/Videos/logo_nuss_snippet_neu.mp4"
               section={section2}
-              autoplayAfterReveal={true}
+              autoplay
               muted
               playsinline
               loop
