@@ -52,8 +52,15 @@
       Vielfalt.</p>
      </div>
 
+     <div class="section">
+      <p class="t-reveal">Heute bin ich Motion Designer und angehender Webdesigner –
+        mit einer tiefen Leidenschaft für Gestaltung, die sich bewegt und
+        verändert. Ich liebe es, Ideen nicht nur sichtbar, sondern
+        auch erlebbar zu machen.</p>
+    </div>
+
     <div class="section">
-        <img src="/darek_jung.webp" alt="Dariusz Porträt" class="portrait" />
+        <img src="/darek.webp" alt="Dariusz Portrait" class="portrait" />
     </div>
 
     <div class="section">
@@ -65,13 +72,6 @@
         perfekt zu meiner eigenen Arbeitsweise und hat mich auf meinem Weg als
         Designer entscheidend geprägt.</p>
       </div>
-
-      <div class="section">
-      <p class="t-reveal">Heute bin ich Motion Designer und angehender Webdesigner –
-        mit einer tiefen Leidenschaft für Gestaltung, die sich bewegt und
-        verändert. Ich liebe es, Ideen nicht nur sichtbar, sondern
-        auch erlebbar zu machen.</p>
-    </div>
 
     <div class="section">
     <img src="/in_den_bergen.webp" alt="In den Bergen" class="portrait" />
@@ -113,7 +113,7 @@
     </div>
 
     <div class="section">
-    <img src="/abschluss_lewagon.webp" alt="Abschluss LeWagon" class="portrait" />
+    <img src="/lewagon.webp" alt="Abschluss LeWagon" class="portrait" />
 </div>
 
     <div class="section">
