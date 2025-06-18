@@ -223,19 +223,19 @@ onMount(() => {
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">oder GSAP. Durch interaktive</h1>
+      <h1 class="text-reveal">oder GSAP.</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Gestaltung und bewegte Elemente</h1>
+      <h1 class="text-reveal">Durch interaktive Gestaltung und</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">möchte ich besondere Nutzererlebnisse</h1>
+      <h1 class="text-reveal">bewegte Elemente möchte ich besondere</h1>
     </div>
 
-     <div class="text-wrapper">
-      <h1 class="text-reveal">schaffen.</h1>
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Nutzererlebnisse schaffen.</h1>
     </div>
 
   </div>
@@ -296,10 +296,10 @@ canvas {
     z-index: 0;
   }
 
-  /* .info-block-mobile h1,
+  .info-block-mobile h1,
   .info-block-mobile h2 {
   letter-spacing: -0.02em;
-  } */
+  }
 
 
 @media (max-width: 1024px) {
