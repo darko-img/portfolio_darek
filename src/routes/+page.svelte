@@ -186,19 +186,19 @@ onMount(() => {
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Begeisterung für Front-End-Webent-</h1>
+      <h1 class="text-reveal">Begeisterung für Front-End-</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">wicklung. An der Schnittstelle</h1>
+      <h1 class="text-reveal">Webentwicklung. An der Schnittstelle</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">von Design und Technologie, erstelle</h1>
+      <h1 class="text-reveal">von Design und Technologie,</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">ich dynamische Komponenten</h1>
+      <h1 class="text-reveal">erstelle ich dynamische Komponenten</h1>
     </div>
 
     <div class="text-wrapper">
