@@ -294,10 +294,10 @@ canvas {
     z-index: 0;
   }
 
-  /* .info-block-mobile h1,
+  .info-block-mobile h1,
   .info-block-mobile h2 {
   letter-spacing: -0.01em;
-  } */
+  }
 
 
 @media (max-width: 1024px) {
