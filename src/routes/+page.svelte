@@ -1,11 +1,28 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { textReveal } from '$lib/animations/gsap';
+  import { isMobile } from '$lib/stores/device';
 
-  let canvas: HTMLCanvasElement;
+let canvas: HTMLCanvasElement;
 
-  onMount(() => {
-  textReveal();
+function checkIsMobile() {
+  return window.innerWidth <= 450;
+}
+
+function handleResize() {
+  const mobile = checkIsMobile();
+  isMobile.set(mobile);
+
+  // Text-Animation beim Umschalten auslösen
+  textReveal(mobile ? ".info-block-mobile .text-reveal" : ".info-block .text-reveal");
+}
+
+onMount(() => {
+  // Initial prüfen
+  handleResize();
+
+  // Event Listener registrieren
+  window.addEventListener('resize', handleResize);
 
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
@@ -88,6 +105,10 @@
     isDrawing = false;
     clearCanvas();
   });
+  return () => {
+    // Event Listener wieder entfernen bei Komponentenzerstörung
+    window.removeEventListener('resize', handleResize);
+  };
 });
 </script>
 
