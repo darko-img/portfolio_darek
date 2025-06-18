@@ -296,12 +296,6 @@ canvas {
     z-index: 0;
   }
 
-  .info-block-mobile h1,
-  .info-block-mobile h2 {
-  letter-spacing: -0.02em;
-  }
-
-
 @media (max-width: 1024px) {
 
   h1, h2 {
@@ -328,7 +322,7 @@ canvas {
 
   .info-block-mobile h1,
   .info-block-mobile h2 {
-  font-size: 5vw;
+  font-size: 4.8vw;
   font-style: normal;
   }
 }
