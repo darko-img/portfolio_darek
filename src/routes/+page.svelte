@@ -152,6 +152,92 @@
   </div>
 </div>
 
+<div class="info-block-mobile">
+  <div class="info-text 1">
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Grafikdesigner aus Berlin mit Fokus auf</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Motion Design und wachsender</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Begeisterung für Front-End-</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Webentwicklung. An der Schnittstelle</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">von Design und Technologie, erstelle ich</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">dynamische Komponenten für die</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">digitale Welt.</h1>
+    </div>
+
+  </div>
+
+  <div class="info-text 2">
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Derzeit arbeite ich mit verschiedensten</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Programmiersprachen und</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Javascript-Bibliotheken wie Three.js</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">oder GSAP. Durch interaktive</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Gestaltung und bewegte Elemente</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">möchte ich besondere Nutzererlebnisse</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">schaffen.</h1>
+    </div>
+
+  </div>
+
+  <div class="info-text 3">
+
+    <div class="text-wrapper">
+      <h2 class="text-reveal">Für generelle Anfragen – oder wenn du</h2>
+    </div>
+
+    <div class="text-wrapper">
+      <h2 class="text-reveal">wissen willst, wo es den besten</h2>
+    </div>
+
+    <div class="text-wrapper">
+      <h2 class="text-reveal">Burger in Berlin gibt – bin ich jederzeit</h2>
+    </div>
+
+    <div class="text-wrapper">
+      <h2 class="text-reveal">per E-mail erreichbar.</h2>
+    </div>
+
+  </div>
+</div>
+
 
 <style>
 
@@ -161,7 +247,7 @@ canvas {
     width: 100vw;
     height: 100vh;
 
-    z-index: 0;
+    z-index: 1;
   }
 
   .info-block {
@@ -172,10 +258,25 @@ canvas {
     padding: 1rem;
 
     pointer-events: none;
+
+    z-index: 0;
+  }
+
+  .info-block-mobile {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
+    pointer-events: none;
+
+    z-index: 0;
   }
 
 
 @media (max-width: 1024px) {
+
   h1, h2 {
   font-size: 2vw;
   font-style: normal;
@@ -183,12 +284,24 @@ canvas {
 }
 
 @media (max-width: 450px) {
+
   .info-block {
-    margin-top: 4rem;
+    display: none;
+  }
+
+  .info-block-mobile {
+  margin-top: 4rem;
+  display: flex;
   }
 
   h1, h2 {
   font-size: 3.2vw;
+  font-style: normal;
+  }
+
+  .info-block-mobile h1,
+  .info-block-mobile h2 {
+  font-size: 5vw;
   font-style: normal;
   }
 }

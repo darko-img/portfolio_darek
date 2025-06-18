@@ -33,6 +33,7 @@
       <div class="col-1">
 
         <div class="projekt-text">
+
           <span class="year-text">
             <span>2017</span>
           </span>
@@ -40,6 +41,7 @@
           <span class="year-text">
             <span>–24</span>
           </span>
+
         </div>
 
       </div>
@@ -192,7 +194,7 @@
 
   span {
     font-size: 2.5vw;
-    line-height: 1;
+    line-height: 1.2;
     margin: 0;
     padding: 0;
   }
@@ -243,7 +245,7 @@
     position: fixed;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .year-text {
