@@ -178,32 +178,25 @@ onMount(() => {
   <div class="info-text 1">
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Grafikdesigner aus Berlin mit Fokus auf</h1>
+      <h1 class="text-reveal">Grafikdesigner aus Berlin mit Fokus auf Motion</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Motion Design und wachsender</h1>
+      <h1 class="text-reveal">Design und wachsender Begeisterung für</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Begeisterung für Front-End-</h1>
+      <h1 class="text-reveal">Front-End-Webentwicklung. An der Schnittstelle</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Webentwicklung. An der Schnittstelle</h1>
+      <h1 class="text-reveal">von Design und Technologie, erstelle ich</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">von Design und Technologie,</h1>
+      <h1 class="text-reveal">dynamische Komponenten für die digitale Welt.</h1>
     </div>
 
-    <div class="text-wrapper">
-      <h1 class="text-reveal">erstelle ich dynamische Komponenten</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">für die digitale Welt.</h1>
-    </div>
 
   </div>
 
@@ -214,19 +207,15 @@ onMount(() => {
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Programmiersprachen und</h1>
+      <h1 class="text-reveal">Programmiersprachen und Javascript-Bibliotheken</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Javascript-Bibliotheken wie Three.js</h1>
+      <h1 class="text-reveal">wie Three.js oder GSAP. Durch interaktive</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">oder GSAP. Durch interaktive Gestaltung</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">und bewegte Elemente möchte ich</h1>
+      <h1 class="text-reveal">Gestaltung und bewegte Elemente möchte ich</h1>
     </div>
 
     <div class="text-wrapper">
@@ -238,19 +227,15 @@ onMount(() => {
   <div class="info-text 3">
 
     <div class="text-wrapper">
-      <h2 class="text-reveal">Für generelle Anfragen – oder wenn du</h2>
+      <h2 class="text-reveal">Für generelle Anfragen – oder wenn du wissen</h2>
     </div>
 
     <div class="text-wrapper">
-      <h2 class="text-reveal">wissen willst, wo es den besten</h2>
+      <h2 class="text-reveal">willst, wo es den besten Burger in Berlin gibt –</h2>
     </div>
 
     <div class="text-wrapper">
-      <h2 class="text-reveal">Burger in Berlin gibt – bin ich jederzeit</h2>
-    </div>
-
-    <div class="text-wrapper">
-      <h2 class="text-reveal">per E-mail erreichbar.</h2>
+      <h2 class="text-reveal">bin ich jederzeit per E-mail erreichbar.</h2>
     </div>
 
   </div>
@@ -323,7 +308,7 @@ canvas {
 
   .info-block-mobile h1,
   .info-block-mobile h2 {
-  font-size: 5vw;
+  font-size: 4.1vw;
   font-style: normal;
   }
 }
