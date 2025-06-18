@@ -194,15 +194,15 @@ onMount(() => {
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">von Design und Technologie, erstelle ich</h1>
+      <h1 class="text-reveal">von Design und Technologie,</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">dynamische Komponenten für die</h1>
+      <h1 class="text-reveal">erstelle ich dynamische Komponenten</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">digitale Welt.</h1>
+      <h1 class="text-reveal">für die digitale Welt.</h1>
     </div>
 
   </div>
@@ -293,7 +293,7 @@ canvas {
 
   .info-block-mobile h1,
   .info-block-mobile h2 {
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
   }
 
 
