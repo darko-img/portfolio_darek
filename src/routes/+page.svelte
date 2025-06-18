@@ -231,11 +231,11 @@ onMount(() => {
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">möchte ich besondere Nutzererlebnisse</h1>
+      <h1 class="text-reveal">möchte ich besondere</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">schaffen.</h1>
+      <h1 class="text-reveal">Nutzererlebnisse schaffen.</h1>
     </div>
 
   </div>
