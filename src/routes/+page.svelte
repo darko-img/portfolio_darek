@@ -24,6 +24,7 @@ onMount(() => {
   // Event Listener registrieren
   window.addEventListener('resize', handleResize);
 
+  // CANVAS //
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
@@ -294,10 +295,10 @@ canvas {
     z-index: 0;
   }
 
-  .info-block-mobile h1,
+  /* .info-block-mobile h1,
   .info-block-mobile h2 {
   letter-spacing: -0.01em;
-  }
+  } */
 
 
 @media (max-width: 1024px) {
