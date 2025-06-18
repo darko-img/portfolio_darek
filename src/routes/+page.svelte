@@ -3,25 +3,30 @@
   import { textReveal } from '$lib/animations/gsap';
   import { isMobile } from '$lib/stores/device';
 
-let canvas: HTMLCanvasElement;
+  let canvas: HTMLCanvasElement;
 
-function checkIsMobile() {
-  return window.innerWidth <= 450;
-}
+  function checkIsMobile() {
+    return window.innerWidth <= 450;
+  }
 
-function handleResize() {
-  const mobile = checkIsMobile();
-  isMobile.set(mobile);
+  let currentMobileState = checkIsMobile(); // ← hier deklarieren
+  let resizeTimeout: ReturnType<typeof setTimeout>; // ← debounce-Timeout definieren
 
-  // Text-Animation beim Umschalten auslösen
-  textReveal(mobile ? ".info-block-mobile .text-reveal" : ".info-block .text-reveal");
-}
+  function handleResize() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const mobile = checkIsMobile();
+      if (mobile !== currentMobileState) {
+        currentMobileState = mobile;
+        isMobile.set(mobile);
+        textReveal(mobile ? ".info-block-mobile .text-reveal" : ".info-block .text-reveal");
+      }
+    }, 200);
+  }
 
-onMount(() => {
-  // Initial prüfen
-  handleResize();
-
-  // Event Listener registrieren
+  onMount(() => {
+  handleResize(); // prüft und setzt State
+  textReveal(currentMobileState ? ".info-block-mobile .text-reveal" : ".info-block .text-reveal");
   window.addEventListener('resize', handleResize);
 
   const ctx = canvas.getContext('2d');
@@ -115,64 +120,7 @@ onMount(() => {
 
 <canvas bind:this={canvas} class="canvas"></canvas>
 
-<div class="info-block">
-  <div class="info-text 1">
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">Grafikdesigner aus Berlin mit Fokus auf Motion Design</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">und wachsender Begeisterung für Front-End-Webentwicklung.</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">An der Schnittstelle von Design und Technologie,</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">erstelle ich dynamische Komponenten für die digitale Welt.</h1>
-    </div>
-
-  </div>
-
-  <div class="info-text 2">
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">Derzeit arbeite ich mit verschiedensten Programmiersprachen</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">und Javascript-Bibliotheken wie Three.js oder GSAP.</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">Durch interaktive Gestaltung und bewegte Elemente möchte</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">ich besondere Nutzererlebnisse schaffen.</h1>
-    </div>
-
-  </div>
-
-  <div class="info-text 3">
-
-    <div class="text-wrapper">
-      <h2 class="text-reveal">Für generelle Anfragen – oder wenn du wissen willst,</h2>
-    </div>
-
-    <div class="text-wrapper">
-      <h2 class="text-reveal">wo es den besten Burger in Berlin gibt – bin ich</h2>
-    </div>
-
-    <div class="text-wrapper">
-      <h2 class="text-reveal">jederzeit per E-mail erreichbar.</h2>
-    </div>
-
-  </div>
-</div>
-
+{#if $isMobile}
 <div class="info-block-mobile">
   <div class="info-text 1">
 
@@ -258,7 +206,65 @@ onMount(() => {
 
   </div>
 </div>
+{:else}
+<div class="info-block">
+  <div class="info-text 1">
 
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Grafikdesigner aus Berlin mit Fokus auf Motion Design</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">und wachsender Begeisterung für Front-End-Webentwicklung.</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">An der Schnittstelle von Design und Technologie,</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">erstelle ich dynamische Komponenten für die digitale Welt.</h1>
+    </div>
+
+  </div>
+
+  <div class="info-text 2">
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Derzeit arbeite ich mit verschiedensten Programmiersprachen</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">und Javascript-Bibliotheken wie Three.js oder GSAP.</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">Durch interaktive Gestaltung und bewegte Elemente möchte</h1>
+    </div>
+
+    <div class="text-wrapper">
+      <h1 class="text-reveal">ich besondere Nutzererlebnisse schaffen.</h1>
+    </div>
+
+  </div>
+
+  <div class="info-text 3">
+
+    <div class="text-wrapper">
+      <h2 class="text-reveal">Für generelle Anfragen – oder wenn du wissen willst,</h2>
+    </div>
+
+    <div class="text-wrapper">
+      <h2 class="text-reveal">wo es den besten Burger in Berlin gibt – bin ich</h2>
+    </div>
+
+    <div class="text-wrapper">
+      <h2 class="text-reveal">jederzeit per E-mail erreichbar.</h2>
+    </div>
+
+  </div>
+</div>
+{/if}
 
 <style>
 
