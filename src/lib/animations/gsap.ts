@@ -37,7 +37,7 @@ export const textReveal2 = (
 // ABOUT //
 
 export const aboutReveal = (
-  tl = gsap.timeline({ defaults: { lazy: true } }),
+  tl = gsap.timeline(),
   selectors = {
     about: ".about-reveal",
     portrait: ".portrait",
@@ -47,13 +47,13 @@ export const aboutReveal = (
   tl.fromTo(
     selectors.about,
     { yPercent: 150, },
-    { yPercent: 0, duration: 1.0, stagger: 0.05, ease: defaultEase, force3D: true }
+    { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
   );
 
   tl.fromTo(
     selectors.portrait,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
-    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.0, stagger: 0.05, ease: defaultEase, force3D: true },
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true },
     "<0.25"
   );
 
@@ -61,7 +61,7 @@ export const aboutReveal = (
     selectors.tReveal,
     { opacity: 0 },
     { opacity: 1, duration: 0.5, ease: defaultEase, force3D: true },
-    "<0.35"
+    "<0.25"
   );
   return tl;
 };
