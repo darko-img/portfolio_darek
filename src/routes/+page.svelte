@@ -194,15 +194,15 @@ onMount(() => {
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">von Design und Technologie,</h1>
+      <h1 class="text-reveal">von Design und Technologie, erstelle ich</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">erstelle ich dynamische Komponenten</h1>
+      <h1 class="text-reveal">dynamische Komponenten für die</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">für die digitale Welt.</h1>
+      <h1 class="text-reveal">digitale Welt.</h1>
     </div>
 
   </div>
@@ -222,19 +222,15 @@ onMount(() => {
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">oder GSAP. Durch interaktive</h1>
+      <h1 class="text-reveal">oder GSAP. Durch interaktive Gestaltung</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Gestaltung und bewegte Elemente</h1>
+      <h1 class="text-reveal">und bewegte Elemente möchte ich</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">möchte ich besondere Nutzererlebnisse</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">schaffen.</h1>
+      <h1 class="text-reveal">besondere Nutzererlebnisse schaffen.</h1>
     </div>
 
   </div>
@@ -295,10 +291,10 @@ canvas {
     z-index: 0;
   }
 
-  /* .info-block-mobile h1,
+  .info-block-mobile h1,
   .info-block-mobile h2 {
   letter-spacing: -0.01em;
-  } */
+  }
 
 
 @media (max-width: 1024px) {
