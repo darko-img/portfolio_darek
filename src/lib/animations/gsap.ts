@@ -10,6 +10,10 @@ const defaultFromTo = (
   return gsap.fromTo(target, fromVars, toVars);
 };
 
+// START //
+// START //
+// START //
+
 export const textReveal = (selector = ".text-reveal", duration = 1, stagger = 0.1) => {
   return defaultFromTo(
     selector,
@@ -17,6 +21,10 @@ export const textReveal = (selector = ".text-reveal", duration = 1, stagger = 0.
     { yPercent: 0, duration, stagger, ease: defaultEase }
   );
 };
+
+// MENU //
+// MENU //
+// MENU //
 
 export const textReveal2 = (
   onFinish?: () => void,
@@ -47,13 +55,13 @@ export const aboutReveal = (
   tl.fromTo(
     selectors.about,
     { yPercent: 150, },
-    { yPercent: 0, duration: 1.5, stagger: 0.1, ease: defaultEase, force3D: true }
+    { yPercent: 0, duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true }
   );
 
   tl.fromTo(
     selectors.portrait,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
-    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.25, ease: defaultEase, force3D: true },
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.0, ease: defaultEase, force3D: true },
     "<0.35"
   );
 
