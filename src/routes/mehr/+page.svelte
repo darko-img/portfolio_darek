@@ -185,10 +185,6 @@ main {
   line-height: 1.2;
 }
 
-.col-2 .section:first-of-type p {
-  text-indent: 1.5em;
-}
-
 .portrait {
   width: 100%;
   height: auto;

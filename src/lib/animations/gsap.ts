@@ -53,15 +53,15 @@ export const aboutReveal = (
   tl.fromTo(
     selectors.portrait,
     { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)", },
-    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.0, stagger: 0.1, ease: defaultEase, force3D: true },
+    { clipPath: "polygon(0 0%, 100% 0%, 100% 100%, 0 100%)", duration: 1.25, stagger: 0.1, ease: defaultEase, force3D: true },
     "<0.35"
   );
 
   tl.fromTo(
     selectors.tReveal,
     { opacity: 0 },
-    { opacity: 1, duration: 0.5, ease: defaultEase, force3D: true },
-    "<0.35"
+    { opacity: 1, duration: 0.25, ease: defaultEase, force3D: true },
+    "<0.3"
   );
   return tl;
 };
