@@ -45,7 +45,7 @@ export const textReveal2 = (
 // ABOUT //
 
 export const aboutReveal = (
-  tl = gsap.timeline({ defaults: { lazy: true } }),
+  tl = gsap.timeline(),
   selectors = {
     about: ".about-reveal",
     portrait: ".portrait",
