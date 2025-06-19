@@ -43,49 +43,7 @@
   <div class="col-1">
 
     <div class="section">
-      <p class="t-reveal">Geboren 1991 in Stettin, Polen, war ich
-      schon früh der Junge, der immer ein Blatt Papier und einen
-      Stift zur Hand hatte. Kunst war für mich mehr als nur Zeitvertreib –
-      sie war mein Fenster zur Welt. Schon als Kind formte ich mit meinen Bildern
-      kleine Welten – intuitiv, ohne Regeln, nur mit meiner Fantasie.
-      Mit vier Jahren zog ich mit meiner Mutter nach Berlin – ganz spontan,
-      ohne zu wissen, was uns erwartet. Die Stadt hat mich geprägt, ihr Rhythmus,
-      ihre Farben, ihre Vielfalt.</p>
-     </div>
-
-    <div class="section">
-        <img src="/darek.webp" alt="Dariusz Portrait" class="portrait" />
-    </div>
-
-    <div class="section">
-      <p class="t-reveal">Heute bin ich Motion Designer und angehender Webdesigner –
-        mit einer tiefen Leidenschaft für Gestaltung, die sich bewegt und
-        verändert. Ich liebe es, Ideen nicht nur sichtbar, sondern
-        auch erlebbar zu machen.</p>
-    </div>
-
-    <div class="section">
-      <p class="t-reveal">2017 habe ich meinen Abschluss als Grafikdesigner am
-        Lette-Verein in Berlin gemacht. Diese Ausbildung hat mir nicht nur fundierte
-        technische Fähigkeiten vermittelt, sondern auch meinen gestalterischen
-        Blick geschärft und meine kreative Persönlichkeit weiterentwickelt.
-        Der Lette-Verein, mit seiner Mischung aus Tradition und Innovation, passte
-        perfekt zu meiner eigenen Arbeitsweise und hat mich auf meinem Weg als
-        Designer entscheidend geprägt.</p>
-      </div>
-
-    <div class="section">
-    <img src="/in_den_bergen.webp" alt="In den Bergen" class="portrait" />
-</div>
-
-    <div class="section">
-      <p class="t-reveal">Der Weg dahin war alles andere als linear.
-        Ich habe ausprobiert, verworfen, neu angefangen. Was sich aber nie geändert hat:
-        Mein Blick für Details und mein Wunsch, Emotionen durch Design
-        auszulösen. Ich glaube fest daran, dass gutes Design nicht nur
-        gut aussieht – sondern etwas in uns auslöst und gleichzeitig eine
-        Funktion erfüllt, Design ist nie willkürlich, es ist eine Reise.
-        Mutig, klar und aufregend.</p>
+      <img src="/darek.webp" alt="Dariusz Portrait" class="portrait" />
     </div>
 
   </div>
@@ -93,45 +51,54 @@
   <div class="col-2">
 
     <div class="section">
-    <img src="/graffiti.webp" alt="Graffiti" class="portrait" />
-</div>
+      <p class="t-reveal">Geboren 1991 in Stettin, Polen, war ich
+      schon früh der Junge, der immer ein Blatt Papier und einen
+      Stift zur Hand hatte. Kunst war für mich mehr als nur Zeitvertreib –
+      sie war mein Fenster zur Welt. Mit vier Jahren zog ich mit meiner Mutter nach Berlin – ganz spontan,
+      ohne zu wissen, was uns erwartet. Die Stadt hat mich geprägt, ihr Rhythmus,
+      ihre Farben, ihre Vielfalt.</p>
+     </div>
+
+    <div class="section">
+      <p class="t-reveal">Heute bin ich Motion Designer und angehender Webdesigner –
+      mit einer tiefen Leidenschaft für Gestaltung, die sich bewegt und
+      verändert. Ich liebe es, Ideen nicht nur sichtbar, sondern
+      auch erlebbar zu machen.</p>
+    </div>
+
+    <div class="section">
+      <p class="t-reveal">Der Weg dahin war alles andere als linear.
+      Ich habe ausprobiert, verworfen, neu angefangen. Was sich aber nie geändert hat:
+      Mein Blick für Details und mein Wunsch, Emotionen durch Design
+      auszulösen. Ich glaube fest daran, dass gutes Design nicht nur
+      gut aussieht – sondern etwas in uns auslöst und gleichzeitig eine
+      Funktion erfüllt, Design ist nie willkürlich, es ist eine Reise.
+      Mutig, klar und aufregend.</p>
+    </div>
 
     <div class="section">
       <p class="t-reveal">Gestaltung beginnt für mich mit Beobachtung – sei es in
-        der Natur, in alten Schriften oder im Stadtbild. Ich mag den Kontrast
-        zwischen Alt und Neu, zwischen Gefühl und System. Und: Gute
-        Gestaltung lebt für mich von Interaktion – zwischen Nutzer*in und
-        Objekt, zwischen Mensch und Medium.</p>
+      der Natur, in alten Schriften oder im Stadtbild. Ich mag den Kontrast
+      zwischen Alt und Neu, zwischen Gefühl und System. Und: Gute
+      Gestaltung lebt für mich von Interaktion – zwischen Nutzer*in und
+      Objekt, zwischen Mensch und Medium.</p>
     </div>
-
-    <div class="section">
-      <p class="t-reveal">2025 habe ich erfolgreich ein Full-Stack-Web-Developer-Bootcamp
-        bei Le Wagon in Berlin abgeschlossen. Diese intensive Ausbildung hat meine
-        technischen Fähigkeiten erweitert und mir ermöglicht, kreative Konzepte auch digital
-        ganzheitlich umzusetzen. Durch die Kombination aus Design- und Programmierkenntnissen
-        kann ich heute Projekte gestalten, die nicht nur visuell überzeugen, sondern auch
-        funktional und interaktiv sind.</p>
-    </div>
-
-    <div class="section">
-    <img src="/lewagon.webp" alt="Abschluss LeWagon" class="portrait" />
-</div>
 
     <div class="section">
       <p class="t-reveal">Ich liebe es, Dinge zum Leben zu erwecken – ob durch Animationen
-        oder durch eine durchdachte visuelle Struktur. Ich achte sehr auf
-        die Feinheiten, die andere vielleicht übersehen, weil ich weiß, dass
-        genau dort oft die Magie liegt.</p>
+      oder durch eine durchdachte visuelle Struktur. Ich achte sehr auf
+      die Feinheiten, die andere vielleicht übersehen, weil ich weiß, dass
+      genau dort oft die Magie liegt.</p>
     </div>
 
      <div class="section">
       <p class="t-reveal">Ich arbeite besonders gern mit Menschen, die neugierig und mit
-        dem Herzen bei der Sache sind. Die verstehen, dass Design mehr
-        ist als Dekoration – es ist Kommunikation – und damit der Beginn jeder
-        echten Beziehung zwischen Mensch und Idee.<br><br>
+      dem Herzen bei der Sache sind. Die verstehen, dass Design mehr
+      ist als Dekoration – es ist Kommunikation – und damit der Beginn jeder
+      echten Beziehung zwischen Mensch und Idee.<br><br>
 
-        &copy;2025 Dariusz Tomaszewski<br>Alle Rechte vorbehalten.</p>
-      </div>
+      &copy;2025 Dariusz Tomaszewski<br>Alle Rechte vorbehalten.</p>
+    </div>
 
   </div>
 
@@ -199,7 +166,7 @@ main {
   grid-template-columns: 1fr 1fr;
   max-width: 1000px;
   margin: 0 auto;
-  gap: 1.5rem;
+  gap: 1rem;
   position: relative;
 }
 
@@ -218,7 +185,7 @@ main {
   line-height: 1.2;
 }
 
-.col-1 .section:first-of-type p {
+.col-2 .section:first-of-type p {
   text-indent: 1.5em;
 }
 

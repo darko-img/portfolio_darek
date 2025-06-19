@@ -178,31 +178,23 @@ onMount(() => {
   <div class="info-text 1">
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Grafikdesigner aus Berlin mit Fokus auf</h1>
+      <h1 class="text-reveal">Grafikdesigner aus Berlin mit Fokus auf Motion</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Motion Design und wachsender</h1>
+      <h1 class="text-reveal">Design und wachsender Begeisterung für</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Begeisterung für Front-End-</h1>
+      <h1 class="text-reveal">Front-End-Webentwicklung. An der Schnittstelle</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Webentwicklung. An der Schnittstelle</h1>
+      <h1 class="text-reveal">von Design und Technologie, erstelle ich</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">von Design und Technologie,</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">erstelle ich dynamische Komponenten</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">für die digitale Welt.</h1>
+      <h1 class="text-reveal">dynamische Komponenten für die digitale Welt.</h1>
     </div>
 
 
@@ -215,27 +207,19 @@ onMount(() => {
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Programmiersprachen und</h1>
+      <h1 class="text-reveal">Programmiersprachen und Javascript-Bibliotheken</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Javascript-Bibliotheken wie Three.js</h1>
+      <h1 class="text-reveal">wie Three.js oder GSAP. Durch interaktive</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">oder GSAP. Durch interaktive</h1>
+      <h1 class="text-reveal">Gestaltung und bewegte Elemente möchte ich</h1>
     </div>
 
     <div class="text-wrapper">
-      <h1 class="text-reveal">Gestaltung und bewegte Elemente</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">möchte ich besondere</h1>
-    </div>
-
-    <div class="text-wrapper">
-      <h1 class="text-reveal">Nutzererlebnisse schaffen.</h1>
+      <h1 class="text-reveal">besondere Nutzererlebnisse schaffen.</h1>
     </div>
 
   </div>
@@ -243,19 +227,15 @@ onMount(() => {
   <div class="info-text 3">
 
     <div class="text-wrapper">
-      <h2 class="text-reveal">Für generelle Anfragen – oder wenn du</h2>
+      <h2 class="text-reveal">Für generelle Anfragen – oder wenn du wissen</h2>
     </div>
 
     <div class="text-wrapper">
-      <h2 class="text-reveal">wissen willst, wo es den besten</h2>
+      <h2 class="text-reveal">willst, wo es den besten Burger in Berlin gibt – bin</h2>
     </div>
 
     <div class="text-wrapper">
-      <h2 class="text-reveal">Burger in Berlin gibt – bin ich jederzeit</h2>
-    </div>
-
-    <div class="text-wrapper">
-      <h2 class="text-reveal">per E-mail erreichbar.</h2>
+      <h2 class="text-reveal">ich jederzeit per E-mail erreichbar.</h2>
     </div>
 
   </div>
@@ -296,6 +276,11 @@ canvas {
     z-index: 0;
   }
 
+  .info-block-mobile h1,
+  .info-block-mobile h2 {
+  letter-spacing: -0.02em;
+  }
+
 @media (max-width: 1024px) {
 
   h1, h2 {
@@ -322,8 +307,9 @@ canvas {
 
   .info-block-mobile h1,
   .info-block-mobile h2 {
-  font-size: 5vw;
+  font-size: 4.1vw;
   font-style: normal;
+  line-height: 1.3;
   }
 }
 
