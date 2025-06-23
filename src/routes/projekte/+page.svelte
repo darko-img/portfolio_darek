@@ -304,6 +304,10 @@
   }
 
   @media (max-width: 450px) {
+    .work-wrapper {
+      padding-bottom: 0;
+    }
+
     p {
       font-size: 3vw;
     }
