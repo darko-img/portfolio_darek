@@ -26,7 +26,7 @@
       autoRaf: true,
       duration: isMehrPage ? 0.5 : 1.2,
       easing: isMehrPage
-        ? (t) => 1 - Math.pow(1 - t, 4)
+        ? (t) => 1 - Math.pow(1 - t, 5)
         : (t) => 1 - Math.pow(1 - t, 3)
     });
   }
